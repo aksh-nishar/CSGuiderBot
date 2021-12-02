@@ -54,6 +54,16 @@ cyber_security_keyboard.add(books_button, certifications_button)
 cyber_security_keyboard.add(degrees_button, jobs_button)
 cyber_security_keyboard.add(back_button, back_to_top_menu_button)
 
+blockchain_keyboard = ReplyKeyboardMarkup(resize_keyboard=True).add(skills_required_button, courses_button)
+blockchain_keyboard.add(books_button, certifications_button)
+blockchain_keyboard.add(degrees_button, jobs_button)
+blockchain_keyboard.add(back_button, back_to_top_menu_button)
+
+networking_keyboard = ReplyKeyboardMarkup(resize_keyboard=True).add(skills_required_button, courses_button)
+networking_keyboard.add(books_button, certifications_button)
+networking_keyboard.add(degrees_button, jobs_button)
+networking_keyboard.add(back_button, back_to_top_menu_button)
+
 ai_and_ml_on = False
 cyber_security_on = False
 game_development_on = False
@@ -102,13 +112,13 @@ async def main_keyboard_answer(message: types.Message):
         pass
     elif message.text == "Blockchain Guide":
         blockchain_on = True
-        pass
+        await message.answer("Blockchain Guide", reply_markup=blockchain_keyboard)
     elif message.text == "Cloud Computing Guide":
         cloud_computing_on = True
         pass
     elif message.text == "Networking Guide":
         networking_on = True
-        pass
+        await message.answer("Networking Guide", reply_markup=networking_keyboard)
     elif message.text == "Graphic Designing Guide":
         graphic_designing_on = True
         pass
@@ -147,6 +157,31 @@ else, it is equally important that you can convey these insights to a non-techni
 or clients.")
         elif cyber_security_on:
             pass
+        elif blockchain_on:
+            await message.answer("Some skills required to get into Blockchain are as follows:\n\n\n \
+\U000026A1 Blockchain architecture. \n \
+Blockchain developers should fully understand how blockchain works and the architecture on which it's based. They \
+should be well versed in concepts such as cryptography, consensus, hash functions, distributed ledgers, smart \
+contracts and any other concepts integral to understanding blockchain's inner workings. Developers should also be \
+familiar with the four types of blockchain architecture: consortium, private, public and hybrid.\n\n\
+\U000026A1 Cryptography. \n \
+Effective cryptography is essential to providing a secure blockchain environment, and developers should have a strong \
+foundation in cryptographic concepts and practices, including wallets, keys and digital signatures. \n\n\
+\U000026A1 Data structures. \n\
+The entire blockchain network consists of data structures. Each block can be considered a type of data structure that \
+clusters transactions for the public ledger. Blockchain developers must routinely work with data structures and should \
+understand how the blockchain network uses them. \n\n\
+\U000026A1 Smart contracts. \n\
+Smart contracts are self-executing contracts that enable two parties to exchange goods and services without an \
+intermediary. Smart contracts have become a staple of blockchain implementations, and developers should have a \
+thorough understanding of what they are and how they enforce business logic. \n\n\
+\U000026A1 Web development. \n\
+Blockchain and web development go hand in hand, especially with blockchain's emphasis on decentralized applications. \
+Blockchain developers should be experienced in all aspects of web development.\n\n\
+\U000026A1 Programming languages. \n\
+Blockchain technologies often use different programming languages, depending on the platforms used to implement the \
+blockchain environments. Although developers can't be experts in every language, they still need to be proficient in \
+any number of them. Some of the more common languages used for blockchain include Java, C++, Python and JavaScript. \n")
     elif message.text == "Courses":
         if ai_and_ml_on:
             await message.answer("List of some courses and programs for AI and ML:\n\n\n \
@@ -176,6 +211,20 @@ https://www.coursera.org/search?query=machine%20learning\n\n \
 https://www.udacity.com/courses/all?search=artificial%20intelligence")
         elif cyber_security_on:
             pass
+        elif blockchain_on:
+            await message.answer("List of some courses and programs for AI and ML:\n\n\n \
+\U000026A1Blockchain and Bitcoin Fundamentals\n\
+https://www.udemy.com/course/blockchain-and-bitcoin-fundamentals/\n\n\
+\U000026A1Bitcoin and Cryptocurrency Bootcamp\n\
+https://www.udemy.com/course/bitcoin-and-cryptocurrency-bootcamp/\n\n\
+\U000026A1Blockchain Specialization - University of California, Irvine(certified course)\n\
+https://www.coursera.org/specializations/uci-blockchain\n\n\
+\U000026A1Blockchain Tutorial For Beginners\n\
+https://www.youtube.com/playlist?list=PLsyeobzWxl7oY6tZmnZ5S7yTDxyu4zDW-\n\n\
+\U000026A1ETHEREUM DEVELOPMENT TUTORIALS\n\
+https://ethereum.org/en/developers/tutorials/\n\n\
+\U000026A1Ethereum Tutorial\n\
+https://www.tutorialspoint.com/ethereum/index.htm \n\n")
     elif message.text == "Books":
         if ai_and_ml_on:
             await message.answer("Some books to refer for AI and ML:\n\n\n \
@@ -205,12 +254,52 @@ https://www.amazon.in/Machine-Learning-Absolute-Beginners-Introduction/dp/154961
 https://www.amazon.in/Deep-Learning-R_p1-Joseph-Allaire/dp/161729554X/ref=sr_1_1")
         elif cyber_security_on:
             pass
+        elif blockchain_on:
+            await message.answer("Some books to refer for AI and ML:\n\n\n \
+\U000026A1The Book of Satoshi:\n\
+The Collected Writings of Bitcoin Creator Satoshi Nakamoto\n\
+https://www.amazon.in/Book-Satoshi-Collected-Writings-Nakamoto-ebook/dp/B00M6KGJ2K\n\n\
+\U000026A1Decentralized Applications:\n\
+Harnessing Bitcoin’s Blockchain Technology\n\
+https://www.amazon.in/Decentralized-Applications-Siraj-Raval/dp/1491924543\n\n\
+\U000026A1Mastering Blockchain Programming with Solidity:\n\
+Write Production-ready Smart Contracts for Ethereum Blockchain with Solidity\n\
+https://www.amazon.in/Mastering-Blockchain-Programming-Solidity-production-ready-ebook/dp/B07W5F8S1L\n\n\
+\U000026A1Mastering Bitcoin:\n\
+Programming the Open Blockchain\n\
+https://www.amazon.in/Mastering-Bitcoin-Programming-Open-Blockchain/dp/9352135741\n\n\
+\U000026A1Hands-On Blockchain for Python Developers:\n\
+Gain blockchain programming skills to build decentralized applications using Python\n\
+https://www.amazon.in/Hands-Blockchain-Python-Developers-decentralized/dp/1788627857\n\n\
+            ")
     elif message.text == "Certifications":
         if cyber_security_on:
             pass
+        elif blockchain_on:
+            await message.answer("Certifications that will help boost your career:\n\n\n\
+\U000026A1Certified Blockchain Expert -  Blockchain Council\n\
+https://www.blockchain-council.org/certifications/certified-blockchain-professional-expert/\n\n\
+\U000026A1Certified Ethereum Expert - Blockchain Council\n\
+https://www.blockchain-council.org/certifications/certified-ethereum-expert-cee/\n\n\
+\U000026A1Certified Blockchain Professional - EC Council\n\
+https://www.eccouncil.org/programs/certified-blockchain-professional-cbp/\n\n\
+\U000026A1Certified Enterprise Blockchain Architect (CEBA) - 101 Blockchains\n\
+https://academy.101blockchains.com/courses/certified-enterprise-blockchain-architect\n\n\
+\U000026A1Blockchain Technology — EdX\n\
+https://www.edx.org/professional-certificate/uc-berkeleyx-blockchain-fundamentals\n\n\
+\U000026A1Certified Blockchain Developer — Educative\n\
+https://www.educative.io/courses/hands-on-blockchain-hyperledger-fabric\n\n")
     elif message.text == "Degrees":
         if cyber_security_on:
             pass
+        elif blockchain_on:
+            await message.answer("Possible Blockchain based degrees:\n\n\n\
+\U000026A1Top 5 Universities for Blockchain Degrees(international)\n\
+https://www.stoodnt.com/blog/top-5-universities-for-blockchain-degrees/\n\n\
+\U000026A1Masters Programs in Blockchain in Europe 2022\n\
+https://www.masterstudies.com/Masters-Degree/Blockchain/Europe/\n\n\
+\U000026A1Advanced Certification in Software Engineering for Cloud, Blockchain & IoT - IIT: B\n\
+https://www.greatlearning.in/iit-madras-acse \n\n")
     elif message.text == "Jobs":
         if ai_and_ml_on:
             await message.answer("Job Roles differ from company to company. Here is a list of some common job \
@@ -245,6 +334,45 @@ jobs will also rise as robotics scientists are in incessant demands by major ind
 machines. The robots will help in carrying out certain tasks efficiently.")
         elif cyber_security_on:
             pass
+        elif blockchain_on:
+            await message.answer("Job Roles differ from company to company. Here is a list of some common job \
+roles:\n\n\n \
+\U000026A1Blockchain Developer\n\
+Blockchain developers with the expertise to help companies explore Blockchain platforms are in high demand. Blockchain \
+development might be the most marketable career path today because people are eager to realize all the benefits of \
+Blockchain. These individuals require absolute attention to detail as theirs is a high ranking position. Blockchain \
+developers are programmers who create applications for blockchain. They typically have a lot of experience working \
+with C++, Python, and Javascript before becoming Blockchain developers.\n\n\
+\U000026A1Blockchain Solution Architect\n\
+The Blockchain Solution Architect has the responsibility of designing, assigning, and connecting Blockchain solution \
+components with the team experts such as developers, network administrators, UX designers, and IT Operations whose to \
+develop to complete the Blockchain solutions.\n\n\
+\U000026A1Blockchain Project Manager\n\
+This individual is entrusted with the responsibility of connecting Blockchain projects to experts whose duty it is to \
+develop Blockchain solutions. Blockchain project managers need to be equipped with the skills of a traditional (cloud) \
+project manager. They also need to master the technical bit to understand the technology thoroughly. Another important \
+ability is excellent communication skills; this is essential when addressing non-technical workers, when providing \
+useful updates or when trying to get resources from higher authorities.\n\n\
+\U000026A1Blockchain UX Designer\n\
+With the incorporation of Blockchain into so many industries, its design as well as user interface, is becoming \
+critical. The role of a Blockchain designer is shaping a user interface that creates trust and is alluring to a \
+regular user. These individuals need to be able to pay attention to detail, have an artistic touch, but most \
+importantly they need to be hardworking as their line of work requires them to spend countless hours behind their \
+computers.\n\n\
+\U000026A1Blockchain Quality Engineer\n\
+In any development environment, we have a quality assurance engineer who tests and ensures that all areas of the \
+project are of the required quality. In the Blockchain world, a Blockchain engineer plays a similar role by \
+guaranteeing that all operations are of excellence in the Blockchain development environment. In other words, they \
+conduct the testing and automation of frameworks for Blockchain. These individuals need to have a third eye as far as \
+payment to detail is concerned because a small mistake on their part affects everyone using their technology. \
+Excellent communication skills would also go a long way in maintaining good work relationships.\n\n\
+\U000026A1Blockchain Legal Consultant\n\
+Of course, as organizations try to comprehend the adoption of Blockchain into their systems legal issues always arise. \
+As companies launch this new technology, they are also looking for legal expertise on what considerations to make \
+while investing. They are curious about the implications of their actions, about how to handle their finances, and \
+lastly how to manage their identity. Of course, for such an individual, proper communication skills are mandatory. You \
+also need to have a good grasp of your international law as Blockchain is tech without borders for the same reason it \
+is advisable that such people master as many universal languages as they can.\n\n")
     elif message.text == "Certifications/Degrees":
         if ai_and_ml_on:
             await message.answer("Here is a list of certifications and degrees which you can apply for \
@@ -270,6 +398,12 @@ https://www.masterstudies.com/MSc/Artificial-Intelligence/")
         elif cyber_security_on:
             cyber_security_on = False
             await message.answer("Back", reply_markup=guides_menu_keyboard)
+        elif blockchain_on:
+            blockchain_on = False
+            await message.answer("Back", reply_markup=guides_menu_keyboard)
+        elif networking_on:
+            networking_on = False
+            await message.answer("Back", reply_markup=guides_menu_keyboard)    
         else:
             await message.answer("Back", reply_markup=top_menu_keyboard)
     elif message.text == "Main Menu":
