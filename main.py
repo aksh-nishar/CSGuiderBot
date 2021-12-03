@@ -182,6 +182,34 @@ Blockchain developers should be experienced in all aspects of web development.\n
 Blockchain technologies often use different programming languages, depending on the platforms used to implement the \
 blockchain environments. Although developers can't be experts in every language, they still need to be proficient in \
 any number of them. Some of the more common languages used for blockchain include Java, C++, Python and JavaScript. \n")
+        elif networking_on:
+            await message.answer("In order to build a career in networking, one needs to develop skill and knowledge \
+pertaining to the following topics: \n\n\n \
+\U0001F5A71. Internet\n\
+Internet is a worldwide virtual networking medium that connects computers all across the world. Net is short for the \
+internet and has millions of smaller networks that carry a huge array of information.\n\n\
+\U0001F5A72. Linux\n\
+Linux is a Unix-like operating system. Just like Windows, Mac OS, and IOS, Linux is an operating system used by \
+millions across the globe. Android itself is powered by the Linux operating system. \n\n\
+\U0001F5A73. Ethernet\n\
+Ethernet refers to a system that connects a series of computers in a local area network (LAN). This is often done \
+through ethernet cables, which plug into a router or other port in the modem in addition to the computer port.\n\n\
+\U0001F5A74. Network Security\n\
+Here's how network security is used on computer network engineer resumes:\n\
+Create and enforce network security policy.\n\
+Analyzed data network documentation and assisted in communicating to management regarding the current operational \
+status of networks.\n\
+Appointed to Boundary Protection Technician, providing network security and monitoring firewall; opened firewall ports \
+on case-by-case basis.\n\n\
+\U0001F5A75. Assurance\n\
+Here's how assurance is used on computer network engineer resumes:\n\
+Performed information assurance vulnerability assessments on more than 12 ships.\n\
+Implemented Information Assurance controls to ensure all resident information systems were safe and secure.\n\n\
+\U0001F5A76. Hardware\n\
+Hardware is the physical part attached to a computer or other similar devices. Components are the internal parts of \
+hardware which include RAM, hard drives, motherboard, and so on. External hardware devices which include, keyboard, \
+mouse, printer, and so on are known as peripherals. All of these together are called computer hardware.\n\n\
+")
     elif message.text == "Courses":
         if ai_and_ml_on:
             await message.answer("List of some courses and programs for AI and ML:\n\n\n \
@@ -212,7 +240,7 @@ https://www.udacity.com/courses/all?search=artificial%20intelligence")
         elif cyber_security_on:
             pass
         elif blockchain_on:
-            await message.answer("List of some courses and programs for AI and ML:\n\n\n \
+            await message.answer("List of some courses and programs for Blockchain:\n\n\n \
 \U000026A1Blockchain and Bitcoin Fundamentals\n\
 https://www.udemy.com/course/blockchain-and-bitcoin-fundamentals/\n\n\
 \U000026A1Bitcoin and Cryptocurrency Bootcamp\n\
@@ -225,6 +253,19 @@ https://www.youtube.com/playlist?list=PLsyeobzWxl7oY6tZmnZ5S7yTDxyu4zDW-\n\n\
 https://ethereum.org/en/developers/tutorials/\n\n\
 \U000026A1Ethereum Tutorial\n\
 https://www.tutorialspoint.com/ethereum/index.htm \n\n")
+        elif networking_on:
+            await message.answer("List of some courses and programs for Networking:\n\n\n \
+\U0001F5A7Networking Essentials \n\
+https://www.netacad.com/courses/networking/networking-essentials\n\n\
+\U0001F5A7CCNA: Introduction to Networks\n\
+https://www.netacad.com/courses/networking/ccna-introduction-networks\n\n\
+\U0001F5A7Introduction to networking for complete beginners\n\
+https://www.udemy.com/course/introduction-to-networking-for-complete-beginners/\n\n\
+\U0001F5A7The Complete Networking Fundamentals Course. Your CCNA start\n\
+https://www.udemy.com/course/complete-networking-fundamentals-course-ccna-start/\n\n\
+\U0001F5A7Computer Networks\n\
+https://www.youtube.com/playlist?list=PLBlnK6fEyqRgMCUAG0XRw78UA8qnv6jEx \n\n\
+")
     elif message.text == "Books":
         if ai_and_ml_on:
             await message.answer("Some books to refer for AI and ML:\n\n\n \
@@ -255,7 +296,7 @@ https://www.amazon.in/Deep-Learning-R_p1-Joseph-Allaire/dp/161729554X/ref=sr_1_1
         elif cyber_security_on:
             pass
         elif blockchain_on:
-            await message.answer("Some books to refer for AI and ML:\n\n\n \
+            await message.answer("Some books to refer for Blockchain:\n\n\n \
 \U000026A1The Book of Satoshi:\n\
 The Collected Writings of Bitcoin Creator Satoshi Nakamoto\n\
 https://www.amazon.in/Book-Satoshi-Collected-Writings-Nakamoto-ebook/dp/B00M6KGJ2K\n\n\
@@ -272,6 +313,18 @@ https://www.amazon.in/Mastering-Bitcoin-Programming-Open-Blockchain/dp/935213574
 Gain blockchain programming skills to build decentralized applications using Python\n\
 https://www.amazon.in/Hands-Blockchain-Python-Developers-decentralized/dp/1788627857\n\n\
             ")
+        
+        elif networking_on:
+            await message.answer("Some books to refer for Networking:\n\n\n \
+\U0001F5A7CompTIA Network+ Certification All-in-One Exam Guide\n\
+https://www.amazon.in/dp/1260122387\n\n\
+\U0001F5A7Network Programmability and Automation\n\
+https://www.amazon.in/dp/1491931256\n\n\
+\U0001F5A7Computer Networking: A Top-Down Approach\n\
+https://www.amazon.in/dp/0133594149\n\n\
+\U0001F5A7Computer Networks\n\
+https://www.amazon.in/Computer-Networks-5e-5th-Tanenbaum/dp/9332518742\n\n")
+
     elif message.text == "Certifications":
         if cyber_security_on:
             pass
@@ -289,6 +342,22 @@ https://academy.101blockchains.com/courses/certified-enterprise-blockchain-archi
 https://www.edx.org/professional-certificate/uc-berkeleyx-blockchain-fundamentals\n\n\
 \U000026A1Certified Blockchain Developer — Educative\n\
 https://www.educative.io/courses/hands-on-blockchain-hyperledger-fabric\n\n")
+        elif networking_on:
+            await message.answer("Certifications that will help boost your career:\n\n\n\
+\U0001F5A7CompTIA IT Fundamentals (ITF+)\n\
+https://www.comptia.org/certifications/network\n\n\
+\U0001F5A7Cisco Certified Network Associate (CCNA)\n\
+https://www.cisco.com/c/en/us/training-events/training-certifications/certifications/associate/ccna.html\n\n\
+\U0001F5A7Cisco Certified Network Professional (CCNP) Enterprise:\n\
+https://www.cisco.com/c/en/us/training-events/training-certifications/certifications/professional/ccnp-enterprise.\
+html\n\n\
+\U0001F5A7Cisco Certified Internetwork Expert (CCIE) Enterprise Infrastructure\n\
+https://www.cisco.com/c/en/us/training-events/training-certifications/certifications/expert/ccie-enterprise-\
+infrastructure.html\n\n\
+\U0001F5A7VMWare Certified Technical Associate - Network Virtualization (VCTA-NV)\n\
+https://www.vmware.com/education-services/certification/vcta-nv.html\n\n\
+\U0001F5A7Juniper Networks Certified Associate - Junos (JNCIA-Junos)\n\
+https://www.juniper.net/us/en/training/certification.html \n\n")
     elif message.text == "Degrees":
         if cyber_security_on:
             pass
@@ -300,6 +369,16 @@ https://www.stoodnt.com/blog/top-5-universities-for-blockchain-degrees/\n\n\
 https://www.masterstudies.com/Masters-Degree/Blockchain/Europe/\n\n\
 \U000026A1Advanced Certification in Software Engineering for Cloud, Blockchain & IoT - IIT: B\n\
 https://www.greatlearning.in/iit-madras-acse \n\n")
+        elif networking_on:
+            await message.answer("Possible NEtworking based degrees:\n\n\n\
+\U0001F5A7Bachelor Programs in Computer Networking(international)\n\
+https://www.bachelorstudies.com/Bachelor/Computer-Networking/\n\n\
+\U0001F5A7Bachelor Network Courses(India)\n\
+https://collegedunia.com/courses/network#6\n\n\
+M.E. (Computer Networking) Colleges in India\n\
+https://targetstudy.com/colleges/me-computer-networking-degree-colleges-in-india.html\n\n\
+Networking Colleges in India - 2022\n\
+https://www.shiksha.com/it-software/networking-hardware-security/colleges/colleges-india \n\n")
     elif message.text == "Jobs":
         if ai_and_ml_on:
             await message.answer("Job Roles differ from company to company. Here is a list of some common job \
@@ -373,6 +452,38 @@ while investing. They are curious about the implications of their actions, about
 lastly how to manage their identity. Of course, for such an individual, proper communication skills are mandatory. You \
 also need to have a good grasp of your international law as Blockchain is tech without borders for the same reason it \
 is advisable that such people master as many universal languages as they can.\n\n")
+        elif networking_on:
+            await message.answer("Job Roles differ from company to company. Here is a list of some common job \
+roles:\n\n\n \
+\U0001F5A7Network Engineer\n\
+A network engineer designs and manages the groups of computers networked together. The network engineer performs tasks \
+such as installing and configuring communication hardware, setting up of the network communication link, installing \
+and configuring application software, troubleshooting operations to ensure continuous network availability, and \
+offering technical support and assistance.\n\n\
+\U0001F5A7Network Analyst\n\
+Network analysts support the computer network and the overall computer infrastructure. Job duties might involve \
+installing network software and training the user in new applications. The analyst might be responsible for \
+coordinating system enhancements between the software and hardware, documenting procedures, and producing policies and \
+procedures.\n\n\
+\U0001F5A7Information Systems Administrator\n\
+Information systems administrators assist with the design, delivery, and maintenance of an information technology \
+infrastructure within the organization. The person assists in strategic planning and in evaluating and recommending \
+services, products, and projects. The job involves assisting in the planning, development, implementation, and \
+maintenance of the information platform. The information platform might include Web servers and services, \
+technological applications, and interactive applications. Administrators also supply instruction, user aids, and \
+assistance in problem solving for library IT applications.\n\n\
+\U0001F5A7Network Technician\n\
+The network technician generally services network computers and troubleshoots for potential problems. Network \
+technicians often work the help-desk services to repair or upgrade computers. Technicians need to be familiar with the \
+different operating systems such as Microsoft, Novell, and Unix, as well as the basics of computer networking. \n\n\
+\U0001F5A7Computer Networking Instructor\n\
+The increasing use of computer networks has created a need for more instructors who have a solid networking background \
+and can teach those skills to students. Unlike in some other academic fields, one need not have a doctoral degree in \
+computer networking to be a computer networking instructor. Although community colleges and four-year schools might \
+prefer instructors to have a master’s degree, for-profit and certification schools usually only require substantial \
+experience in the profession. It is also a way to remain a working professional while supplementing an income and \
+contributing to the growth of the profession. \n\n")
+
     elif message.text == "Certifications/Degrees":
         if ai_and_ml_on:
             await message.answer("Here is a list of certifications and degrees which you can apply for \
