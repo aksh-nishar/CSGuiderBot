@@ -91,7 +91,19 @@ async def main_keyboard_answer(message: types.Message):
         cloud_computing_on, networking_on, graphic_designing_on, data_science_on, robotics_and_hardware_on
 
     if message.text == "What is CSGuider Bot?":
-        pass
+        await message.answer("\U0001F4BB CSGuiderBot\n\n\n\
+\U0001F4BB What is CSGuider Bot?\n\n\
+CSGuider is a comprehensive guide to specialization within the Computer Science field.\n\n\
+It is aimed at providing students with a list of possible opportunities within the Computer Science field along with \
+providing them with resources related to these specialization fields with the help of a responsive UI.\n\n\
+\U0001F4BB The following resources are included in the CSGuider Bot:\n\
+\U0001F537Skills Required \n\
+\U0001F537Courses\n\
+\U0001F537Books\n\
+\U0001F537Degrees\n\
+\U0001F537Certifications\n\
+\U0001F537Job Opportunities\n\n\
+All these features are conveniently packed into an easy to use and interactive Telegram Bot ")
     elif message.text == "Why we created this bot?":
         pass
     elif message.text == "\U00002757\U00002757Important Note\U00002757\U00002757":
