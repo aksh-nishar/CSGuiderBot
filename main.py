@@ -64,6 +64,11 @@ networking_keyboard.add(books_button, certifications_button)
 networking_keyboard.add(degrees_button, jobs_button)
 networking_keyboard.add(back_button, back_to_top_menu_button)
 
+graphic_designing_keyboard = ReplyKeyboardMarkup(resize_keyboard=True).add(skills_required_button, courses_button)
+graphic_designing_keyboard.add(books_button, certifications_button)
+graphic_designing_keyboard.add(degrees_button, jobs_button)
+graphic_designing_keyboard.add(back_button, back_to_top_menu_button)
+
 ai_and_ml_on = False
 cyber_security_on = False
 game_development_on = False
@@ -133,7 +138,7 @@ All these features are conveniently packed into an easy to use and interactive T
         await message.answer("Networking Guide", reply_markup=networking_keyboard)
     elif message.text == "Graphic Designing Guide":
         graphic_designing_on = True
-        pass
+        await message.answer("Graphic Designing", reply_markup=graphic_designing_keyboard)
     elif message.text == "Data Science Guide":
         data_science_on = True
         pass
@@ -222,6 +227,37 @@ Hardware is the physical part attached to a computer or other similar devices. C
 hardware which include RAM, hard drives, motherboard, and so on. External hardware devices which include, keyboard, \
 mouse, printer, and so on are known as peripherals. All of these together are called computer hardware.\n\n\
 ")
+        elif graphic_designing_on:
+            await message.answer("Some skills required to get into GRaphics Design are as follows:\n\n\n \
+\U0001F58C3D Design\n\
+3D design is the process of using software to create a mathematical representation of a 3-dimensional object or shape. \
+The created object is called a 3D model and these 3-dimensional models are used for computer-generated (CG) design. 3D \
+design is used in a variety of industries to help artists shape, communicate, document, analyse and share their \
+ideas.\n\n\
+\U0001F58CDigital Illustration (Adobe Illustrator)\n\
+Illustrator is widely used by graphic designers, web designers, visual artists, and professional illustrators \
+throughout the world to create high quality artwork. Illustrator includes many sophisticated drawing tools that \
+can reduce the time need to create illustrations.\n\n\
+\U0001F58CAdobe Photoshop \n\
+Learning Photoshop for graphic design is an essential skill for anyone working or wanting to work in graphic design. \
+Photoshop is the standard digital tool used a wide variety of graphic design roles, including print, web and \
+interactive design, as well as video. Those looking to start a career in graphic design will need to learn Photoshop, \
+but this is simply one step in the process of becoming a graphic designer. Learning Photoshop alone is not enough to \
+become a graphic designer.\n\n\
+\U0001F58CLogo Design \n\
+Designers know the importance of a great first impression, which is why graphic designer logos are some of the most \
+creative and compelling logos out there. At a glance, the right logo builds trust in your design skills and sets you \
+apart from the competition. \n\n\
+\U0001F58CTypography \n\
+Graphic designers use typography to adjust the text within the design. This helps in creating content with a purpose. \
+The planned use of typefaces allows the designers to make a design look aesthetic and pleasing. The designers have \
+been using typefaces strategically to make a text readable and also to make an impression on viewers. Because of such \
+designs with unique typography ideas, a brand can communicate with its audience in an effective way.\n\n\
+\U0001F58CVector Graphics\n\
+Vector graphics are computer images created using a sequence of commands or mathematical statements that place lines \
+and shapes in a two-dimensional or three-dimensional space. In vector graphics, a graphic artist's work, or file, is \
+created and saved as a sequence of vector statements. A vector graphic file describes a series of points to be \
+connected. \n\n")
     elif message.text == "Courses":
         if ai_and_ml_on:
             await message.answer("List of some courses and programs for AI and ML:\n\n\n \
@@ -278,6 +314,21 @@ https://www.udemy.com/course/complete-networking-fundamentals-course-ccna-start/
 \U0001F5A7Computer Networks\n\
 https://www.youtube.com/playlist?list=PLBlnK6fEyqRgMCUAG0XRw78UA8qnv6jEx \n\n\
 ")
+        elif graphic_designing_on:
+            await message.answer("List of some courses and programs for Graphics Design:\n\n\n \
+\U0001F58CGraphic Design Bootcamp: Photoshop, Illustrator, InDesign\n\
+https://www.udemy.com/course/graphic-design-for-beginners/\n\n\
+\U0001F58CGraphic Design Masterclass: Learn Graphic Design in Projects\n\
+https://www.udemy.com/course/graphic-design/\n\n\
+\U0001F58CGraphic Design Masterclass: Learn Graphic Design in Projects\n\
+https://www.udemy.com/course/become-a-professional-logo-designer/ \n\n\
+\U0001F58CBeginners Guide to Graphic Design | 45 Episode FREE Series \n\
+https://www.youtube.com/watch?v=WONZVnlam6U&list=PLYfCBK8IplO4E2sXtdKMVpKJZRBEoMvpn \n\n\
+\U0001F58CGraphics Design Skill Share\n\
+https://www.skillshare.com/browse/graphic-design\n\n\
+\U0001F58CGraphic Design Specialization -  Certified Course by CalArts\n\
+https://www.coursera.org/specializations/graphic-design \n\n")
+
     elif message.text == "Books":
         if ai_and_ml_on:
             await message.answer("Some books to refer for AI and ML:\n\n\n \
@@ -336,6 +387,16 @@ https://www.amazon.in/dp/1491931256\n\n\
 https://www.amazon.in/dp/0133594149\n\n\
 \U0001F5A7Computer Networks\n\
 https://www.amazon.in/Computer-Networks-5e-5th-Tanenbaum/dp/9332518742\n\n")
+        elif graphic_designing_on:
+            await message.answer("Some books to refer for Graphics Design:\n\n\n\
+\U0001F58CLogo Modernism\n\
+https://www.amazon.in/dp/3836545306\n\n\
+\U0001F58CThe Elements of Typographic Style (v4)\n\
+https://www.amazon.in/dp/0881792128\n\n\
+\U0001F58CHow to be a Graphic Designer Without Losing Your Soul\n\
+https://www.amazon.in/dp/1856697096\n\n\
+\U0001F58CGraphic Design for Art, Fashion, Film, Architecture, Photography, Product Design and Everything in Between \n\
+https://www.amazon.in/dp/3791383507 \n\n")
 
     elif message.text == "Certifications":
         if cyber_security_on:
@@ -370,6 +431,14 @@ infrastructure.html\n\n\
 https://www.vmware.com/education-services/certification/vcta-nv.html\n\n\
 \U0001F5A7Juniper Networks Certified Associate - Junos (JNCIA-Junos)\n\
 https://www.juniper.net/us/en/training/certification.html \n\n")
+        elif graphic_designing_on:
+            await message.answer("Certifications that will help boost your career:\n\n\n\
+\U0001F58CAdobe Certified Associate in Graphic Design and Illustration\n\
+https://edex.adobe.com/teaching-resources/v770dfc88\n\n\
+\U0001F58CVisual Design Using Adobe Photoshop\n\
+https://edex.adobe.com/teaching-resources/v97ccf4fe\n\n\
+\U0001F58CPrint and Digital Media Publication Using Adobe InDesign\n\
+https://edex.adobe.com/teaching-resources/v042df592 \n\n")
     elif message.text == "Degrees":
         if cyber_security_on:
             pass
@@ -391,6 +460,17 @@ M.E. (Computer Networking) Colleges in India\n\
 https://targetstudy.com/colleges/me-computer-networking-degree-colleges-in-india.html\n\n\
 Networking Colleges in India - 2022\n\
 https://www.shiksha.com/it-software/networking-hardware-security/colleges/colleges-india \n\n")
+        elif graphic_designing_on:
+            await message.answer("Possible Graphic Design based degrees:\n\n\n\
+\U0001F58CBachelor Programs in Graphic Design(international)\n\
+https://www.bachelorstudies.com/Bachelor/Graphic-Design/\n\n\
+\U0001F58CBA in Graphics Design(India)\n\
+https://www.collegedekho.com/courses/ba-graphic-design/\n\n\
+\U0001F58CMasters Programs in Graphic Design(international)\n\
+https://www.masterstudies.com/Masters-Degree/Graphic-Design/\n\n\
+\U0001F58CMaster of Arts [M.A.] in Graphic Design\n\
+https://collegedunia.com/courses/master-of-arts-ma-graphic-design \n\n")
+
     elif message.text == "Jobs":
         if ai_and_ml_on:
             await message.answer("Job Roles differ from company to company. Here is a list of some common job \
@@ -495,6 +575,50 @@ computer networking to be a computer networking instructor. Although community c
 prefer instructors to have a master’s degree, for-profit and certification schools usually only require substantial \
 experience in the profession. It is also a way to remain a working professional while supplementing an income and \
 contributing to the growth of the profession. \n\n")
+        elif graphic_designing_on:
+             await message.answer("Job Roles differ from company to company. Here is a list of some common job \
+roles:\n\n\n \
+\U0001F58C Graphic designer\n\
+Graphic designers develop graphics and layouts for product illustrations, company logos, websites and more. This job \
+title can cover a huge range of duties in a huge range of industries.\n\n\
+\U0001F58C Creative director\n\
+Creative directors determine the creative vision of a project. They make sure the overall aesthetic and cohesive look \
+stays on track by leading their team through the steps to create something, whether that is a tangible product like a \
+video game, film, magazine or something more abstract like an advertising campaign or brand identity.\n\n\
+\U0001F58C User experience (UX) designer\n\
+UX designers work to make products, processes and services seamless, enjoyable and intuitive for users. They think \
+about how the product feels, how users will use it. They ensure the product flows from one step to the next. UX \
+designers might run user tests, refining any bumps or confusions in the process. This career involves tons of \
+out-of-the-box thinking, creative intuition and a natural appreciation for smooth design.\n\n\
+\U0001F58C User interface (UI) designer\n\
+UI design is often considered a subset of UX design and has similar overall goals. User interface designers focus on \
+how the product is laid out. They design each screen and each page, ensuring that the layout visually works with the \
+overall path a UX designer has charted.\n\n\
+\U0001F58C Production artist\n\
+Production artists take over the hands-on steps of production—whether that’s in graphics, film, art or other formats. \
+They upload and ensure the accuracy of design files throughout the last stages of development. The job is equal parts \
+design and computer applications skill.\n\n\
+\U0001F58C Product developer\n\
+Product developers ideate, lead and manage the creation of products. They can work on so many different things that \
+their job duties will vary widely, but general tasks include performing industry research, creating illustrations, \
+presenting the product to employers or stakeholders and contributing to the development process.\n\n\
+\U0001F58C Art director\n\
+Art directors take charge of the visual style and content in magazines, newspapers, product packaging and movie and \
+television productions. They create design and direct other artists to develop each contributing piece. They work \
+closely with their employers or clients to cast an artistic vision that meets objectives, the available budget and \
+desired impact.\n\n\
+\U0001F58C Marketing specialist\n\
+Marketing specialists collect and analyze data on target customers, initiate marketing campaigns, measure \
+effectiveness of marketing attempts and create strategies to promote their company and its goods or services.\n\n\
+\U0001F58C Multimedia artist or animator\n\
+Multimedia artists and animators design complex graphics and animation using computer animation or modeling programs. \
+They think about story development, visual impact and platforms to create media content that will meet their \
+employer’s objectives. More brands and organizations are looking to increase their online video presence—and that’s \
+been a boon for graphic designers with animation and motion graphics skills.\n\n\
+\U0001F58C Freelancer\n\
+While it’s not a unique design job in its own right, but most of the job titles mentioned above can be performed as a \
+freelancer. Designers who have some experience on their resume, a stunning portfolio of work or expertise in niche \
+areas of design, marketing and graphics could build a career finding freelance projects.\n\n")
 
     elif message.text == "Certifications/Degrees":
         if ai_and_ml_on:
@@ -527,6 +651,9 @@ https://www.masterstudies.com/MSc/Artificial-Intelligence/")
         elif networking_on:
             networking_on = False
             await message.answer("Back", reply_markup=guides_menu_keyboard)    
+        elif graphic_designing_on:
+            graphic_designing_on = False
+            await message.answer("Back", reply_markup=guides_menu_keyboard)
         else:
             await message.answer("Back", reply_markup=top_menu_keyboard)
     elif message.text == "Main Menu":
