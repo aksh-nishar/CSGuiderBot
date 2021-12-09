@@ -96,6 +96,23 @@ application_development_keyboard.add(ios_development_button)
 application_development_keyboard.add(desktop_development_button)
 application_development_keyboard.add(back_button, back_to_top_menu_button)
 
+data_science_keyboard = ReplyKeyboardMarkup(resize_keyboard=True).add(skills_required_button,courses_button)
+data_science_keyboard.add(books_button, certifications_button)
+data_science_keyboard.add(degrees_button, jobs_button)
+data_science_keyboard.add(back_button, back_to_top_menu_button)
+
+game_development_keyboard = ReplyKeyboardMarkup(resize_keyboard=True).add(skills_required_button, courses_button)
+game_development_keyboard.add(books_button, certifications_button)
+game_development_keyboard.add(degrees_button, jobs_button)
+game_development_keyboard.add(back_button, back_to_top_menu_button)
+
+robotics_and_hardware_keyboard = ReplyKeyboardMarkup(resize_keyboard=True).add(skills_required_button, courses)
+robotics_and_hardware_keyboard.add(books_button, certifications_button)
+robotics_and_hardware_keyboard.add(degrees_button, jobs_button)
+robotics_and_hardware_keyboard.add(back_button, back_to_top_menu_button)
+
+
+
 ai_and_ml_on = False
 cyber_security_on = False
 game_development_on = False
@@ -424,6 +441,185 @@ Cloud infrastructure is heavily based upon APIs and web services for the integra
 internet. Some examples are XML, SOAP, WSDL, and other open standards are used to transfer and describe data \
 and list services available. Gaining an understanding of these fundamentals can help you in your journey in \
 the cloud.")
+        elif data_science_on:
+            await message.answer("Data science is an interdisciplinary field.\n \
+In order to have a flourishing career, a data scientist should obtain a \
+comprehensive set of skills that covers each building block of the field.\
+Following are the skills that are required to pursue a career in Data Science:\n\
+1.Data science requires you to have or develop skills in statistics.\n\
+One of the building blocks is statistics.Some even call machine learning glorified statistics.\
+I do not completely agree with this argument but machine learning and statistics are closely related.\
+The goal of data science is creating value out of data.\
+The initial requirement for accomplishing this goal is to understand the data very well.\n\
+Statistics can be considered as the most impactful tool to understand, interpret, evaluate the data.\
+\n 2.A person has to have or attain knowledge of Data science tools.\
+The tools for data science are for analyzing data, creating aesthetic and interactive \
+visualizations and creating powerful predictive models using machine learning algorithms.\n \
+Most of the data science tools deliver complex data science operations in one place.\
+Some of the Data science tools of 2021 are:\n\
+SAS\n 2. Apache Hadoop\n 3. Excel\n 4. MongoDB\n 5. Python\n \
+3.One needs to know how to best communicate with others whether it's at\
+work or with clients or even with the computer.\n\
+Communication skills play an important role in almost any field you go to; \
+be it industrial or commercial or any other entertainment.\n\
+If you know how to communicate better you can sell anything in this world.\
+Communication becomes a very crucial part of a person's life especially if he \
+belongs to the industrial sector such as Computer Science or IT.\n\
+You need to know how and when to communicate with people and maintain a clean reputation just the same.\
+\n4.Commendable knowledge in Quants and Business Acumen.\n\
+Good Business Acumen include the following things and qualities: \n\
+*Leadership Skills\n\
+*Financial acumen\n\
+*Strategic thinking\n\
+*Market orientation\n\
+*Analytical skills\n\
+*Problem-solving skills\n\
+\n5.Apart from all these skills one need to have a profound knowledge of Graphs and Statistical Graphs, Pie Charts.\
+\n\
+Mos of the times in Data Analysis graphs are use and till date they are considered to be the \
+best method of representing any sort of data in a pictorial form.\n\
+Why use of graph is made is beacuse it is easire to understand and it saves a lot of time that would be\
+consumes if one opted to read the report of each and every financial year\
+( in instance of a Company's share prices )   ")
+        elif robotics_and_hardware_on:
+            await message.answer("Robotics is an interdisciplinary sector of science and engineering \
+dedicated to the design, construction and use of mechanical robots. \
+Our guide will give you a concrete grasp of robotics, \
+including different types of robots and how they're being applied across industries.\n\
+*What Is Robotics?\n\
+Robotics is the intersection of science, engineering and technology that produces machines,\
+called robots, that substitute for (or replicate) human actions. \n\
+Pop culture has always been fascinated with robots. \
+R2-D2. Optimus Prime. WALL-E. These over-exaggerated, \
+humanoid concepts of robots usually seem like a caricature of the real thing...\
+or are they more forward thinking than we realize?\n\
+Robots are gaining intellectual and mechanical capabilities \
+that don’t put the possibility of a R2-D2-like machine out of reach in the future.\n\
+That was about Robotics now we'll talk about the skill you need to learn\
+before going into Robotics:\n\
+1.Math and Science:\n\
+Robotics manufacturer RobotIQ describes mathematics as one of \
+the only core robotics skills that you cannot learn as you go along.\n\
+At a minimum, a strong background in several fields of\
+mathematics and science are critical for a successful career in robotics:\n\
+*Algebra and calculus will help you write the equations \n\
+and formulas that represent the abstract concepts that a robot manipulates.\
+*Geometry and physics will help you understand the different ways \
+that a robot can move in order to minimize movement, reduce wear \
+and tear, and increase the lifespan of equipment.\n\
+*Applied mathematics, or the use of math to solve problems in science and engineering,\
+will enable you to address challenges such as predicting \
+how a robot will move under certain circumstances.\n\
+2. Programming:\n\
+While a career in robotics requires knowledge of popular \
+programming languages such as C, C++, Python, and Java, there are \
+some key differences between programming for robotics and \
+programming to develop software or mobile applications.\n\
+*Software applications tend to interact with other software \
+applications, such as a website requesting information from a \
+database. Robots, on the other hand, interact with software, \
+hardware, and various electronics.\n\
+*RobotIQ points out that many robots used in an industrial setting \
+run on proprietary programming languages. \
+If you’re working with robots from multiple manufacturers, \
+there’s a good chance you’ll be working with multiple languages as well.\n\
+*High-level robotic system programming depends on highly \
+complex and technical AI and ML algorithms. \
+“This is at the intersection of programming and a theoretical \
+understanding of how robots work,” Platt says. \
+“It’s hard for employers to find those skills.”\n\
+3. Working on a Team:\n\
+Robotics is largely technical work, but certain \
+soft skills are beneficial, Platt says. In particular, being a team player is essential. \
+“You want to be someone with valuable skills,” \
+such as the ability to write complex AI algorithms, \
+“but you need to be someone who can also work on a team.\n \
+Unless you work at a small startup, Platt adds, \
+you can expect to be working with five or six other engineers, \
+a project manager, product developers, and a user experience expert. \
+You can also expect the team to follow an Agile project \
+management style, with an iterative process for developing, \
+testing, and getting feedback on a product.\n\
+4. Solving Complex Problems: \n\
+Designing and building functioning technical \
+systems is obviously a critical robotics skill, \
+but it’s just as important to be able to figure out why \
+a system isn’t functioning properly. If it’s a mechanical issue, \
+you’ll need to know the best practices for making a repair. \
+If it’s a software issue, you’ll need to be ready to look for errors or bugs in the code. \
+And if it isn’t immediately clear what the issue is, you’ll need to put your \
+problem-solving skills to work to assess the situation and find a possible solution.\n\
+In many cases, problem-solving in robotics can be a matter of trial and error. \
+In addition to practicing persistence, you can build your \
+problem-solving skills through experience. \
+An experiential learning program, such as the Master of \
+Science in Robotics program in the Northeastern University College of Engineering,\
+provides students access to on-campus advanced laboratories and \
+research centers as well as industrial partners such as \
+Boston Dynamics, iRobot, and the Toyota Research Institute.\n\
+5. Thinking Creatively :\n\
+A little bit of creativity can go a \
+long way for a robotics professional. \
+It can be beneficial for solving problems, such as using an \
+existing part in a new way or coming up with a brand-new design altogether. \
+Creativity and teamwork go hand in hand, too—a willingness to work with others\
+and accept their contributions can help the entire team \
+come up with a new idea or different solution.\n\
+6. Active Learning:\n\
+The field of robotics is always changing. \
+There are new programming languages to learn, new AI concepts to test,\
+and new and more durable materials to work with. \
+A robotics engineer can demonstrate their value by \
+constantly learning about these changes and applying them \
+to new fields of robotics.\n\
+One example is telepresence robots that can be operated \
+remotely and are able to move, speak, and listen. \
+The news site Robotics Tomorrow describes a number of use \
+cases, such as attending a class or meeting halfway across the world, \
+monitoring the conditions of patients in a hospital or nursing home, \
+or moving heavy or hazardous materials across a manufacturing facility. \
+These types of robots have the potential to change the way the world works and learns, \
+but building and maintaining them will require new designs, engineering techniques, \
+and software programs.\n\
+\n\n\n\n\
+Other things that you need to know before you pursue your career in robotics and hardware are:\
+* Basic idea of how a basic breadboard functions and its fundamentals\n\
+*For starting off with robotics Arduino is a very intelligent way to do so\n\    ")
+
+        elif game_development_on:
+            await message.answer("Before you make up your mind to \
+start you career in Game Developing you need to be firm in you mind that you \
+want to take this as your career. Because this particular field \
+demands one to have absolute enthusiasm and passion for Video games.\
+Along with these things the Gaming Industry also demands a  a good \
+knowledge of programming languages from basic to advanced \
+and mastery of gaming specific progremming languages.\n\
+Here are some basic to advance requirements to become a game developer:\n\
+1. A bachelors degree in Software Engineering or Computer \
+sciences is to be attained by the individual after the completion of his college.\n\
+2. Coding languages like C,C++,Java and C# for Unity (basics) ;     \
+UnrealScript, Lua, JavaScript, SQL, Python, Rust, etc.\
+From which C++ & C# being the most essential of them all \
+as they are considered the foundation of any gaming developer and so \
+any video game out there. Whereas Unreal engine and Unity being \
+only gaming specific languages; more like platforms for \
+designing of the game.\n\
+3. The Designing of the game is something only creative \
+people will be able to do and make it in a way \
+that the target audience would want to buy it. \
+Creativity deals with the design of each and every object, \
+entity, human, etc in the game. \
+But the part that is linked to creativity the post is the idea of the \
+game and how the maker pictures it in the beginning of the \
+developmental stages\n\
+4.A passion for video games.\n\
+5.Wide-ranging knowledge of gaming trends.\n\
+6.Strong analytical frame of mind.\n\
+Things you need to study to be a game developer:   \n\
+*Bachelor of Science (B.Sc) in Graphics, Animation & Gaming.\n\
+*Bachelor of Arts (BA) in Digital Filmmaking & Animation.\n\
+*Bachelor of Technology (B. Tech) – Computer Science and Game Development.\n\
+*Bachelor of Science in Animation Game Design and Development.\n\")
 
     elif message.text == "\U0001F4BB Courses":
         if ai_and_ml_on:
@@ -530,6 +726,82 @@ https://www.edx.org/search?q=cloud%20computing&tab=program\n\n \
 https://www.coursera.org/search?query=cloud%20computing&\n\n \
 \U00002666 Cloud computing courses on (udacity)\n \
 https://www.udacity.com/school-of-cloud-computing")
+
+            elif game_development_on:
+                await message.answer("Here's some courses you can kick off your Game-development career with:\n\
+RUST Programming Tutorial #1- Hello World | Getting Started with Rust:\n\
+https://www.youtube.com/watch?v=vOMJlQ5B-M0&list=PLVvjrrRCBy2JSHf9tGxGKJ-bYAN_uDCUL\n\
+Learn RUST by building real Applications:\n\
+https://www.udemy.com/course/rust-fundamentals/\n\
+Unreal Engine 4 courses (Create multiplayer games with C++):\n\
+https://www.udemy.com/course/unrealcourse/\n\
+Unreal Engine Blueprint Developer Tutorial  | Learn visual scripting:\n\
+https://www.udemy.com/course/unrealblueprint/\n\
+Unreal engine C++ the ultimate Shooter Course:\n\
+https://www.udemy.com/course/unreal-engine-the-ultimate-shooter-course/\n\
+Unreal Engine 5 Beginner tutorial- UE5 starter course:\n\
+https://www.youtube.com/watch?v=gQmiqmxJMtA\n\
+Learn Unity- Beginner game-development tutorial:\n\
+https://www.youtube.com/watch?v=gB1F9G0JXOo\n\
+Unity C# scripting | Complete C# for Unity Game development:\n\
+https://www.udemy.com/course/unity-c-sharp-scripting/?src=sac&kw=C%23+for+unity\n\
+Lua Scripting | Master Lua scripting from Scratch:\n\
+https://www.udemy.com/course/learn-lua-scripting-roblox/\n\
+Lua Programming and game development With LOVE:\n\
+https://www.udemy.com/course/lua-love/\n\
+Here's some bonus courses if youve made it this far:\n\
+Complete Roblox Lua | Start making games with Roblox Studio:\n\
+https://www.udemy.com/course/complete-roblox-lua-start-making-games-with-roblox-studio/\n\
+An Introduction to game development in Python:\n\
+https://www.udemy.com/course/an-introduction-to-game-development-in-python/\n ")
+
+            elif data_science_on:
+                await message.answer("Here's some courses you can kick off your Data Science career with:\n\
+The complete SQL Bootcamp of Manipulation and Analysis of Data:\n\
+https://www.udemy.com/course/the-complete-sql-bootcamp/\n\
+BI Analysis: MySQL for Data Analytics and Business Intelligence:\n\
+https://www.udemy.com/course/sql-mysql-for-data-analytics-and-business-intelligence/\n\
+2021 Python for Machine Learning and Data Science Mastercalss:\n\
+https://www.udemy.com/course/python-for-machine-learning-data-science-masterclass/\n\
+Python for Data Science: Course for Beginners(Learn Python, Pandas, NumPy, Matplotlib):\n\
+https://www.youtube.com/watch?v=LHBE6Q9XlzI\n\
+Learn Apache Spark3 with Scala-Hands on with big Data:\n\
+https://www.udemy.com/course/apache-spark-with-scala-hands-on-with-big-data/\n\
+Apache Spark Full Course- Learn Complete Apache in 8 hours:\n\
+https://www.youtube.com/watch?v=F8pyaR4uQ2g\n\
+R programming Tutorial - Learn the Basics of Statistical Computing:\n\
+https://www.youtube.com/watch?v=_V8eKsto3Ug\n\
+R Programming A-Z: For Data Science(Courses and Exercises):\n\
+https://www.udemy.com/course/r-programming/\n")
+
+            elif robotics_and_hardware_on:
+                await message.answer("Here's some courses you can kick off your Robotics \
+and Hardware career with:\n\
+Here are some courses on arduino:\n\
+Basic electronics for Arduino Makers:\n\
+https://www.udemy.com/course/basic-electronics/\n\
+Arduino step by step getting serious:\n\
+https://www.udemy.com/course/arduino-sbs-getting-serious/\n\
+Arduino step by step: Getting started:\n\
+https://www.udemy.com/course/arduino-sbs-17gs/\n\
+Arduino for Beginners with Grove:\n\
+https://www.udemy.com/course/arduino-getting-started-with-grove/\n\
+\n\n\
+Courses for beginners in Electronics:\n\
+Electronics Mastery- The beignners course in Electronics:\n\
+https://www.udemy.com/course/electronics-mastery-understand-the-fundamentals-fast/\n\
+Complete UiPath RPA Develpoer Course: BUild 7 Robots:\n\
+https://www.udemy.com/course/complete-uipath-rpa-developer-course/\n\
+\n\n\
+Here's your guide in and around the Breadboard:\n\
+How to use the Breadboard:\n\
+https://www.sciencebuddies.org/science-fair-projects/references/how-to-use-a-breadboard\n\
+How to use a Breadboard:\n\
+https://youtu.be/6WReFkfrUIk\n")
+                
+                
+                
+
 
     elif message.text == "\U0001F4D6 Books":
         if ai_and_ml_on:
@@ -643,6 +915,89 @@ https://www.amazon.in/Infrastructure-As-Code-Managing-Servers/dp/9352133811/ref=
 https://www.amazon.in/Cloud-Computing-Concepts-Technology-Architecture/dp/B099KSQYJP/ref=sr_1_2\n\n \
 \U00002666 Cloud Computing: A Hands-On Approach\n \
 https://www.amazon.in/Cloud-Computing-Hands-Arshdeep-Bahga/dp/8173719233/ref=sr_1_1")
+        elif game_development_on:
+            await message.answer("Here's some books for you to refer for Game-development:\n\
+Hands-On Unity 2020 Game Development: Build, customize, \
+and optimize professional games using Unity 2020 and C# 1st Edition\n\
+https://www.amazon.in/Hands-Unity-2020-Game-Development-ebook/dp/B087BXKD89/ref=sr_1_2   \n \
+Game Development Projects with Unreal Engine: Learn to \
+build your first games and bring your ideas to life using UE4 and C++ \n\
+https://www.amazon.in/Game-Development-Projects-Unreal-Engine/dp/1800209223/ref=sr_1_4\n\
+Unity Game Development Blueprint:\n\
+https://www.amazon.in/Unity-Game-Development-Blueprints-Doran/dp/1783553650/ref=sr_1_6?\n\
+Game Feel: A Game Designer's Guide to Virtual Sensation \
+(Morgan Kaufmann Game Design Books)\n\
+https://www.amazon.in/Game-Feel-Designers-Sensation-Kaufmann/dp/0123743281/ref=sr_1_1\n\
+The Art of Game Design: A Book of Lenses, Third Edition \n\
+https://www.amazon.in/Art-Game-Design-Lenses-Third/dp/1138632058/ref=sr_1_1 \n\
+Practical Game Design: Learn the art of game design through \
+applicable skills and cutting-edge insights\n\
+https://www.amazon.in/Practical-Game-Design-applicable-cutting-edge/dp/1787121798/ref=sr_1_1\n\
+Game Engine Architecture, Third Edition \n\
+https://www.amazon.in/Engine-Architecture-Third-Jason-Gregory/dp/1138035459/ref=sr_1_1\n\
+Unity from Zero to Proficiency (Intermediate): \
+A step-by-step guide to coding your first FPS in C# with Unity. [Third Edition]\n\
+https://www.amazon.in/Unity-Proficiency-Intermediate-step-step/dp/1696564298/ref=sr_1_1\n\
+Getting Started with Unity 5: Leverage the power of Unity 5 to create amazing 3D games\n\
+https://www.amazon.in/gp/slredirect/picassoRedirect.html/ref=pa_sp_atf_aps_sr_pg1_1\n")
+
+
+        elif data_science_on:
+            await message.answer("Here's some books for you to refer for Data Science:\n\
+Data Science from scratch:\n\
+https://www.amazon.in/Data-Science-Scratch-Joel-Grus/dp/149190142X/ref=sr_1_2\n\
+Hands-On Machine Learning with Scikit-Learn, Keras and Tensor Flow: \
+Concepts, Tools and Techniques to Build Intelligent Systems:\n\
+https://www.amazon.in/Hands-Machine-Learning-Scikit-Learn-Tensor/dp/9352139054/ref=sr_1_1\n\
+Build a carerr in Data Science:\n\
+https://www.amazon.in/Build-Career-Science-Emily-Robinson/dp/1617296244/ref=sr_1_1\n\
+R for Data Science: Import, Tidy, Transform, Visualize, and Model Data:\n\
+https://www.amazon.in/Data-Science-Transform-Visualize-Model/dp/9352134974/ref=sr_1_3\n\
+Python Data Science Handbook: Essential Tools for Working with Data:\n\
+https://www.amazon.in/Python-Data-Science-Handbook-Essential/dp/9352134915/ref=sr_1_1\n\
+Practical Statistics for Data Scientists: \
+50+ Essential Concepts Using R and Python, Second Edition Paperback:\n\
+https://www.amazon.in/Practical-Statistics-Data-Scientists-Essential/dp/8194435005/ref=sr_1_1\n\
+Deep learning with python:\n\
+https://www.amazon.in/Deep-Learning-Python-Francois-Chollet/dp/1617294438/ref=sr_1_3\n\
+Introduction to Machine Learning with Python: \
+A Guide for Data Scientists (Greyscale Indian Edition):\n\
+https://www.amazon.in/Introduction-Machine-Learning-Python-Scientists/dp/9352134575/ref=sr_1_3\n")
+
+
+        elif robotics_and_hardware_on:
+            await message.answer("Here's soem books for you to refer to for \
+Robotics and hardware:\n\
+Springer Handbook of Robotics :\n\
+https://www.amazon.in/Springer-Handbook-Robotics-Handbooks/dp/3319325507/ref=sr_1_1\n\
+Robotics, Vision and Control: Fundamental Algorithms \
+In MATLAB® Second, Completely Revised, Extended And Updated Edition:\n\
+https://www.amazon.in/Robotics-Vision-Control-Fundamental-Algorithms/dp/3319544128/ref=sr_1_2\n\
+Probabilistic Robotics (Intelligent Robotics and Autonomous Agents series):\n\
+https://www.amazon.in/Probabilistic-Robotics/dp/0262201623/ref=sr_1_1\n\
+Introduction to Robotics: Mechanics and Control:\n\
+https://www.amazon.in/Introduction-Robotics-Mechanics-Control-3e/dp/8131718360/ref=sr_1_3\n\
+Modern Robotics: Mechanics, Planning, and Control:\n\
+https://www.amazon.in/Modern-Robotics-Mechanics-Planning-Control/dp/1107156300/ref=sr_1_1\n\
+Planning Algorithims:\n\
+https://www.amazon.in/Planning-Algorithms-Steven-M-LaValle/dp/0521862051/ref=sr_1_1\n\
+Principles of Robot Motion: \
+Theory, Algorithms, and Implementations \
+(Intelligent Robotics and Autonomous Agents series):\n\
+https://www.amazon.in/Principles-Robot-Motion-Algorithms-Implementation/dp/0262033275/ref=sr_1_1\n\
+Mechanics of Robotic Manipulation (Intelligent Robotics and Autonomous Agents series):\n\
+https://www.amazon.in/Mechanics-Manipulation-Intelligent-Robotics-Autonomous/dp/0262133962/ref=sr_1_2\n\
+The Art of electronics:\n\
+https://www.amazon.in/Art-Electronics-Paul-Horowitz/dp/0521809266/ref=sr_1_2\n\
+Practical Electronics for Inventors, Fourth Edition:\n\
+https://www.amazon.in/Practical-Electronics-Inventors-Fourth-Scherz/dp/1259587541/ref=sr_1_2\n\
+Getting Started With Electronics:\n\
+https://www.amazon.in/Getting-Started-Electronics-Forrest-Mims/dp/0945053282/ref=sr_1_2\n\
+Understanding Basic Electronics:\n\
+https://www.amazon.in/Understanding-Basic-Electronics-ARRL-Inc-ebook/dp/B0112HMEUI/ref=sr_1_7\n\
+Beginner's Guide to Reading Schematics, Fourth Edition:\n\
+https://www.amazon.in/Beginners-Guide-Reading-Schematics-Gibilisco/dp/1260031101/ref=sr_1_1\n")
+
 
     elif message.text == "\U0001F3C5 Certifications":
         if cyber_security_on:
@@ -783,6 +1138,44 @@ https://www.masterstudies.com/Masters-Degree/Cloud-Computing/\n\n\
 https://www.upgrad.com/cloud-computing-pgd-iiitb\n\n \
 \U00002666 Advanced Certificate Programme in Cloud Computing\n \
 https://www.upgrad.com/cloud-computing-certification-pgc-iiitb")
+
+        elif game_development_on:
+            await message.answer("Your collective platform where you can get your Certification\
+for Game Development:\n\
+https://web.ue-germany.com/en/bachelor/game-design\n\
+Bachelors in game development :\n\
+https://www.bachelorstudies.com/Game-Design/\n\
+Masters in Game development programs:\n\
+https://www.masterstudies.com/Masters-Degree/Game-Design/\n\
+Theory:\n\
+https://www.bachelorstudies.com/Game-Theory/\n\")
+
+        elif data_science_on:
+            await message.answer("Your Collective platforms where you can get \
+your degrees in Data Science from:\n\
+Keystone Bachelorstudies.com:\n\
+Bachelors in Data Science:\n\
+https://www.bachelorstudies.com/Data-Science/\n\
+Masters in Data Science:\n\
+https://www.masterstudies.com/Masters-Degree/Data-Science/\n\
+UpGrad Courses for Data Science:\n\
+https://www.upgrad.com/data-science-course/\n\
+Courses in Machine Learning from UpGrad:\n\
+https://www.upgrad.com/machine-learning-course/\n\
+Edx courses for Data sciene:\n\
+https://www.edx.org/search?q=Data%20science%20courses\n\
+Courses from Coursera for Data Science:\n\
+https://www.coursera.org/search?query=data%20science%20certificate&network=g&utm_s\n\
+Courses from Udemy about Data Science:\n\
+https://www.udemy.com/courses/search/?src=ukw&q=data+science+and+machine+learning")
+
+        elif robotics_and_hardware_on:
+            await message.answer("Your collective platform where you can \
+get your certifications in Robotics and Hardware:\n\
+Bachelor Programs in robotics:\n\
+https://www.bachelorstudies.com/Bachelor/Robotics/#:~\n\
+Masters Programs in Robotics:\n\
+https://www.masterstudies.com/Masters-Degree/Robotics/\n")
 
     elif message.text == "\U0001F935 Jobs":
         if ai_and_ml_on:
@@ -1007,6 +1400,349 @@ automation, orchestration and integration. This role often requires a wider unde
 hardware and software, along with data centre and cloud infrastructure. A cloud automation engineer is responsible \
 for implementing, optimizing and supporting cloud infrastructure.")
 
+        elif data_science_on:
+            await message.answer("Data science combines several disciplines, including statistics, \
+data analysis, machine learning, and computer science. It can be daunting if you’re new \
+to the field, but keep in mind that different roles and companies will \
+prefer some skills over others. This means that you don’t have to be an expert at everything. \
+There are potential data science jobs for lots of different experience levels.\n\
+One important piece of advice for your job search is to read data science job \
+descriptions carefullyThis will enable you to apply to jobs you’re already qualified\
+for, or develop specific data skill sets to match the roles you want to pursue. \
+“Data scientist” is often used as a blanket title to describe jobs that are \
+drastically different. Let’s look at four kinds of data science jobs.\n\
+Four Types of Data Science Jobs:\n\
+1. The Data Analyst:\n\
+There are some companies where being a data scientist is synonymous with being \
+a data analyst. Your job might consist of tasks like pulling data out of \
+SQL databases, becoming an Excel or Tableau master, and producing basic data visualizations \
+and reporting dashboards. You may on occasion analyze the results of \
+an A/B test or take the lead on your company’s Google Analytics account.\n\
+A company like this is a great place for an aspiring data scientist to learn the ropes.\n\
+Once you have a handle on your day-to-day responsibilities, a company like this \
+can be a great environment to try new things and expand your skill set.\n\
+\n\n\n\
+2. The Data Engineer:\n\
+Some companies get to the point where they have a lot of traffic (and an \
+increasingly large amount of data), and they start looking for \
+someone to set up a lot of the data infrastructure that the company will need \
+moving forward. They’re also looking for someone to provide analysis. You’ll \
+see job postings listed under both data scientist and data engineer for this type \
+of position. Since you’d be (one of) the first data hires, heavy statistics \
+and machine learning expertise is less important than strong software engineering skills.\n\
+Mentorship opportunities for junior data scientists can be less plentiful at \
+a company looking to leverage rapidly increasing amounts of data.\n\
+As a result, you’ll have great opportunities to shine and grow via trial by fire, \
+but there will be less guidance and you may face a greater risk of flopping or stagnating.\n\
+\n\n\
+3. The Machine Learning Engineer:\n\
+There are a number of companies for whom their data \
+(or their data analysis platform) is their product. In this case, \
+the data analysis or machine learning going on can be pretty intense. \
+This is probably the ideal situation for someone who has a formal mathematics, \
+statistics, or physics background and is hoping to continue down a more academic path.\n\
+Machine learning engineers often focus more on producing great \
+data-driven products than they do answering operational questions for a company.\n\
+Companies that fall into this group could be consumer-facing \
+companies with massive amounts of data or companies that are offering a data-based service.\n\
+\n\n\n\
+4. The Data Science Generalist:\n\
+A lot of companies are looking for a generalist to join an established \
+team of other data scientists. The company you’re interviewing for cares \
+about data but probably isn’t a data company. It’s equally important \
+that you can perform analysis, touch production code, visualize data, etc.\n\
+Some of the most important data generalist skills are familiarity with tools \
+designed for big data, and experience with messy, real-life datasets.\n\
+Generally, these companies are either looking for generalists or they’re looking \
+to fill a specific niche where they feel their team is lacking, such as \
+data visualization or machine learning.\n")
+
+
+        elif game_development_on:
+            await message.answer("The video game industry is booming and there are many \
+types of jobs in the game industry for you to choose from! Click on each role for detailed \
+job descriptions, salary expectations and other key information \
+about working in game dev.\n\
+the following are the Possible jobs for you in the Gaming Industry:\n\
+1. Game Designer:\n\
+Game designers create the concepts and worlds of video games. They are \
+involved with the design of the genre, environment, story, characters, gameplay \
+system, objectives and user experience of video games.\n\
+A Game Designer is the creative force behind the development of a video game. \
+They are the originator of the game concept and will develop it through to its \
+final release. Game Designers author the storyline, writing the plot points, character \
+development, and game objectives that drive the game. The designer will work within \
+the rules of the genre of the game, with real innovation occurring when the \
+genre is pushed to its limits or reinvented.\n\
+Game Designers establish the aesthetics, mood and look of the game which is integral to \
+the game’s individual appeal and marketability. The user experience must \
+always be considered during the development process, as players \
+need to feel engaged and rewarded by the game to continue playing.\n\
+The game development process is all about teams from different disciplines \
+(creative and technical) working in tandem and communicating their requirements to each other.\
+It is the Game Designer’s job to ensure that teams and team dynamics work \
+effectively to finish on schedule and on budget.\n\
+\n\n\
+2. System Designer:\n\
+A System Designer is the creator of the software systems that will power a video game. \
+They are brought in early in the development process to analyse the scope \
+and design of the game to set up the platforms that will bring the game to life.\n\
+Based on the genre and mechanics of the game the System Designer will assist in establishing \
+the development of the project. They will assemble the suite of technical resources \
+that the game requires, and identify any custom software that needs to be \
+scripted for the game.\n\
+System Designers will identify which elements of the game require artificial \
+intelligence (AI), fighting features, scoring rules, etc. They must also manage the system \
+performance of the game, ensuring it has the power to deal with rapid gameplay and \
+the demands that the players place on the game to make for compelling gameplay.\n\
+The prototyping process at the start of game development and the quality assurance \
+process at the end of development are overseen by the System Designers. The prototype \
+will test the concept of the game, inform how the game should be developed and \
+alert to any issues that may arise during development. The QA process will test the \
+game in its later iterations and inform of the glitches that need to be ironed \
+out before the game heads to distribution.\n\
+\n\n\
+3. Level Designer:\n\
+A Level Designer is the creator of the levels within a game, mapping out the layout \
+so that it functions within the rules of the game and executes \
+gameplay as created by the Game Designer.\n\
+The first stage of the level design process is to sketch out the layout of the \
+level in two dimensions, this is based on the concept art and storyboards that \
+are provided by the Game Designer. Once they have been signed off they are then rendered \
+to their 3D iterations and the level is then populated with characters, objects, \
+events, environments and circles of action.\n\
+The Level Designer creates the entry and exit points of each level and guides the \
+player logically through the game via its rules, rewards and objectives. \
+Level design begins early in the game development process as it is the basic structure \
+of the game, with gameplay refinement, inter-level consistency and user experience \
+driving the development process. \n\
+The sequence of levels is also taken into consideration by Level Designers. The first \
+level of a game will introduce the player to the game. It will \
+establish characters, explain the storyline, instruct the player on the \
+objectives of the game and generally initiate the player into the world of the game. \
+Each level that follows will then act to further the story, develop characters, increase \
+the level of complexity, up the stakes, and draw the player further into the game.\n\
+\n\n\
+4. Game Programmer:\n\
+Game programmer is a general term applied to the computer engineers \
+that work on computer games. Usually trained in the basic languages of \
+computer programming, programmers make a game come to life. They may \
+specialize in areas of coding such as graphics, AI, sound, scripting, \
+user interface, network, tools, porting, etc.\n\
+A strong knowledge of coding and the various platforms is vital to becoming a \
+Game Programmer. They are a key part of the development team taking technical \
+resources throughout the production process, ensuring that at the end of the \
+process the game functions effectively.\n\
+\n\n\
+5. AI Programmer:\n\
+Artificial Intelligence (AI) Programmers can be said to give a game its brain. They \
+create algorithms that set the behavior of characters and elements based on the gameplay \
+of the individual player. This is done by customising the reactions of gameplay to the \
+actions of the player. Elements such as pathfinding, group movement and camera control \
+are all embedded into the gameplay strategy.\n\
+In this highly specialized field programmers establish decision trees and design \
+neural networks within the game, creating artificial nerve systems. AI programming \
+is at the cutting edge of game development as it has a deep impact on gameplay \
+that players may not be aware of, this leads to a dynamic and intuitive experience.\n\
+\n\n\
+6. Gameplay Engineer:\n\
+Gameplay Engineers are code writers who adapt software to the requirements of a \
+video game. They may also be required to create custom software for \
+functions specific to a game.\n\
+Player usability is a key focus of the Gameplay Engineer. They oversee User Interface\
+issues, player notifications, gameplay mechanics and game upgrades. Optimizing the \
+playability of the game requires creative solutions to technical \
+issues, testing, software integration, debugging, and an element of design.\n\
+The Gameplay Engineer also has to keep an eye on the long-term stability of \
+the product as players will push the game to its limits. Engineers need \
+to know what these limits are and ensure the programming is rigorous \
+enough to withstand the most experienced of players.\n\
+\n\n\
+7. Video Game Artist:\n\
+A Game Artist is often a generalist animator and/or 3D \
+modeler who creates both 2D and 3D art for video games. \
+Working from design briefs and concept art, Game Artists give \
+expression to the script from the storyboard \
+to populate the world of the game.\n\
+They work on all the visual elements required to put a game together, \
+including characters, objects, textures, assets, environments, \
+props, vehicles, weapons, etc.\n\
+Many game artists will specialize in one or more of these areas as game development\
+becomes increasingly sophisticated. The extent of the role also depends \
+on the size of the studio and project.\n\
+During the course of their career they may take on a variety of positions within \
+an animation and/or modeling or assets team, leading to an ever-increasing \
+deeper understanding of the process.\n\
+\n\n\
+8. Character Artist:\n\
+3D Character Artists create 3D models of characters for films and video \
+games. Models are often based on original concept art.\n\
+Character Artists for computer games draw up the visual elements of as \
+briefed by the Art Director and Lead Character Artist. They create illustrations \
+of characters, vehicles, environment, weapons, props, etc from \
+the original concept artist’s sketches.\n\
+Their tasks can also include creating storyboards, scenery, as well as adding \
+shading and texture to visuals. The Character Artists work closely with \
+creative and technical teams to drive the visual quality of the game and \
+to maintain a consistent character style. In the competitive gaming market \
+players now expect high standard graphics, it is up to the character artist to \
+deliver on the overall artistic quality of the game.\n\
+Character Artists in film create the 3D characters, creatures or objects that \
+are integrated into live-action. Their work primarily takes place during \
+the post-production process, but sketches and concept art will be developed from \
+pre-production stages as part of the film or series’ production design.\n\
+The processes are the same as in gaming, however as film has a linear structure, \
+they will not incorporate interactive elements or behaviours. This work is vital \
+to the believability of the production as these elements need to fit seamlessly \
+into the footage for the final product to be believable\n\
+Character Artists in animated features, series or shorts develop and create \
+the character art that is used throughout the production. They work closely \
+with directors, writers and design departments to bring the characters to life. \
+These characters are as simple as their film counterparts in that they do not \
+require interactivity. What is crucial in character art for animated features \
+is for the characters to be relatable and sympathetic to audiences. Sophisticated \
+character development and artistry is required to elicit emotion from drawn images.\n\
+\n\n\
+9. Environment Artist:\n\
+3D Environment Artists are 3D Modelers who specialize in creating indoor and \
+outdoor settings for films or video games.\n\
+They are responsible for background visuals with which characters and objects\
+will interact, such as buildings, roads, flora, furniture, drapes, etc.\n\
+For films or TV shows, environments are often built digitally when it is not \
+possible or practical to film in real life (e.g. outer space, historical \
+recreations, fantasy lands). Actors may be recorded against a green screen \
+and their surroundings replaced by computer-generated environments \
+built by 3D Environment Artists.\n\
+\n\n\
+10. Asset Artist:\n\
+Asset artists create a broad range of elements within a video game. These \
+include graphics, 3D models, sound effects, music, vehicles, \
+head-up displays (HUDs), icons, etc.\n\
+Asset artists will maintain and catalogue a detailed library of all assets \
+required of a game for animators and developers to access during production. \
+Video games utilize a vast array of audio and visual components to engage the \
+player. The more complex gameplay is, the more gamers will be engrossed by \
+the stimuli of the game.\n\
+Because of the variety of skills required to create or acquire the \
+volume of elements required for a video game asset artists need \
+to be skilled in both audio and visual design.\n\
+In video games, these virtual environments have an additional layer of \
+complexity. They must function and react according to the laws of \
+physics and within the rules of the game universe. So characters must \
+not be able to walk through walls, objects must react to gravity, \
+etc (unless these are unique features of the game universe).\n\
+\n\n\
+11. Technical Artist:\n\
+Technical Artists are hybrid creative and technical operators who liaise \
+between the artist and the programmer teams. They require both visual \
+skills as well as programming knowledge to understand both disciplines \
+and problem solve between departments.\n\
+A good technical artist will keep the artistic vision intact while \
+working within the limits of the software systems used on a video \
+game production. They work closely with the Game Designer, Lead Artist \
+and Lead Programmer, advising on technical resources, researching new \
+techniques, maintaining tools and pipelines, and preparing digital files \
+of finished artwork to run efficiently without visual degradation.\n\
+
+        elif robotics_and_hardware_on:
+            await message.answer("Some of the Jobs availabe if you want to pursue your career in\
+Robotics and hardware.\n\
+1. Design Engineer:\n\
+Design engineers create the visual look of a robot. They often start by sketching \
+blueprints, schematics, or figures of a robot’s intended design, then work \
+with a mechanical engineering team to ensure those plans are followed \
+correctly during development.\n\
+Though their work is concerned with the physical appearance, proportions, and \
+functions of a robot, it is also important that design engineers have advanced \
+computer science knowledge and that they understand how the various components \
+of their design work together to bring a machine to life.\n\
+\n\n\
+2. Software Engineer:\n\
+Software engineers in robotics are in charge of developing the software that \
+allows each machine to function. They work closely with software designers \
+and programmers to integrate new software with existing systems and typically \
+remain involved throughout the robot’s construction to ensure full functionality is achieved.\n\
+In robotics, software engineers are also tasked with staying up-to-date with \
+changing technologies and trends, and must apply updates or reconfigure \
+existing robotics software as needed.\n\
+\n\n\
+3. Hardware Engineer:\n\
+A hardware engineer is responsible for the computer hardware that robots \
+utilize to function. They can have a hand in everything from prototyping to development,\
+and are often tasked with overseeing the execution of a hardware build.\n\
+Once a robot has been constructed, a hardware engineer may also partake in\
+testing and analysis of the designed systems, and lead a team in making any\
+necessary changes for improvement.\n\
+\n\n\
+4. User Experience (UX) Designer:\n\
+The work of a UX designer is one aspect of robotics Padir considers integral \
+but often underrepresented in the larger robotics field. When building a robot, \
+“sometimes engineers can overlook what the user needs,” he explains, identifying \
+that it is up to the UX designer to represent this perspective in the development \
+process.\n\
+These professionals are typically tasked with evaluating how consumers will interact \
+with a robot, and making decisions about how to build a system \
+that’s best equipped to meet those needs. \n\
+\n\n\
+5. Data Scientist:\n\
+As most robots run on data, the work of a data scientist is critical within the \
+robotics field. These professionals are responsible for designing data modeling \
+processes and creating the algorithms and predictive models on which the data is \
+gathered and interpreted. They also analyze data sets on which existing robots function, \
+make adjustments to collection processes or storage systems, and measure effectiveness in \
+order to improve functionality.\n\
+\n\n\
+6. Machine Learning Engineer:\n\
+Machine learning engineers are responsible for the automation aspect of robotics. \
+These professionals rely heavily on data and predictive analytics in their work. In many \
+cases, they use advanced software to automate predictive models as a way of advancing the \
+machine’s function and helping it “learn” from its experiences.\n\
+Machine learning engineers are often highly skilled in data science, deep \
+learning, natural language processing, programming, and more.\n\
+\n\n\
+7. Algorithm Engineers:\n\
+In the scope of robotics, an algorithm engineer’s main role is to research, develop, \
+and then test the algorithms on which a robot runs. These professionals work \
+closely with the rest of the development team to understand the desired functionality \
+of the robot, then identify and integrate the data needed to reach that goal.\n\
+This role straddles the line between data science, software, and computer science, \
+requiring professionals to be well versed in all three disciplines.\n")
+
+
+
+
+ 
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+ 
+
+
+
+
+
+
+  
+
+
+            
+            
+            ")
     elif message.text == "\U0001F393 Certifications/Degrees":
         if ai_and_ml_on:
             await message.answer("Here is a list of certifications and degrees which you can apply for \
@@ -1072,8 +1808,18 @@ https://www.masterstudies.com/MSc/Artificial-Intelligence/")
         elif software_development_on:
             software_development_on = False
             await message.answer("\U0001F519 Back", reply_markup=guides_menu_keyboard)
+        elif data_science_on:
+            data_science_on=False
+            await message.answer("\U0001F519 Back", reply_markup=guides_menu_keyboard)
+        elif game_development_on:
+            game_development_on = False
+            await message.answer("\U0001F519 Back", reply_markup=guides_menu_keyboard)
+        elif robotics_and_hardware_on:
+            robotics_and_hardware_on = False
+            await message.answer("\U0001F519 Back", reply_markup=guides_menu_keyboard)
         else:
             await message.answer("\U0001F519 Back", reply_markup=top_menu_keyboard)
+
            
     elif message.text == "\U0001F51D Main Menu":
         await message.answer("\U0001F51D Main Menu", reply_markup=top_menu_keyboard)
