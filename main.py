@@ -106,7 +106,7 @@ game_development_keyboard.add(books_button, certifications_button)
 game_development_keyboard.add(degrees_button, jobs_button)
 game_development_keyboard.add(back_button, back_to_top_menu_button)
 
-robotics_and_hardware_keyboard = ReplyKeyboardMarkup(resize_keyboard=True).add(skills_required_button, courses)
+robotics_and_hardware_keyboard = ReplyKeyboardMarkup(resize_keyboard=True).add(skills_required_button, courses_button)
 robotics_and_hardware_keyboard.add(books_button, certifications_button)
 robotics_and_hardware_keyboard.add(degrees_button, jobs_button)
 robotics_and_hardware_keyboard.add(back_button, back_to_top_menu_button)
@@ -619,7 +619,7 @@ Things you need to study to be a game developer:   \n\
 *Bachelor of Science (B.Sc) in Graphics, Animation & Gaming.\n\
 *Bachelor of Arts (BA) in Digital Filmmaking & Animation.\n\
 *Bachelor of Technology (B. Tech) – Computer Science and Game Development.\n\
-*Bachelor of Science in Animation Game Design and Development.\n\")
+*Bachelor of Science in Animation Game Design and Development.\n\n")
 
     elif message.text == "\U0001F4BB Courses":
         if ai_and_ml_on:
@@ -727,8 +727,8 @@ https://www.coursera.org/search?query=cloud%20computing&\n\n \
 \U00002666 Cloud computing courses on (udacity)\n \
 https://www.udacity.com/school-of-cloud-computing")
 
-            elif game_development_on:
-                await message.answer("Here's some courses you can kick off your Game-development career with:\n\
+        elif game_development_on:
+            await message.answer("Here's some courses you can kick off your Game-development career with:\n\
 RUST Programming Tutorial #1- Hello World | Getting Started with Rust:\n\
 https://www.youtube.com/watch?v=vOMJlQ5B-M0&list=PLVvjrrRCBy2JSHf9tGxGKJ-bYAN_uDCUL\n\
 Learn RUST by building real Applications:\n\
@@ -755,8 +755,8 @@ https://www.udemy.com/course/complete-roblox-lua-start-making-games-with-roblox-
 An Introduction to game development in Python:\n\
 https://www.udemy.com/course/an-introduction-to-game-development-in-python/\n ")
 
-            elif data_science_on:
-                await message.answer("Here's some courses you can kick off your Data Science career with:\n\
+        elif data_science_on:
+            await message.answer("Here's some courses you can kick off your Data Science career with:\n\
 The complete SQL Bootcamp of Manipulation and Analysis of Data:\n\
 https://www.udemy.com/course/the-complete-sql-bootcamp/\n\
 BI Analysis: MySQL for Data Analytics and Business Intelligence:\n\
@@ -774,8 +774,8 @@ https://www.youtube.com/watch?v=_V8eKsto3Ug\n\
 R Programming A-Z: For Data Science(Courses and Exercises):\n\
 https://www.udemy.com/course/r-programming/\n")
 
-            elif robotics_and_hardware_on:
-                await message.answer("Here's some courses you can kick off your Robotics \
+        elif robotics_and_hardware_on:
+            await message.answer("Here's some courses you can kick off your Robotics \
 and Hardware career with:\n\
 Here are some courses on arduino:\n\
 Basic electronics for Arduino Makers:\n\
@@ -1148,7 +1148,7 @@ https://www.bachelorstudies.com/Game-Design/\n\
 Masters in Game development programs:\n\
 https://www.masterstudies.com/Masters-Degree/Game-Design/\n\
 Theory:\n\
-https://www.bachelorstudies.com/Game-Theory/\n\")
+https://www.bachelorstudies.com/Game-Theory/\n\n")
 
         elif data_science_on:
             await message.answer("Your Collective platforms where you can get \
@@ -1642,7 +1642,7 @@ working within the limits of the software systems used on a video \
 game production. They work closely with the Game Designer, Lead Artist \
 and Lead Programmer, advising on technical resources, researching new \
 techniques, maintaining tools and pipelines, and preparing digital files \
-of finished artwork to run efficiently without visual degradation.\n\
+of finished artwork to run efficiently without visual degradation.\n")
 
         elif robotics_and_hardware_on:
             await message.answer("Some of the Jobs availabe if you want to pursue your career in\
@@ -1708,41 +1708,6 @@ of the robot, then identify and integrate the data needed to reach that goal.\n\
 This role straddles the line between data science, software, and computer science, \
 requiring professionals to be well versed in all three disciplines.\n")
 
-
-
-
- 
-
-
- 
-
-
-
-
-
-
-
-
-
-
-
- 
-
-
-
- 
-
-
-
-
-
-
-  
-
-
-            
-            
-            ")
     elif message.text == "\U0001F393 Certifications/Degrees":
         if ai_and_ml_on:
             await message.answer("Here is a list of certifications and degrees which you can apply for \
