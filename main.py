@@ -183,7 +183,7 @@ All these features are conveniently packed into an easy to use and interactive T
 
     elif message.text == "\U0001F3AE Game Development Guide \U0001F3AE":
         game_development_on = True
-        pass
+        await message.answer("Game Development", reply_markup=game_development_keyboard)
 
     elif message.text == "\U0001F5A5 Software Development Guide \U0001F5A5":
         software_development_on = True
@@ -239,11 +239,11 @@ All these features are conveniently packed into an easy to use and interactive T
 
     elif message.text == "\U0001F4CA Data Science Guide \U0001F4CA":
         data_science_on = True
-        pass
+        await message.answer("Data Science", reply_markup=data_science_keyboard)
 
     elif message.text == "\U0001F916 Robotics and Hardware Guide \U0001F916":
         robotics_and_hardware_on = True
-        pass
+        await message.answer("Robotics and Hardware", reply_markup=robotics_and_hardware_keyboard)
 
     elif message.text == "\U0001F530 Skills Required":
         if ai_and_ml_on:
@@ -485,31 +485,19 @@ consumes if one opted to read the report of each and every financial year\
             await message.answer("Robotics is an interdisciplinary sector of science and engineering \
 dedicated to the design, construction and use of mechanical robots. \
 Our guide will give you a concrete grasp of robotics, \
-including different types of robots and how they're being applied across industries.\n\
+including different types of robots and how they're being applied across industries.\n\n\
 *What Is Robotics?\n\
 Robotics is the intersection of science, engineering and technology that produces machines,\
 called robots, that substitute for (or replicate) human actions. \n\
-Pop culture has always been fascinated with robots. \
-R2-D2. Optimus Prime. WALL-E. These over-exaggerated, \
-humanoid concepts of robots usually seem like a caricature of the real thing...\
-or are they more forward thinking than we realize?\n\
 Robots are gaining intellectual and mechanical capabilities \
 that don’t put the possibility of a R2-D2-like machine out of reach in the future.\n\
 That was about Robotics now we'll talk about the skill you need to learn\
-before going into Robotics:\n\
+before going into Robotics:\n\n\
 1.Math and Science:\n\
 Robotics manufacturer RobotIQ describes mathematics as one of \
 the only core robotics skills that you cannot learn as you go along.\n\
 At a minimum, a strong background in several fields of\
-mathematics and science are critical for a successful career in robotics:\n\
-*Algebra and calculus will help you write the equations \n\
-and formulas that represent the abstract concepts that a robot manipulates.\
-*Geometry and physics will help you understand the different ways \
-that a robot can move in order to minimize movement, reduce wear \
-and tear, and increase the lifespan of equipment.\n\
-*Applied mathematics, or the use of math to solve problems in science and engineering,\
-will enable you to address challenges such as predicting \
-how a robot will move under certain circumstances.\n\
+mathematics and science are critical for a successful career in robotics:\n\n\
 2. Programming:\n\
 While a career in robotics requires knowledge of popular \
 programming languages such as C, C++, Python, and Java, there are \
@@ -518,16 +506,7 @@ programming to develop software or mobile applications.\n\
 *Software applications tend to interact with other software \
 applications, such as a website requesting information from a \
 database. Robots, on the other hand, interact with software, \
-hardware, and various electronics.\n\
-*RobotIQ points out that many robots used in an industrial setting \
-run on proprietary programming languages. \
-If you’re working with robots from multiple manufacturers, \
-there’s a good chance you’ll be working with multiple languages as well.\n\
-*High-level robotic system programming depends on highly \
-complex and technical AI and ML algorithms. \
-“This is at the intersection of programming and a theoretical \
-understanding of how robots work,” Platt says. \
-“It’s hard for employers to find those skills.”\n\
+hardware, and various electronics.\n\n\
 3. Working on a Team:\n\
 Robotics is largely technical work, but certain \
 soft skills are beneficial, Platt says. In particular, being a team player is essential. \
@@ -540,23 +519,12 @@ a project manager, product developers, and a user experience expert. \
 You can also expect the team to follow an Agile project \
 management style, with an iterative process for developing, \
 testing, and getting feedback on a product.\n\
-4. Solving Complex Problems: \n\
+4. Solving Complex Problems: \n\n\
 Designing and building functioning technical \
 systems is obviously a critical robotics skill, \
 but it’s just as important to be able to figure out why \
 a system isn’t functioning properly. If it’s a mechanical issue, \
-you’ll need to know the best practices for making a repair. \
-If it’s a software issue, you’ll need to be ready to look for errors or bugs in the code. \
-And if it isn’t immediately clear what the issue is, you’ll need to put your \
-problem-solving skills to work to assess the situation and find a possible solution.\n\
-In many cases, problem-solving in robotics can be a matter of trial and error. \
-In addition to practicing persistence, you can build your \
-problem-solving skills through experience. \
-An experiential learning program, such as the Master of \
-Science in Robotics program in the Northeastern University College of Engineering,\
-provides students access to on-campus advanced laboratories and \
-research centers as well as industrial partners such as \
-Boston Dynamics, iRobot, and the Toyota Research Institute.\n\
+you’ll need to know the best practices for making a repair. \n\n\
 5. Thinking Creatively :\n\
 A little bit of creativity can go a \
 long way for a robotics professional. \
@@ -564,24 +532,14 @@ It can be beneficial for solving problems, such as using an \
 existing part in a new way or coming up with a brand-new design altogether. \
 Creativity and teamwork go hand in hand, too—a willingness to work with others\
 and accept their contributions can help the entire team \
-come up with a new idea or different solution.\n\
+come up with a new idea or different solution.\n\n\
 6. Active Learning:\n\
 The field of robotics is always changing. \
 There are new programming languages to learn, new AI concepts to test,\
 and new and more durable materials to work with. \
 A robotics engineer can demonstrate their value by \
 constantly learning about these changes and applying them \
-to new fields of robotics.\n\
-One example is telepresence robots that can be operated \
-remotely and are able to move, speak, and listen. \
-The news site Robotics Tomorrow describes a number of use \
-cases, such as attending a class or meeting halfway across the world, \
-monitoring the conditions of patients in a hospital or nursing home, \
-or moving heavy or hazardous materials across a manufacturing facility. \
-These types of robots have the potential to change the way the world works and learns, \
-but building and maintaining them will require new designs, engineering techniques, \
-and software programs.\n\
-\n\n\n\n\
+to new fields of robotics.\n\n\n\n\
 Other things that you need to know before you pursue your career in robotics and hardware are:\
 * Basic idea of how a basic breadboard functions and its fundamentals\n\
 *For starting off with robotics Arduino is a very intelligent way to do so\n\    ")
@@ -798,10 +756,6 @@ How to use the Breadboard:\n\
 https://www.sciencebuddies.org/science-fair-projects/references/how-to-use-a-breadboard\n\
 How to use a Breadboard:\n\
 https://youtu.be/6WReFkfrUIk\n")
-                
-                
-                
-
 
     elif message.text == "\U0001F4D6 Books":
         if ai_and_ml_on:
@@ -1462,8 +1416,8 @@ data visualization or machine learning.\n")
             await message.answer("The video game industry is booming and there are many \
 types of jobs in the game industry for you to choose from! Click on each role for detailed \
 job descriptions, salary expectations and other key information \
-about working in game dev.\n\
-the following are the Possible jobs for you in the Gaming Industry:\n\
+about working in game dev.\n\n\
+the following are the Possible jobs for you in the Gaming Industry:\n\n\
 1. Game Designer:\n\
 Game designers create the concepts and worlds of video games. They are \
 involved with the design of the genre, environment, story, characters, gameplay \
@@ -1473,35 +1427,11 @@ They are the originator of the game concept and will develop it through to its \
 final release. Game Designers author the storyline, writing the plot points, character \
 development, and game objectives that drive the game. The designer will work within \
 the rules of the genre of the game, with real innovation occurring when the \
-genre is pushed to its limits or reinvented.\n\
-Game Designers establish the aesthetics, mood and look of the game which is integral to \
-the game’s individual appeal and marketability. The user experience must \
-always be considered during the development process, as players \
-need to feel engaged and rewarded by the game to continue playing.\n\
-The game development process is all about teams from different disciplines \
-(creative and technical) working in tandem and communicating their requirements to each other.\
-It is the Game Designer’s job to ensure that teams and team dynamics work \
-effectively to finish on schedule and on budget.\n\
-\n\n\
+genre is pushed to its limits or reinvented.\n\n\
 2. System Designer:\n\
 A System Designer is the creator of the software systems that will power a video game. \
 They are brought in early in the development process to analyse the scope \
-and design of the game to set up the platforms that will bring the game to life.\n\
-Based on the genre and mechanics of the game the System Designer will assist in establishing \
-the development of the project. They will assemble the suite of technical resources \
-that the game requires, and identify any custom software that needs to be \
-scripted for the game.\n\
-System Designers will identify which elements of the game require artificial \
-intelligence (AI), fighting features, scoring rules, etc. They must also manage the system \
-performance of the game, ensuring it has the power to deal with rapid gameplay and \
-the demands that the players place on the game to make for compelling gameplay.\n\
-The prototyping process at the start of game development and the quality assurance \
-process at the end of development are overseen by the System Designers. The prototype \
-will test the concept of the game, inform how the game should be developed and \
-alert to any issues that may arise during development. The QA process will test the \
-game in its later iterations and inform of the glitches that need to be ironed \
-out before the game heads to distribution.\n\
-\n\n\
+and design of the game to set up the platforms that will bring the game to life.\n\n\
 3. Level Designer:\n\
 A Level Designer is the creator of the levels within a game, mapping out the layout \
 so that it functions within the rules of the game and executes \
@@ -1510,139 +1440,39 @@ The first stage of the level design process is to sketch out the layout of the \
 level in two dimensions, this is based on the concept art and storyboards that \
 are provided by the Game Designer. Once they have been signed off they are then rendered \
 to their 3D iterations and the level is then populated with characters, objects, \
-events, environments and circles of action.\n\
-The Level Designer creates the entry and exit points of each level and guides the \
-player logically through the game via its rules, rewards and objectives. \
-Level design begins early in the game development process as it is the basic structure \
-of the game, with gameplay refinement, inter-level consistency and user experience \
-driving the development process. \n\
-The sequence of levels is also taken into consideration by Level Designers. The first \
-level of a game will introduce the player to the game. It will \
-establish characters, explain the storyline, instruct the player on the \
-objectives of the game and generally initiate the player into the world of the game. \
-Each level that follows will then act to further the story, develop characters, increase \
-the level of complexity, up the stakes, and draw the player further into the game.\n\
-\n\n\
+events, environments and circles of action.\n\n\
 4. Game Programmer:\n\
 Game programmer is a general term applied to the computer engineers \
 that work on computer games. Usually trained in the basic languages of \
 computer programming, programmers make a game come to life. They may \
 specialize in areas of coding such as graphics, AI, sound, scripting, \
-user interface, network, tools, porting, etc.\n\
-A strong knowledge of coding and the various platforms is vital to becoming a \
-Game Programmer. They are a key part of the development team taking technical \
-resources throughout the production process, ensuring that at the end of the \
-process the game functions effectively.\n\
-\n\n\
+user interface, network, tools, porting, etc.\n\n\
 5. AI Programmer:\n\
 Artificial Intelligence (AI) Programmers can be said to give a game its brain. They \
 create algorithms that set the behavior of characters and elements based on the gameplay \
 of the individual player. This is done by customising the reactions of gameplay to the \
 actions of the player. Elements such as pathfinding, group movement and camera control \
-are all embedded into the gameplay strategy.\n\
-In this highly specialized field programmers establish decision trees and design \
-neural networks within the game, creating artificial nerve systems. AI programming \
-is at the cutting edge of game development as it has a deep impact on gameplay \
-that players may not be aware of, this leads to a dynamic and intuitive experience.\n\
-\n\n\
+are all embedded into the gameplay strategy.\n\n\
 6. Gameplay Engineer:\n\
 Gameplay Engineers are code writers who adapt software to the requirements of a \
 video game. They may also be required to create custom software for \
-functions specific to a game.\n\
-Player usability is a key focus of the Gameplay Engineer. They oversee User Interface\
-issues, player notifications, gameplay mechanics and game upgrades. Optimizing the \
-playability of the game requires creative solutions to technical \
-issues, testing, software integration, debugging, and an element of design.\n\
-The Gameplay Engineer also has to keep an eye on the long-term stability of \
-the product as players will push the game to its limits. Engineers need \
-to know what these limits are and ensure the programming is rigorous \
-enough to withstand the most experienced of players.\n\
-\n\n\
+functions specific to a game.\n\n\
 7. Video Game Artist:\n\
 A Game Artist is often a generalist animator and/or 3D \
 modeler who creates both 2D and 3D art for video games. \
 Working from design briefs and concept art, Game Artists give \
 expression to the script from the storyboard \
-to populate the world of the game.\n\
-They work on all the visual elements required to put a game together, \
-including characters, objects, textures, assets, environments, \
-props, vehicles, weapons, etc.\n\
-Many game artists will specialize in one or more of these areas as game development\
-becomes increasingly sophisticated. The extent of the role also depends \
-on the size of the studio and project.\n\
-During the course of their career they may take on a variety of positions within \
-an animation and/or modeling or assets team, leading to an ever-increasing \
-deeper understanding of the process.\n\
-\n\n\
+to populate the world of the game.\n\n\
 8. Character Artist:\n\
 3D Character Artists create 3D models of characters for films and video \
 games. Models are often based on original concept art.\n\
 Character Artists for computer games draw up the visual elements of as \
 briefed by the Art Director and Lead Character Artist. They create illustrations \
 of characters, vehicles, environment, weapons, props, etc from \
-the original concept artist’s sketches.\n\
-Their tasks can also include creating storyboards, scenery, as well as adding \
-shading and texture to visuals. The Character Artists work closely with \
-creative and technical teams to drive the visual quality of the game and \
-to maintain a consistent character style. In the competitive gaming market \
-players now expect high standard graphics, it is up to the character artist to \
-deliver on the overall artistic quality of the game.\n\
-Character Artists in film create the 3D characters, creatures or objects that \
-are integrated into live-action. Their work primarily takes place during \
-the post-production process, but sketches and concept art will be developed from \
-pre-production stages as part of the film or series’ production design.\n\
-The processes are the same as in gaming, however as film has a linear structure, \
-they will not incorporate interactive elements or behaviours. This work is vital \
-to the believability of the production as these elements need to fit seamlessly \
-into the footage for the final product to be believable\n\
-Character Artists in animated features, series or shorts develop and create \
-the character art that is used throughout the production. They work closely \
-with directors, writers and design departments to bring the characters to life. \
-These characters are as simple as their film counterparts in that they do not \
-require interactivity. What is crucial in character art for animated features \
-is for the characters to be relatable and sympathetic to audiences. Sophisticated \
-character development and artistry is required to elicit emotion from drawn images.\n\
-\n\n\
+the original concept artist’s sketches.\n\n\
 9. Environment Artist:\n\
 3D Environment Artists are 3D Modelers who specialize in creating indoor and \
-outdoor settings for films or video games.\n\
-They are responsible for background visuals with which characters and objects\
-will interact, such as buildings, roads, flora, furniture, drapes, etc.\n\
-For films or TV shows, environments are often built digitally when it is not \
-possible or practical to film in real life (e.g. outer space, historical \
-recreations, fantasy lands). Actors may be recorded against a green screen \
-and their surroundings replaced by computer-generated environments \
-built by 3D Environment Artists.\n\
-\n\n\
-10. Asset Artist:\n\
-Asset artists create a broad range of elements within a video game. These \
-include graphics, 3D models, sound effects, music, vehicles, \
-head-up displays (HUDs), icons, etc.\n\
-Asset artists will maintain and catalogue a detailed library of all assets \
-required of a game for animators and developers to access during production. \
-Video games utilize a vast array of audio and visual components to engage the \
-player. The more complex gameplay is, the more gamers will be engrossed by \
-the stimuli of the game.\n\
-Because of the variety of skills required to create or acquire the \
-volume of elements required for a video game asset artists need \
-to be skilled in both audio and visual design.\n\
-In video games, these virtual environments have an additional layer of \
-complexity. They must function and react according to the laws of \
-physics and within the rules of the game universe. So characters must \
-not be able to walk through walls, objects must react to gravity, \
-etc (unless these are unique features of the game universe).\n\
-\n\n\
-11. Technical Artist:\n\
-Technical Artists are hybrid creative and technical operators who liaise \
-between the artist and the programmer teams. They require both visual \
-skills as well as programming knowledge to understand both disciplines \
-and problem solve between departments.\n\
-A good technical artist will keep the artistic vision intact while \
-working within the limits of the software systems used on a video \
-game production. They work closely with the Game Designer, Lead Artist \
-and Lead Programmer, advising on technical resources, researching new \
-techniques, maintaining tools and pipelines, and preparing digital files \
-of finished artwork to run efficiently without visual degradation.\n")
+outdoor settings for films or video games.\n\n")
 
         elif robotics_and_hardware_on:
             await message.answer("Some of the Jobs availabe if you want to pursue your career in\
