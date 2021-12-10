@@ -29,7 +29,6 @@ robotics_and_hardware_button = KeyboardButton("\U0001F916 Robotics and Hardware 
 web_development_button = KeyboardButton("\U0001F310 Web Development Guide \U0001F310")
 front_end_development_button = KeyboardButton("\U00002B06 Front-End Web Development Guide \U00002B06")
 back_end_development_button = KeyboardButton("\U00002B07 Back-End Web Development Guide \U00002B07")
-full_stack_development_button = KeyboardButton("\U00002195 Full Stack Web Development Guide \U00002195")
 application_development_button = KeyboardButton("\U0001F4BB Application Development Guide \U0001F4BB")
 android_development_button = KeyboardButton("\U0001F4F1 Android App Development Guide \U0001F4F1")
 ios_development_button = KeyboardButton("\U0001F4F2 IOS App Development Guide \U0001F4F2")
@@ -88,7 +87,6 @@ software_development_keyboard.add(back_button, back_to_top_menu_button)
 
 web_development_keyboard = ReplyKeyboardMarkup(resize_keyboard=True).add(front_end_development_button)
 web_development_keyboard.add(back_end_development_button)
-web_development_keyboard.add(full_stack_development_button)
 web_development_keyboard.add(back_button, back_to_top_menu_button)
 
 application_development_keyboard = ReplyKeyboardMarkup(resize_keyboard=True).add(android_development_button)
@@ -111,7 +109,15 @@ robotics_and_hardware_keyboard.add(books_button, certifications_button)
 robotics_and_hardware_keyboard.add(degrees_button, jobs_button)
 robotics_and_hardware_keyboard.add(back_button, back_to_top_menu_button)
 
+front_end_development_keyboard = ReplyKeyboardMarkup(resize_keyboard=True).add(skills_required_button, courses_button)
+front_end_development_keyboard.add(books_button, certifications_button)
+front_end_development_keyboard.add(degrees_button, jobs_button)
+front_end_development_keyboard.add(back_button, back_to_top_menu_button)
 
+back_end_development_keyboard = ReplyKeyboardMarkup(resize_keyboard=True).add(skills_required_button, courses_button)
+back_end_development_keyboard.add(books_button, certifications_button)
+back_end_development_keyboard.add(degrees_button, jobs_button)
+back_end_development_keyboard.add(back_button, back_to_top_menu_button)
 
 ai_and_ml_on = False
 cyber_security_on = False
@@ -194,16 +200,12 @@ All these features are conveniently packed into an easy to use and interactive T
         await message.answer("\U0001F310 Web Development Guide \U0001F310", reply_markup=web_development_keyboard)
     elif message.text == "\U00002B06 Front-End Web Development Guide \U00002B06":
         front_end_development_on = True
-        # await message.answer("\U00002B06 Front-End Web Development Guide \U00002B06", reply_markup=front_end_development_keyboard)
-        pass
+        await message.answer("\U00002B06 Front-End Web Development Guide \U00002B06", reply_markup=front_end_development_keyboard)
+        
     elif message.text == "\U00002B07 Back-End Web Development Guide \U00002B07":
         back_end_development_on = True
-        # await message.answer("\U00002B07 Back-End Web Development Guide \U00002B07", reply_markup=back_end_development_keyboard)
-        pass
-    elif message.text == "\U00002195 Full Stack Web Development Guide \U00002195":
-        full_stack_development_on = True
-        # await message.answer("\U00002195 Full Stack Web Development Guide \U00002195", reply_markup=full_stack_development_keyboard)
-        pass
+        await message.answer("\U00002B07 Back-End Web Development Guide \U00002B07", reply_markup=back_end_development_keyboard)
+            
     elif message.text == "\U0001F4BB Application Development Guide \U0001F4BB":
         application_development_on = True
         await message.answer("\U0001F4BB Application Development Guide \U0001F4BB",
@@ -313,87 +315,101 @@ Apart from the technical skills pointed above, an ethical hacker also must be a 
 problem solver. They must be wanting to learn new ways and ensure all security breaches are thoroughly checked.")
         elif blockchain_on:
             await message.answer("Some skills required to get into Blockchain are as follows:\n\n\n \
-\U000026A1 Blockchain architecture. \n \
+\U00002666 Blockchain architecture. \n \
 Blockchain developers should fully understand how blockchain works and the architecture on which it's based. They \
 should be well versed in concepts such as cryptography, consensus, hash functions, distributed ledgers, smart \
 contracts and any other concepts integral to understanding blockchain's inner workings. Developers should also be \
-familiar with the four types of blockchain architecture: consortium, private, public and hybrid.\n\n\
-\U000026A1 Cryptography. \n \
+familiar with the four types of blockchain architecture: consortium, private, public and hybrid.\n\
+Enterprise Blockchain Architect Course:https://www.udemy.com/course/enterprise-blockchain-architect-course/\n\n\
+\U00002666 Cryptography. \n \
 Effective cryptography is essential to providing a secure blockchain environment, and developers should have a strong \
-foundation in cryptographic concepts and practices, including wallets, keys and digital signatures. \n\n\
-\U000026A1 Data structures. \n\
+foundation in cryptographic concepts and practices, including wallets, keys and digital signatures. \n\
+Cryptography Course: https://www.udemy.com/course/cryptography/\n\n\
+\U00002666 Data structures. \n\
 The entire blockchain network consists of data structures. Each block can be considered a type of data structure that \
 clusters transactions for the public ledger. Blockchain developers must routinely work with data structures and should \
-understand how the blockchain network uses them. \n\n\
-\U000026A1 Smart contracts. \n\
+understand how the blockchain network uses them. \n\
+Data Structures Course: https://www.coursera.org/learn/data-structures\n\n\
+\U00002666 Smart contracts. \n\
 Smart contracts are self-executing contracts that enable two parties to exchange goods and services without an \
 intermediary. Smart contracts have become a staple of blockchain implementations, and developers should have a \
-thorough understanding of what they are and how they enforce business logic. \n\n\
-\U000026A1 Web development. \n\
+thorough understanding of what they are and how they enforce business logic. \n\
+Smart Contracts Course: https://www.coursera.org/learn/smarter-contracts\n\n\
+\U00002666 Web development. \n\
 Blockchain and web development go hand in hand, especially with blockchain's emphasis on decentralized applications. \
 Blockchain developers should be experienced in all aspects of web development.\n\n\
-\U000026A1 Programming languages. \n\
+\U00002666 Programming languages. \n\
 Blockchain technologies often use different programming languages, depending on the platforms used to implement the \
 blockchain environments. Although developers can't be experts in every language, they still need to be proficient in \
 any number of them. Some of the more common languages used for blockchain include Java, C++, Python and JavaScript. \n")
         elif networking_on:
             await message.answer("In order to build a career in networking, one needs to develop skill and knowledge \
 pertaining to the following topics: \n\n\n \
-\U0001F5A7 Internet\n\
+\U00002666 Internet\n\
 Internet is a worldwide virtual networking medium that connects computers all across the world. Net is short for the \
 internet and has millions of smaller networks that carry a huge array of information.\n\n\
-\U0001F5A7 Linux\n\
+\U00002666 Linux\n\
 Linux is a Unix-like operating system. Just like Windows, Mac OS, and IOS, Linux is an operating system used by \
-millions across the globe. Android itself is powered by the Linux operating system. \n\n\
-\U0001F5A7 Ethernet\n\
+millions across the globe. Android itself is powered by the Linux operating system. \n\
+Linux Course: https://www.udemy.com/course/linux-administration-bootcamp/\n\n\
+\U00002666 Ethernet\n\
 Ethernet refers to a system that connects a series of computers in a local area network (LAN). This is often done \
 through ethernet cables, which plug into a router or other port in the modem in addition to the computer port.\n\n\
-\U0001F5A7 Network Security\n\
+\U00002666 Network Security\n\
 Here's how network security is used on computer network engineer resumes:\n\
 Create and enforce network security policy.\n\
 Analyzed data network documentation and assisted in communicating to management regarding the current operational \
 status of networks.\n\
 Appointed to Boundary Protection Technician, providing network security and monitoring firewall; opened firewall ports \
-on case-by-case basis.\n\n\
-\U0001F5A7 Assurance\n\
+on case-by-case basis.\n\
+Network Security Courses: https://www.coursera.org/courses?query=network%20security\n\n\
+\U00002666 Assurance\n\
 Here's how assurance is used on computer network engineer resumes:\n\
 Performed information assurance vulnerability assessments on more than 12 ships.\n\
 Implemented Information Assurance controls to ensure all resident information systems were safe and secure.\n\n\
-\U0001F5A7 Hardware\n\
+\U00002666 Hardware\n\
 Hardware is the physical part attached to a computer or other similar devices. Components are the internal parts of \
 hardware which include RAM, hard drives, motherboard, and so on. External hardware devices which include, keyboard, \
-mouse, printer, and so on are known as peripherals. All of these together are called computer hardware.\n\n")
+mouse, printer, and so on are known as peripherals. All of these together are called computer hardware.\n\
+Computer Hardware Course: https://www.coursera.org/learn/computer-hardware-software\n\n")
         elif graphic_designing_on:
             await message.answer("Some skills required to get into GRaphics Design are as follows:\n\n\n \
-\U0001F58C 3D Design\n\
+\U00002666 3D Design\n\
 3D design is the process of using software to create a mathematical representation of a 3-dimensional object or shape. \
 The created object is called a 3D model and these 3-dimensional models are used for computer-generated (CG) design. 3D \
 design is used in a variety of industries to help artists shape, communicate, document, analyse and share their \
-ideas.\n\n\
-\U0001F58C Digital Illustration (Adobe Illustrator)\n\
+ideas.\n\
+3D Design Courses: https://www.skillshare.com/browse/3d-design\n\n\
+\U00002666 Digital Illustration (Adobe Illustrator)\n\
 Illustrator is widely used by graphic designers, web designers, visual artists, and professional illustrators \
 throughout the world to create high quality artwork. Illustrator includes many sophisticated drawing tools that \
-can reduce the time need to create illustrations.\n\n\
-\U0001F58C Adobe Photoshop \n\
+can reduce the time need to create illustrations.\n\
+Illustration Courses: https://www.skillshare.com/browse/illustration\n\n\
+\U00002666 Adobe Photoshop \n\
 Learning Photoshop for graphic design is an essential skill for anyone working or wanting to work in graphic design. \
 Photoshop is the standard digital tool used a wide variety of graphic design roles, including print, web and \
 interactive design, as well as video. Those looking to start a career in graphic design will need to learn Photoshop, \
 but this is simply one step in the process of becoming a graphic designer. Learning Photoshop alone is not enough to \
-become a graphic designer.\n\n\
-\U0001F58C Logo Design \n\
+become a graphic designer.\n\
+Photoshop Course: https://www.skillshare.com/classes/Adobe-Photoshop-CC-%E2%80%93-Essentials-Training-Course/181044379\
+3\n\n\
+\U00002666 Logo Design \n\
 Designers know the importance of a great first impression, which is why graphic designer logos are some of the most \
 creative and compelling logos out there. At a glance, the right logo builds trust in your design skills and sets you \
-apart from the competition. \n\n\
-\U0001F58C Typography \n\
+apart from the competition. \n\
+Logo Design Course: https://www.udemy.com/course/logodesign/\n\n\
+\U00002666 Typography \n\
 Graphic designers use typography to adjust the text within the design. This helps in creating content with a purpose. \
 The planned use of typefaces allows the designers to make a design look aesthetic and pleasing. The designers have \
 been using typefaces strategically to make a text readable and also to make an impression on viewers. Because of such \
-designs with unique typography ideas, a brand can communicate with its audience in an effective way.\n\n\
-\U0001F58C Vector Graphics\n\
+designs with unique typography ideas, a brand can communicate with its audience in an effective way.\n\
+Typography course: https://www.udemy.com/course/typographic-logos-typography-and-lettering-for-logo-design/\n\n\
+\U00002666 Vector Graphics\n\
 Vector graphics are computer images created using a sequence of commands or mathematical statements that place lines \
 and shapes in a two-dimensional or three-dimensional space. In vector graphics, a graphic artist's work, or file, is \
 created and saved as a sequence of vector statements. A vector graphic file describes a series of points to be \
-connected. \n\n")
+connected. \n\
+Vector Graphics Course: https://www.udemy.com/topic/vector-graphic/\n\n")
         elif cloud_computing_on:
             await message.answer("Some skills required to get into Cloud Computing are as follows:\n\n\n \
 \U00002666 Understanding the Linux OS\n \
@@ -442,31 +458,32 @@ internet. Some examples are XML, SOAP, WSDL, and other open standards are used t
 and list services available. Gaining an understanding of these fundamentals can help you in your journey in \
 the cloud.")
         elif data_science_on:
-            await message.answer("Data science is an interdisciplinary field.\n \
+            await message.answer("Data science is an interdisciplinary field.\n \n\
 In order to have a flourishing career, a data scientist should obtain a \
 comprehensive set of skills that covers each building block of the field.\
-Following are the skills that are required to pursue a career in Data Science:\n\
-1.Data science requires you to have or develop skills in statistics.\n\
+Following are the skills that are required to pursue a career in Data Science:\n\n\
+\U00002666Data science requires you to have or develop skills in statistics.\n\
 One of the building blocks is statistics.Some even call machine learning glorified statistics.\
 I do not completely agree with this argument but machine learning and statistics are closely related.\
 The goal of data science is creating value out of data.\
 The initial requirement for accomplishing this goal is to understand the data very well.\n\
 Statistics can be considered as the most impactful tool to understand, interpret, evaluate the data.\
-\n 2.A person has to have or attain knowledge of Data science tools.\
+\n\n\
+\U00002666A person has to have or attain knowledge of Data science tools.\
 The tools for data science are for analyzing data, creating aesthetic and interactive \
 visualizations and creating powerful predictive models using machine learning algorithms.\n \
 Most of the data science tools deliver complex data science operations in one place.\
 Some of the Data science tools of 2021 are:\n\
-SAS\n 2. Apache Hadoop\n 3. Excel\n 4. MongoDB\n 5. Python\n \
-3.One needs to know how to best communicate with others whether it's at\
+SAS\n 2. Apache Hadoop\n 3. Excel\n 4. MongoDB\n 5. Python\n \n\
+\U00002666One needs to know how to best communicate with others whether it's at\
 work or with clients or even with the computer.\n\
 Communication skills play an important role in almost any field you go to; \
 be it industrial or commercial or any other entertainment.\n\
 If you know how to communicate better you can sell anything in this world.\
 Communication becomes a very crucial part of a person's life especially if he \
 belongs to the industrial sector such as Computer Science or IT.\n\
-You need to know how and when to communicate with people and maintain a clean reputation just the same.\
-\n4.Commendable knowledge in Quants and Business Acumen.\n\
+You need to know how and when to communicate with people and maintain a clean reputation just the same.\n\n\
+\U00002666Commendable knowledge in Quants and Business Acumen.\n\
 Good Business Acumen include the following things and qualities: \n\
 *Leadership Skills\n\
 *Financial acumen\n\
@@ -474,8 +491,8 @@ Good Business Acumen include the following things and qualities: \n\
 *Market orientation\n\
 *Analytical skills\n\
 *Problem-solving skills\n\
-\n5.Apart from all these skills one need to have a profound knowledge of Graphs and Statistical Graphs, Pie Charts.\
-\n\
+\n\U00002666Apart from all these skills one need to have a profound knowledge of Graphs and Statistical Graphs, Pie Charts.\
+\n\n\
 Mos of the times in Data Analysis graphs are use and till date they are considered to be the \
 best method of representing any sort of data in a pictorial form.\n\
 Why use of graph is made is beacuse it is easire to understand and it saves a lot of time that would be\
@@ -493,12 +510,12 @@ Robots are gaining intellectual and mechanical capabilities \
 that don’t put the possibility of a R2-D2-like machine out of reach in the future.\n\
 That was about Robotics now we'll talk about the skill you need to learn\
 before going into Robotics:\n\n\
-1.Math and Science:\n\
+\U00002666Math and Science:\n\
 Robotics manufacturer RobotIQ describes mathematics as one of \
 the only core robotics skills that you cannot learn as you go along.\n\
 At a minimum, a strong background in several fields of\
 mathematics and science are critical for a successful career in robotics:\n\n\
-2. Programming:\n\
+\U00002666Programming:\n\
 While a career in robotics requires knowledge of popular \
 programming languages such as C, C++, Python, and Java, there are \
 some key differences between programming for robotics and \
@@ -507,7 +524,7 @@ programming to develop software or mobile applications.\n\
 applications, such as a website requesting information from a \
 database. Robots, on the other hand, interact with software, \
 hardware, and various electronics.\n\n\
-3. Working on a Team:\n\
+\U00002666Working on a Team:\n\
 Robotics is largely technical work, but certain \
 soft skills are beneficial, Platt says. In particular, being a team player is essential. \
 “You want to be someone with valuable skills,” \
@@ -519,13 +536,13 @@ a project manager, product developers, and a user experience expert. \
 You can also expect the team to follow an Agile project \
 management style, with an iterative process for developing, \
 testing, and getting feedback on a product.\n\
-4. Solving Complex Problems: \n\n\
+\U00002666Solving Complex Problems: \n\n\
 Designing and building functioning technical \
 systems is obviously a critical robotics skill, \
 but it’s just as important to be able to figure out why \
 a system isn’t functioning properly. If it’s a mechanical issue, \
 you’ll need to know the best practices for making a repair. \n\n\
-5. Thinking Creatively :\n\
+\U00002666Thinking Creatively :\n\
 A little bit of creativity can go a \
 long way for a robotics professional. \
 It can be beneficial for solving problems, such as using an \
@@ -533,7 +550,7 @@ existing part in a new way or coming up with a brand-new design altogether. \
 Creativity and teamwork go hand in hand, too—a willingness to work with others\
 and accept their contributions can help the entire team \
 come up with a new idea or different solution.\n\n\
-6. Active Learning:\n\
+\U00002666Active Learning:\n\
 The field of robotics is always changing. \
 There are new programming languages to learn, new AI concepts to test,\
 and new and more durable materials to work with. \
@@ -551,33 +568,92 @@ want to take this as your career. Because this particular field \
 demands one to have absolute enthusiasm and passion for Video games.\
 Along with these things the Gaming Industry also demands a  a good \
 knowledge of programming languages from basic to advanced \
-and mastery of gaming specific progremming languages.\n\
-Here are some basic to advance requirements to become a game developer:\n\
-1. A bachelors degree in Software Engineering or Computer \
-sciences is to be attained by the individual after the completion of his college.\n\
-2. Coding languages like C,C++,Java and C# for Unity (basics) ;     \
+and mastery of gaming specific progremming languages.\n\n\
+Here are some basic to advance requirements to become a game developer:\n\n\
+\U00002666 A bachelors degree in Software Engineering or Computer \
+sciences is to be attained by the individual after the completion of his college.\n\n\
+\U00002666 Coding languages like C,C++,Java and C# for Unity (basics) ;     \
 UnrealScript, Lua, JavaScript, SQL, Python, Rust, etc.\
 From which C++ & C# being the most essential of them all \
 as they are considered the foundation of any gaming developer and so \
 any video game out there. Whereas Unreal engine and Unity being \
 only gaming specific languages; more like platforms for \
-designing of the game.\n\
-3. The Designing of the game is something only creative \
+designing of the game.\n\n\
+\U00002666 The Designing of the game is something only creative \
 people will be able to do and make it in a way \
 that the target audience would want to buy it. \
 Creativity deals with the design of each and every object, \
 entity, human, etc in the game. \
 But the part that is linked to creativity the post is the idea of the \
 game and how the maker pictures it in the beginning of the \
-developmental stages\n\
-4.A passion for video games.\n\
-5.Wide-ranging knowledge of gaming trends.\n\
-6.Strong analytical frame of mind.\n\
+developmental stages\n\n\
+\U00002666 A passion for video games.\n\n\
+\U00002666 Wide-ranging knowledge of gaming trends.\n\n\
+\U00002666 Strong analytical frame of mind.\n\n\
 Things you need to study to be a game developer:   \n\
 *Bachelor of Science (B.Sc) in Graphics, Animation & Gaming.\n\
 *Bachelor of Arts (BA) in Digital Filmmaking & Animation.\n\
 *Bachelor of Technology (B. Tech) – Computer Science and Game Development.\n\
 *Bachelor of Science in Animation Game Design and Development.\n\n")
+        elif front_end_development_on:
+            await message.answer("Some skills required to get into Front End Development are as follows:\n\n\n \
+\U00002666 HTML \n\
+Early Front End devs using HTML were limited by the language’s inability to handle design or style. HTML defines the \
+structure of a website and basic elements of how a site should look. HTML can be used to make characters appear bold \
+or italicized and which block of text should be a paragraph.\n\
+HTML Tutorial: https://www.w3schools.com/html/\n\n\
+\U00002666 CSS \n\
+That’s nice if you want a text-based site, but what if you want to change the background color? That’s where CSS \
+enters the picture. CSS is a language that determines how a page should look. Using CSS, Front End devs can code \
+all the stylistic changes in one place without repeating that command every time you want a little style on your \
+site. For example, it takes only a few lines of CSS to turn all our headlines blue.\n\
+CSSS Tutorial: https://www.w3schools.com/css/\n\n\
+\U00002666 JavaScript\n\
+JavaScript is the final layer of cake and turns a static website into a dynamic experience. If you’ve had the pleasure \
+of surfing the web in the mid-1990s — think AOL CDs and dial-up connections — you know all too well the frustration \
+that comes with waiting for a page to load. If you wanted to do anything on a site, you’d have to wait for it to \
+refresh. Luckily, we don’t have to wait anymore. Thank JavaScript for that.\n\
+Js Tutorial: https://www.w3schools.com/js/\n\n\
+\U00002666 JQuery and AJAX\n\
+Now, Front End devs can manipulate web elements without having to wait for a site to load (Imagine waiting for Twitter \
+to refresh every time you updated your feed.) Developers also use Front End frameworks to enhance or simplify \
+JavaScript tasks. The AngularJS framework, for example, lets developers build single-page web apps efficiently. jQuery \
+simplifies tasks and AJAX adds XML, a markup language, to JavaScript to enable sites to update without refreshing.\n\
+JQuery Tutorial: https://www.w3schools.com/jquery/\n\
+AJAX Tutorial: https://www.w3schools.com/js/js_ajax_intro.asp \n\n\
+\U00002666 Bootstrap\n\
+Bootstrap is a free and open-source CSS framework directed at responsive, mobile-first front-end web development. \
+It contains CSS- and JavaScript-based design templates for typography, forms, buttons, navigation, and other interface \
+components.\n\
+Bootstrap Tutorial: https://www.w3schools.com/bootstrap/bootstrap_ver.asp\n\n")
+        elif back_end_development_on:
+            await message.answer("Some skills required to get into Front End Development are as follows:\n\n\n \
+A Back End dev uses a set of Back End developer languages to bring the Front End language of a developer to life. \
+While a Front End dev creates the user experience within a browser, the Back End dev is creating the logic that makes \
+those requests a reality. In some ways, a Back End dev is creating the brains and logic of the website.\n\n\
+\U00002666 PHP\n\
+PHP is another server-side scripting language that can also be used to develop websites. It’s open source and free, \
+which means it’s a versatile tool to create dynamic websites. A Front End needs a Back End otherwise it would be lines \
+of inactive code. Front End languages communicate requests to Back End languages.  Every website has a server, \
+database, and other applications that interact with the Front End through code created by a Back End dev.\n\
+PHP Tutorial: https://www.w3schools.com/php/\n\n\
+\U00002666 Python\n\
+Python is another general purpose, object-oriented programming language. Python is used to code server-side logic and \
+many popular websites, including Reddit and Instagram, are built upon Python. The language is easily scalable with \
+frameworks like Django. Python has become increasingly popular due to its applications in machine learning and data \
+science.\n\
+Python Tutorial: https://www.w3schools.com/python/\n\n\
+\U00002666 Ruby\n\
+Ruby is a general-purpose, object-oriented programming language. That means it’s used widely and treats everything as \
+an object. The philosophy behind Ruby, which emphasizes the human and favors expressiveness, has made it incredibly \
+popular among developers and startups. Ruby on Rails is an incredibly popular framework used to help develop websites \
+and applications by streamlining the development process.\n\
+Ruby Tutorial: https://www.tutorialspoint.com/ruby/\n\n\
+\U00002666 SQL\n\
+SQL, or Structured Query Language, is used to manage data found on a database. MySQL is an open source data management \
+system that’s widely used in Back End development. There are other Back End languages, such as Java or ASP.NET, that \
+are used in different industries.\n\
+SQL Tutorial: https://www.w3schools.com/sql/\n\n")
 
     elif message.text == "\U0001F4BB Courses":
         if ai_and_ml_on:
@@ -630,43 +706,43 @@ https://www.coursera.org/search?query=cybersecurity\n\n \
 https://www.udacity.com/school-of-cybersecurity")
         elif blockchain_on:
             await message.answer("List of some courses and programs for Blockchain:\n\n\n \
-\U000026A1 Blockchain and Bitcoin Fundamentals\n\
+\U00002666 Blockchain and Bitcoin Fundamentals\n\
 https://www.udemy.com/course/blockchain-and-bitcoin-fundamentals/\n\n\
-\U000026A1 Bitcoin and Cryptocurrency Bootcamp\n\
+\U00002666 Bitcoin and Cryptocurrency Bootcamp\n\
 https://www.udemy.com/course/bitcoin-and-cryptocurrency-bootcamp/\n\n\
-\U000026A1 Blockchain Specialization - University of California, Irvine(certified course)\n\
+\U00002666 Blockchain Specialization - University of California, Irvine(certified course)\n\
 https://www.coursera.org/specializations/uci-blockchain\n\n\
-\U000026A1 Blockchain Tutorial For Beginners\n\
+\U00002666 Blockchain Tutorial For Beginners\n\
 https://www.youtube.com/playlist?list=PLsyeobzWxl7oY6tZmnZ5S7yTDxyu4zDW-\n\n\
-\U000026A1 ETHEREUM DEVELOPMENT TUTORIALS\n\
+\U00002666 ETHEREUM DEVELOPMENT TUTORIALS\n\
 https://ethereum.org/en/developers/tutorials/\n\n\
-\U000026A1 Ethereum Tutorial\n\
+\U00002666 Ethereum Tutorial\n\
 https://www.tutorialspoint.com/ethereum/index.htm \n\n")
         elif networking_on:
             await message.answer("List of some courses and programs for Networking:\n\n\n \
-\U0001F5A7 Networking Essentials \n\
+\U00002666 Networking Essentials \n\
 https://www.netacad.com/courses/networking/networking-essentials\n\n\
-\U0001F5A7 CCNA: Introduction to Networks\n\
+\U00002666 CCNA: Introduction to Networks\n\
 https://www.netacad.com/courses/networking/ccna-introduction-networks\n\n\
-\U0001F5A7 Introduction to networking for complete beginners\n\
+\U00002666 Introduction to networking for complete beginners\n\
 https://www.udemy.com/course/introduction-to-networking-for-complete-beginners/\n\n\
-\U0001F5A7 The Complete Networking Fundamentals Course. Your CCNA start\n\
+\U00002666 The Complete Networking Fundamentals Course. Your CCNA start\n\
 https://www.udemy.com/course/complete-networking-fundamentals-course-ccna-start/\n\n\
-\U0001F5A7 Computer Networks\n\
+\U00002666 Computer Networks\n\
 https://www.youtube.com/playlist?list=PLBlnK6fEyqRgMCUAG0XRw78UA8qnv6jEx \n\n")
         elif graphic_designing_on:
             await message.answer("List of some courses and programs for Graphics Design:\n\n\n \
-\U0001F58C Graphic Design Bootcamp: Photoshop, Illustrator, InDesign\n\
+\U00002666 Graphic Design Bootcamp: Photoshop, Illustrator, InDesign\n\
 https://www.udemy.com/course/graphic-design-for-beginners/\n\n\
-\U0001F58C Graphic Design Masterclass: Learn Graphic Design in Projects\n\
+\U00002666 Graphic Design Masterclass: Learn Graphic Design in Projects\n\
 https://www.udemy.com/course/graphic-design/\n\n\
-\U0001F58C Graphic Design Masterclass: Learn Graphic Design in Projects\n\
+\U00002666 Graphic Design Masterclass: Learn Graphic Design in Projects\n\
 https://www.udemy.com/course/become-a-professional-logo-designer/ \n\n\
-\U0001F58C Beginners Guide to Graphic Design | 45 Episode FREE Series \n\
+\U00002666 Beginners Guide to Graphic Design | 45 Episode FREE Series \n\
 https://www.youtube.com/watch?v=WONZVnlam6U&list=PLYfCBK8IplO4E2sXtdKMVpKJZRBEoMvpn \n\n\
-\U0001F58C Graphics Design Skill Share\n\
+\U00002666 Graphics Design Skill Share\n\
 https://www.skillshare.com/browse/graphic-design\n\n\
-\U0001F58C Graphic Design Specialization -  Certified Course by CalArts\n\
+\U00002666 Graphic Design Specialization -  Certified Course by CalArts\n\
 https://www.coursera.org/specializations/graphic-design \n\n")
         elif cloud_computing_on:
             await message.answer("List of some courses for Cloud Computing:\n\n\n \
@@ -687,75 +763,100 @@ https://www.udacity.com/school-of-cloud-computing")
 
         elif game_development_on:
             await message.answer("Here's some courses you can kick off your Game-development career with:\n\
-RUST Programming Tutorial #1- Hello World | Getting Started with Rust:\n\
-https://www.youtube.com/watch?v=vOMJlQ5B-M0&list=PLVvjrrRCBy2JSHf9tGxGKJ-bYAN_uDCUL\n\
-Learn RUST by building real Applications:\n\
-https://www.udemy.com/course/rust-fundamentals/\n\
-Unreal Engine 4 courses (Create multiplayer games with C++):\n\
-https://www.udemy.com/course/unrealcourse/\n\
-Unreal Engine Blueprint Developer Tutorial  | Learn visual scripting:\n\
-https://www.udemy.com/course/unrealblueprint/\n\
-Unreal engine C++ the ultimate Shooter Course:\n\
-https://www.udemy.com/course/unreal-engine-the-ultimate-shooter-course/\n\
-Unreal Engine 5 Beginner tutorial- UE5 starter course:\n\
-https://www.youtube.com/watch?v=gQmiqmxJMtA\n\
-Learn Unity- Beginner game-development tutorial:\n\
-https://www.youtube.com/watch?v=gB1F9G0JXOo\n\
-Unity C# scripting | Complete C# for Unity Game development:\n\
-https://www.udemy.com/course/unity-c-sharp-scripting/?src=sac&kw=C%23+for+unity\n\
-Lua Scripting | Master Lua scripting from Scratch:\n\
-https://www.udemy.com/course/learn-lua-scripting-roblox/\n\
-Lua Programming and game development With LOVE:\n\
-https://www.udemy.com/course/lua-love/\n\
-Here's some bonus courses if youve made it this far:\n\
-Complete Roblox Lua | Start making games with Roblox Studio:\n\
-https://www.udemy.com/course/complete-roblox-lua-start-making-games-with-roblox-studio/\n\
-An Introduction to game development in Python:\n\
-https://www.udemy.com/course/an-introduction-to-game-development-in-python/\n ")
+\U00002666RUST Programming Tutorial #1- Hello World | Getting Started with Rust:\n\
+https://www.youtube.com/watch?v=vOMJlQ5B-M0&list=PLVvjrrRCBy2JSHf9tGxGKJ-bYAN_uDCUL\n\n\
+\U00002666Learn RUST by building real Applications:\n\
+https://www.udemy.com/course/rust-fundamentals/\n\n\
+\U00002666Unreal Engine 4 courses (Create multiplayer games with C++):\n\
+https://www.udemy.com/course/unrealcourse/\n\n\
+\U00002666Unreal Engine Blueprint Developer Tutorial  | Learn visual scripting:\n\
+https://www.udemy.com/course/unrealblueprint/\n\n\
+\U00002666Unreal engine C++ the ultimate Shooter Course:\n\
+https://www.udemy.com/course/unreal-engine-the-ultimate-shooter-course/\n\n\
+\U00002666Unreal Engine 5 Beginner tutorial- UE5 starter course:\n\
+https://www.youtube.com/watch?v=gQmiqmxJMtA\n\n\
+\U00002666Learn Unity- Beginner game-development tutorial:\n\
+https://www.youtube.com/watch?v=gB1F9G0JXOo\n\n\
+\U00002666Unity C# scripting | Complete C# for Unity Game development:\n\
+https://www.udemy.com/course/unity-c-sharp-scripting/?src=sac&kw=C%23+for+unity\n\n\
+\U00002666Lua Scripting | Master Lua scripting from Scratch:\n\
+https://www.udemy.com/course/learn-lua-scripting-roblox/\n\n\
+\U00002666Lua Programming and game development With LOVE:\n\
+https://www.udemy.com/course/lua-love/\n\n\
+\U00002666Here's some bonus courses if youve made it this far:\n\n\
+\U00002666Complete Roblox Lua | Start making games with Roblox Studio:\n\
+https://www.udemy.com/course/complete-roblox-lua-start-making-games-with-roblox-studio/\n\n\
+\U00002666An Introduction to game development in Python:\n\
+https://www.udemy.com/course/an-introduction-to-game-development-in-python/\n\n ")
 
         elif data_science_on:
-            await message.answer("Here's some courses you can kick off your Data Science career with:\n\
-The complete SQL Bootcamp of Manipulation and Analysis of Data:\n\
-https://www.udemy.com/course/the-complete-sql-bootcamp/\n\
-BI Analysis: MySQL for Data Analytics and Business Intelligence:\n\
-https://www.udemy.com/course/sql-mysql-for-data-analytics-and-business-intelligence/\n\
-2021 Python for Machine Learning and Data Science Mastercalss:\n\
-https://www.udemy.com/course/python-for-machine-learning-data-science-masterclass/\n\
-Python for Data Science: Course for Beginners(Learn Python, Pandas, NumPy, Matplotlib):\n\
-https://www.youtube.com/watch?v=LHBE6Q9XlzI\n\
-Learn Apache Spark3 with Scala-Hands on with big Data:\n\
-https://www.udemy.com/course/apache-spark-with-scala-hands-on-with-big-data/\n\
-Apache Spark Full Course- Learn Complete Apache in 8 hours:\n\
-https://www.youtube.com/watch?v=F8pyaR4uQ2g\n\
-R programming Tutorial - Learn the Basics of Statistical Computing:\n\
-https://www.youtube.com/watch?v=_V8eKsto3Ug\n\
-R Programming A-Z: For Data Science(Courses and Exercises):\n\
+            await message.answer("Here's some courses you can kick off your Data Science career with:\n\n\
+\U00002666The complete SQL Bootcamp of Manipulation and Analysis of Data:\n\
+https://www.udemy.com/course/the-complete-sql-bootcamp/\n\n\
+\U00002666BI Analysis: MySQL for Data Analytics and Business Intelligence:\n\
+https://www.udemy.com/course/sql-mysql-for-data-analytics-and-business-intelligence/\n\n\
+\U000026662021 Python for Machine Learning and Data Science Mastercalss:\n\
+https://www.udemy.com/course/python-for-machine-learning-data-science-masterclass/\n\n\
+\U00002666Python for Data Science: Course for Beginners(Learn Python, Pandas, NumPy, Matplotlib):\n\
+https://www.youtube.com/watch?v=LHBE6Q9XlzI\n\n\
+\U00002666Learn Apache Spark3 with Scala-Hands on with big Data:\n\
+https://www.udemy.com/course/apache-spark-with-scala-hands-on-with-big-data/\n\n\
+\U00002666Apache Spark Full Course- Learn Complete Apache in 8 hours:\n\
+https://www.youtube.com/watch?v=F8pyaR4uQ2g\n\n\
+\U00002666R programming Tutorial - Learn the Basics of Statistical Computing:\n\
+https://www.youtube.com/watch?v=_V8eKsto3Ug\n\n\
+\U00002666R Programming A-Z: For Data Science(Courses and Exercises):\n\
 https://www.udemy.com/course/r-programming/\n")
 
         elif robotics_and_hardware_on:
             await message.answer("Here's some courses you can kick off your Robotics \
 and Hardware career with:\n\
-Here are some courses on arduino:\n\
-Basic electronics for Arduino Makers:\n\
-https://www.udemy.com/course/basic-electronics/\n\
-Arduino step by step getting serious:\n\
-https://www.udemy.com/course/arduino-sbs-getting-serious/\n\
-Arduino step by step: Getting started:\n\
-https://www.udemy.com/course/arduino-sbs-17gs/\n\
-Arduino for Beginners with Grove:\n\
-https://www.udemy.com/course/arduino-getting-started-with-grove/\n\
+\U00002666Here are some courses on arduino:\n\
+\U00002666Basic electronics for Arduino Makers:\n\
+https://www.udemy.com/course/basic-electronics/\n\n\
+\U00002666Arduino step by step getting serious:\n\
+https://www.udemy.com/course/arduino-sbs-getting-serious/\n\n\
+\U00002666Arduino step by step: Getting started:\n\
+https://www.udemy.com/course/arduino-sbs-17gs/\n\n\
+\U00002666Arduino for Beginners with Grove:\n\
+https://www.udemy.com/course/arduino-getting-started-with-grove/\n\n\
 \n\n\
-Courses for beginners in Electronics:\n\
-Electronics Mastery- The beignners course in Electronics:\n\
-https://www.udemy.com/course/electronics-mastery-understand-the-fundamentals-fast/\n\
-Complete UiPath RPA Develpoer Course: BUild 7 Robots:\n\
-https://www.udemy.com/course/complete-uipath-rpa-developer-course/\n\
+\U00002666Courses for beginners in Electronics:\n\
+\U00002666Electronics Mastery- The beignners course in Electronics:\n\
+https://www.udemy.com/course/electronics-mastery-understand-the-fundamentals-fast/\n\n\
+\U00002666Complete UiPath RPA Develpoer Course: BUild 7 Robots:\n\
+https://www.udemy.com/course/complete-uipath-rpa-developer-course/\n\n\
 \n\n\
-Here's your guide in and around the Breadboard:\n\
-How to use the Breadboard:\n\
-https://www.sciencebuddies.org/science-fair-projects/references/how-to-use-a-breadboard\n\
-How to use a Breadboard:\n\
-https://youtu.be/6WReFkfrUIk\n")
+\U00002666Here's your guide in and around the Breadboard:\n\
+\U00002666How to use the Breadboard:\n\
+https://www.sciencebuddies.org/science-fair-projects/references/how-to-use-a-breadboard\n\n\
+\U00002666How to use a Breadboard:\n\
+https://youtu.be/6WReFkfrUIk\n\n")
+
+        elif front_end_development_on:
+            await message.answer("Here's some courses you can kick off your front end career:\n\n\n\
+\U00002666The Complete Front-End Web Development Course!\n\
+https://www.udemy.com/course/front-end-web-development/\n\n\
+\U00002666Programming Foundations with JavaScript, HTML and CSS\n\
+https://www.coursera.org/learn/duke-programming-web\n\n\
+\U00002666The Web Developer Bootcamp 2022\n\
+https://www.udemy.com/course/the-web-developer-bootcamp/\n\n\
+\U00002666Front-End Web Development Quick Start With HTML5, CSS, and JavaScript\n\
+https://www.pluralsight.com/courses/front-end-web-app-html5-javascript-css\n\n\
+\U00002666Front-End Web Development with React\n\
+https://www.coursera.org/learn/front-end-react\n\n")
+        elif back_end_development_on:
+            await message.answer("Here's some courses you can kick off your back end career:\n\n\n\
+\U00002666Complete Backend Development 2022 Bundle - Python Roadmap\n\
+https://www.udemy.com/course/software-developer-masterclass/\n\n\
+\U00002666Django 3 - Python Backend Web Development For Beginner\n\
+https://www.udemy.com/course/django-python-web-development-for-beginner/\n\n\
+\U00002666Intro to Backend\n\
+https://www.udacity.com/course/intro-to-backend--ud171\n\n\
+\U00002666Building Web Applications in PHP\n\
+https://www.coursera.org/learn/web-applications-php\n\n\
+\U00002666The Complete Ruby on Rails Developer Course\n\
+https://www.coursera.org/courses?query=php\n\n")
 
     elif message.text == "\U0001F4D6 Books":
         if ai_and_ml_on:
@@ -810,40 +911,40 @@ https://www.amazon.in/Kali-Linux-Revealed-Penetration-Distribution/dp/0997615605
 https://www.amazon.in/Linux-Basics-Hackers-Networking-Scripting/dp/1593278551/ref=pd_sim_4/260-9296315-6994404")
         elif blockchain_on:
             await message.answer("Some books to refer for Blockchain:\n\n\n \
-\U000026A1 The Book of Satoshi:\n\
+\U00002666 The Book of Satoshi:\n\
 The Collected Writings of Bitcoin Creator Satoshi Nakamoto\n\
 https://www.amazon.in/Book-Satoshi-Collected-Writings-Nakamoto-ebook/dp/B00M6KGJ2K\n\n\
-\U000026A1 Decentralized Applications:\n\
+\U00002666 Decentralized Applications:\n\
 Harnessing Bitcoin’s Blockchain Technology\n\
 https://www.amazon.in/Decentralized-Applications-Siraj-Raval/dp/1491924543\n\n\
-\U000026A1 Mastering Blockchain Programming with Solidity:\n\
+\U00002666 Mastering Blockchain Programming with Solidity:\n\
 Write Production-ready Smart Contracts for Ethereum Blockchain with Solidity\n\
 https://www.amazon.in/Mastering-Blockchain-Programming-Solidity-production-ready-ebook/dp/B07W5F8S1L\n\n\
-\U000026A1 Mastering Bitcoin:\n\
+\U00002666 Mastering Bitcoin:\n\
 Programming the Open Blockchain\n\
 https://www.amazon.in/Mastering-Bitcoin-Programming-Open-Blockchain/dp/9352135741\n\n\
-\U000026A1 Hands-On Blockchain for Python Developers:\n\
+\U00002666 Hands-On Blockchain for Python Developers:\n\
 Gain blockchain programming skills to build decentralized applications using Python\n\
 https://www.amazon.in/Hands-Blockchain-Python-Developers-decentralized/dp/1788627857\n\n")
         elif networking_on:
             await message.answer("Some books to refer for Networking:\n\n\n \
-\U0001F5A7 CompTIA Network+ Certification All-in-One Exam Guide\n\
+\U00002666 CompTIA Network+ Certification All-in-One Exam Guide\n\
 https://www.amazon.in/dp/1260122387\n\n\
-\U0001F5A7 Network Programmability and Automation\n\
+\U00002666 Network Programmability and Automation\n\
 https://www.amazon.in/dp/1491931256\n\n\
-\U0001F5A7 Computer Networking: A Top-Down Approach\n\
+\U00002666 Computer Networking: A Top-Down Approach\n\
 https://www.amazon.in/dp/0133594149\n\n\
-\U0001F5A7 Computer Networks\n\
+\U00002666 Computer Networks\n\
 https://www.amazon.in/Computer-Networks-5e-5th-Tanenbaum/dp/9332518742\n\n")
         elif graphic_designing_on:
             await message.answer("Some books to refer for Graphics Design:\n\n\n\
-\U0001F58C Logo Modernism\n\
+\U00002666 Logo Modernism\n\
 https://www.amazon.in/dp/3836545306\n\n\
-\U0001F58C The Elements of Typographic Style (v4)\n\
+\U00002666 The Elements of Typographic Style (v4)\n\
 https://www.amazon.in/dp/0881792128\n\n\
-\U0001F58C How to be a Graphic Designer Without Losing Your Soul\n\
+\U00002666 How to be a Graphic Designer Without Losing Your Soul\n\
 https://www.amazon.in/dp/1856697096\n\n\
-\U0001F58C Graphic Design for Art, Fashion, Film, Architecture, Photography, Product Design and Everything in Between \n\
+\U00002666 Graphic Design for Art, Fashion, Film, Architecture, Photography, Product Design and Everything in Between \n\
 https://www.amazon.in/dp/3791383507 \n\n")
         elif cloud_computing_on:
             await message.answer("Some books to refer for Cloud Computing:\n\n\n \
@@ -871,87 +972,113 @@ https://www.amazon.in/Cloud-Computing-Concepts-Technology-Architecture/dp/B099KS
 https://www.amazon.in/Cloud-Computing-Hands-Arshdeep-Bahga/dp/8173719233/ref=sr_1_1")
         elif game_development_on:
             await message.answer("Here's some books for you to refer for Game-development:\n\
-Hands-On Unity 2020 Game Development: Build, customize, \
+\U00002666Hands-On Unity 2020 Game Development: Build, customize, \
 and optimize professional games using Unity 2020 and C# 1st Edition\n\
-https://www.amazon.in/Hands-Unity-2020-Game-Development-ebook/dp/B087BXKD89/ref=sr_1_2   \n \
-Game Development Projects with Unreal Engine: Learn to \
+https://www.amazon.in/Hands-Unity-2020-Game-Development-ebook/dp/B087BXKD89/ref=sr_1_2   \n \n\
+\U00002666Game Development Projects with Unreal Engine: Learn to \
 build your first games and bring your ideas to life using UE4 and C++ \n\
-https://www.amazon.in/Game-Development-Projects-Unreal-Engine/dp/1800209223/ref=sr_1_4\n\
-Unity Game Development Blueprint:\n\
-https://www.amazon.in/Unity-Game-Development-Blueprints-Doran/dp/1783553650/ref=sr_1_6?\n\
-Game Feel: A Game Designer's Guide to Virtual Sensation \
+https://www.amazon.in/Game-Development-Projects-Unreal-Engine/dp/1800209223/ref=sr_1_4\n\n\
+\U00002666Unity Game Development Blueprint:\n\
+https://www.amazon.in/Unity-Game-Development-Blueprints-Doran/dp/1783553650/ref=sr_1_6?\n\n\
+\U00002666Game Feel: A Game Designer's Guide to Virtual Sensation \
 (Morgan Kaufmann Game Design Books)\n\
-https://www.amazon.in/Game-Feel-Designers-Sensation-Kaufmann/dp/0123743281/ref=sr_1_1\n\
-The Art of Game Design: A Book of Lenses, Third Edition \n\
-https://www.amazon.in/Art-Game-Design-Lenses-Third/dp/1138632058/ref=sr_1_1 \n\
-Practical Game Design: Learn the art of game design through \
+https://www.amazon.in/Game-Feel-Designers-Sensation-Kaufmann/dp/0123743281/ref=sr_1_1\n\n\
+\U00002666The Art of Game Design: A Book of Lenses, Third Edition \n\
+https://www.amazon.in/Art-Game-Design-Lenses-Third/dp/1138632058/ref=sr_1_1 \n\n\
+\U00002666Practical Game Design: Learn the art of game design through \
 applicable skills and cutting-edge insights\n\
-https://www.amazon.in/Practical-Game-Design-applicable-cutting-edge/dp/1787121798/ref=sr_1_1\n\
-Game Engine Architecture, Third Edition \n\
-https://www.amazon.in/Engine-Architecture-Third-Jason-Gregory/dp/1138035459/ref=sr_1_1\n\
-Unity from Zero to Proficiency (Intermediate): \
+https://www.amazon.in/Practical-Game-Design-applicable-cutting-edge/dp/1787121798/ref=sr_1_1\n\n\
+\U00002666Game Engine Architecture, Third Edition \n\
+https://www.amazon.in/Engine-Architecture-Third-Jason-Gregory/dp/1138035459/ref=sr_1_1\n\n\
+\U00002666Unity from Zero to Proficiency (Intermediate): \
 A step-by-step guide to coding your first FPS in C# with Unity. [Third Edition]\n\
-https://www.amazon.in/Unity-Proficiency-Intermediate-step-step/dp/1696564298/ref=sr_1_1\n\
-Getting Started with Unity 5: Leverage the power of Unity 5 to create amazing 3D games\n\
-https://www.amazon.in/gp/slredirect/picassoRedirect.html/ref=pa_sp_atf_aps_sr_pg1_1\n")
+https://www.amazon.in/Unity-Proficiency-Intermediate-step-step/dp/1696564298/ref=sr_1_1\n\n\
+")
 
 
         elif data_science_on:
             await message.answer("Here's some books for you to refer for Data Science:\n\
-Data Science from scratch:\n\
-https://www.amazon.in/Data-Science-Scratch-Joel-Grus/dp/149190142X/ref=sr_1_2\n\
-Hands-On Machine Learning with Scikit-Learn, Keras and Tensor Flow: \
+\U00002666Data Science from scratch:\n\
+https://www.amazon.in/Data-Science-Scratch-Joel-Grus/dp/149190142X/ref=sr_1_2\n\n\
+\U00002666Hands-On Machine Learning with Scikit-Learn, Keras and Tensor Flow: \
 Concepts, Tools and Techniques to Build Intelligent Systems:\n\
-https://www.amazon.in/Hands-Machine-Learning-Scikit-Learn-Tensor/dp/9352139054/ref=sr_1_1\n\
-Build a carerr in Data Science:\n\
-https://www.amazon.in/Build-Career-Science-Emily-Robinson/dp/1617296244/ref=sr_1_1\n\
-R for Data Science: Import, Tidy, Transform, Visualize, and Model Data:\n\
-https://www.amazon.in/Data-Science-Transform-Visualize-Model/dp/9352134974/ref=sr_1_3\n\
-Python Data Science Handbook: Essential Tools for Working with Data:\n\
-https://www.amazon.in/Python-Data-Science-Handbook-Essential/dp/9352134915/ref=sr_1_1\n\
-Practical Statistics for Data Scientists: \
+https://www.amazon.in/Hands-Machine-Learning-Scikit-Learn-Tensor/dp/9352139054/ref=sr_1_1\n\n\
+\U00002666Build a carerr in Data Science:\n\
+https://www.amazon.in/Build-Career-Science-Emily-Robinson/dp/1617296244/ref=sr_1_1\n\n\
+\U00002666R for Data Science: Import, Tidy, Transform, Visualize, and Model Data:\n\
+https://www.amazon.in/Data-Science-Transform-Visualize-Model/dp/9352134974/ref=sr_1_3\n\n\
+\U00002666Python Data Science Handbook: Essential Tools for Working with Data:\n\
+https://www.amazon.in/Python-Data-Science-Handbook-Essential/dp/9352134915/ref=sr_1_1\n\n\
+\U00002666Practical Statistics for Data Scientists: \
 50+ Essential Concepts Using R and Python, Second Edition Paperback:\n\
-https://www.amazon.in/Practical-Statistics-Data-Scientists-Essential/dp/8194435005/ref=sr_1_1\n\
-Deep learning with python:\n\
-https://www.amazon.in/Deep-Learning-Python-Francois-Chollet/dp/1617294438/ref=sr_1_3\n\
-Introduction to Machine Learning with Python: \
+https://www.amazon.in/Practical-Statistics-Data-Scientists-Essential/dp/8194435005/ref=sr_1_1\n\n\
+\U00002666Deep learning with python:\n\
+https://www.amazon.in/Deep-Learning-Python-Francois-Chollet/dp/1617294438/ref=sr_1_3\n\n\
+\U00002666Introduction to Machine Learning with Python: \
 A Guide for Data Scientists (Greyscale Indian Edition):\n\
-https://www.amazon.in/Introduction-Machine-Learning-Python-Scientists/dp/9352134575/ref=sr_1_3\n")
+https://www.amazon.in/Introduction-Machine-Learning-Python-Scientists/dp/9352134575/ref=sr_1_3\n\n")
 
 
         elif robotics_and_hardware_on:
-            await message.answer("Here's soem books for you to refer to for \
+            await message.answer("Here's some books for you to refer to for \
 Robotics and hardware:\n\
-Springer Handbook of Robotics :\n\
-https://www.amazon.in/Springer-Handbook-Robotics-Handbooks/dp/3319325507/ref=sr_1_1\n\
-Robotics, Vision and Control: Fundamental Algorithms \
+\U00002666Springer Handbook of Robotics :\n\
+https://www.amazon.in/Springer-Handbook-Robotics-Handbooks/dp/3319325507/ref=sr_1_1\n\n\
+\U00002666Robotics, Vision and Control: Fundamental Algorithms \
 In MATLAB® Second, Completely Revised, Extended And Updated Edition:\n\
-https://www.amazon.in/Robotics-Vision-Control-Fundamental-Algorithms/dp/3319544128/ref=sr_1_2\n\
-Probabilistic Robotics (Intelligent Robotics and Autonomous Agents series):\n\
-https://www.amazon.in/Probabilistic-Robotics/dp/0262201623/ref=sr_1_1\n\
-Introduction to Robotics: Mechanics and Control:\n\
-https://www.amazon.in/Introduction-Robotics-Mechanics-Control-3e/dp/8131718360/ref=sr_1_3\n\
-Modern Robotics: Mechanics, Planning, and Control:\n\
-https://www.amazon.in/Modern-Robotics-Mechanics-Planning-Control/dp/1107156300/ref=sr_1_1\n\
-Planning Algorithims:\n\
-https://www.amazon.in/Planning-Algorithms-Steven-M-LaValle/dp/0521862051/ref=sr_1_1\n\
-Principles of Robot Motion: \
+https://www.amazon.in/Robotics-Vision-Control-Fundamental-Algorithms/dp/3319544128/ref=sr_1_2\n\n\
+\U00002666Probabilistic Robotics (Intelligent Robotics and Autonomous Agents series):\n\
+https://www.amazon.in/Probabilistic-Robotics/dp/0262201623/ref=sr_1_1\n\n\
+\U00002666Introduction to Robotics: Mechanics and Control:\n\
+https://www.amazon.in/Introduction-Robotics-Mechanics-Control-3e/dp/8131718360/ref=sr_1_3\n\n\
+\U00002666Modern Robotics: Mechanics, Planning, and Control:\n\
+https://www.amazon.in/Modern-Robotics-Mechanics-Planning-Control/dp/1107156300/ref=sr_1_1\n\n\
+\U00002666Planning Algorithims:\n\
+https://www.amazon.in/Planning-Algorithms-Steven-M-LaValle/dp/0521862051/ref=sr_1_1\n\n\
+\U00002666Principles of Robot Motion: \
 Theory, Algorithms, and Implementations \
 (Intelligent Robotics and Autonomous Agents series):\n\
-https://www.amazon.in/Principles-Robot-Motion-Algorithms-Implementation/dp/0262033275/ref=sr_1_1\n\
-Mechanics of Robotic Manipulation (Intelligent Robotics and Autonomous Agents series):\n\
-https://www.amazon.in/Mechanics-Manipulation-Intelligent-Robotics-Autonomous/dp/0262133962/ref=sr_1_2\n\
-The Art of electronics:\n\
-https://www.amazon.in/Art-Electronics-Paul-Horowitz/dp/0521809266/ref=sr_1_2\n\
-Practical Electronics for Inventors, Fourth Edition:\n\
-https://www.amazon.in/Practical-Electronics-Inventors-Fourth-Scherz/dp/1259587541/ref=sr_1_2\n\
-Getting Started With Electronics:\n\
-https://www.amazon.in/Getting-Started-Electronics-Forrest-Mims/dp/0945053282/ref=sr_1_2\n\
-Understanding Basic Electronics:\n\
-https://www.amazon.in/Understanding-Basic-Electronics-ARRL-Inc-ebook/dp/B0112HMEUI/ref=sr_1_7\n\
-Beginner's Guide to Reading Schematics, Fourth Edition:\n\
-https://www.amazon.in/Beginners-Guide-Reading-Schematics-Gibilisco/dp/1260031101/ref=sr_1_1\n")
+https://www.amazon.in/Principles-Robot-Motion-Algorithms-Implementation/dp/0262033275/ref=sr_1_1\n\n\
+\U00002666Mechanics of Robotic Manipulation (Intelligent Robotics and Autonomous Agents series):\n\
+https://www.amazon.in/Mechanics-Manipulation-Intelligent-Robotics-Autonomous/dp/0262133962/ref=sr_1_2\n\n\
+\U00002666The Art of electronics:\n\
+https://www.amazon.in/Art-Electronics-Paul-Horowitz/dp/0521809266/ref=sr_1_2\n\n\
+\U00002666Practical Electronics for Inventors, Fourth Edition:\n\
+https://www.amazon.in/Practical-Electronics-Inventors-Fourth-Scherz/dp/1259587541/ref=sr_1_2\n\n\
+\U00002666Getting Started With Electronics:\n\
+https://www.amazon.in/Getting-Started-Electronics-Forrest-Mims/dp/0945053282/ref=sr_1_2\n\n\
+\U00002666Understanding Basic Electronics:\n\
+https://www.amazon.in/Understanding-Basic-Electronics-ARRL-Inc-ebook/dp/B0112HMEUI/ref=sr_1_7\n\n\
+\U00002666Beginner's Guide to Reading Schematics, Fourth Edition:\n\
+https://www.amazon.in/Beginners-Guide-Reading-Schematics-Gibilisco/dp/1260031101/ref=sr_1_1\n\n")
 
+        elif front_end_development_on:
+            await message.answer("Here's some books for you to refer for Front End Development:\n\n\n\
+\U00002666 HTML and CSS: Design and build websites, by Jon Duckett\n\
+https://amzn.to/2LrksaL\n\n\
+\U00002666 JavaScript and JQuery: Interactive Front-End Web Development, by Jon Duckett\n\
+https://amzn.to/2HICgNJ\n\n\
+\U00002666 Learning Web Design: A beginner’s guide to HTML, CSS, Javascript, and Web Graphics, By Jennifer Niederst \
+Robbins\n\
+https://amzn.to/2Lvf1aK\n\n\
+\U00002666 Eloquent Javascript: by Marijn Haverbake\n\
+https://amzn.to/2NNC7MI\n\n\
+\U00002666 Designing with Web Standards (Voices That Matter)\n\
+https://amzn.to/2PGV2eJ\n\n")
+        elif back_end_development_on:
+            await message.answer("Here's some books for you to refer for Back End Development:\n\n\n\
+\U00002666 Head First Java: By Kathy Sierra, Bert Bates\n\
+https://www.amazon.in/gp/product/0596009208/\n\n\
+\U00002666 Programming: Principles and Practice Using C++: By Bjarne Stroustrup\n\
+https://www.amazon.in/gp/product/B00KPTEH8C/\n\n\
+\U00002666 Learn Python The Hard Way: By Zed A. Shaw\n\
+https://www.amazon.in/gp/product/9332582106/\n\n\
+\U00002666 The Joy of PHP Programming: By Alan Forbes\n\
+https://www.amazon.in/gp/product/1522792147/\n\n\
+\U00002666 Beginning Node.js: By Basarat Ali Syed\n\
+https://www.amazon.in/gp/product/1484201884/\n\n\
+\U00002666 PHP & MySQL: The Missing Manual\n\
+https://www.amazon.in/gp/product/144934190X/\n\n")
 
     elif message.text == "\U0001F3C5 Certifications":
         if cyber_security_on:
@@ -980,41 +1107,41 @@ https://www.comptia.org/certifications/comptia-advanced-security-practitioner\n\
 https://www.giac.org/certifications/certified-incident-handler-gcih/")
         elif blockchain_on:
             await message.answer("Certifications that will help boost your career:\n\n\n\
-\U000026A1 Certified Blockchain Expert -  Blockchain Council\n\
+\U00002666 Certified Blockchain Expert -  Blockchain Council\n\
 https://www.blockchain-council.org/certifications/certified-blockchain-professional-expert/\n\n\
-\U000026A1 Certified Ethereum Expert - Blockchain Council\n\
+\U00002666 Certified Ethereum Expert - Blockchain Council\n\
 https://www.blockchain-council.org/certifications/certified-ethereum-expert-cee/\n\n\
-\U000026A1 Certified Blockchain Professional - EC Council\n\
+\U00002666 Certified Blockchain Professional - EC Council\n\
 https://www.eccouncil.org/programs/certified-blockchain-professional-cbp/\n\n\
-\U000026A1 Certified Enterprise Blockchain Architect (CEBA) - 101 Blockchains\n\
+\U00002666 Certified Enterprise Blockchain Architect (CEBA) - 101 Blockchains\n\
 https://academy.101blockchains.com/courses/certified-enterprise-blockchain-architect\n\n\
-\U000026A1 Blockchain Technology — EdX\n\
+\U00002666 Blockchain Technology — EdX\n\
 https://www.edx.org/professional-certificate/uc-berkeleyx-blockchain-fundamentals\n\n\
-\U000026A1 Certified Blockchain Developer — Educative\n\
+\U00002666 Certified Blockchain Developer — Educative\n\
 https://www.educative.io/courses/hands-on-blockchain-hyperledger-fabric\n\n")
         elif networking_on:
             await message.answer("Certifications that will help boost your career:\n\n\n\
-\U0001F5A7 CompTIA IT Fundamentals (ITF+)\n\
+\U00002666 CompTIA IT Fundamentals (ITF+)\n\
 https://www.comptia.org/certifications/network\n\n\
-\U0001F5A7 Cisco Certified Network Associate (CCNA)\n\
+\U00002666 Cisco Certified Network Associate (CCNA)\n\
 https://www.cisco.com/c/en/us/training-events/training-certifications/certifications/associate/ccna.html\n\n\
-\U0001F5A7 Cisco Certified Network Professional (CCNP) Enterprise:\n\
+\U00002666 Cisco Certified Network Professional (CCNP) Enterprise:\n\
 https://www.cisco.com/c/en/us/training-events/training-certifications/certifications/professional/ccnp-enterprise.\
 html\n\n\
-\U0001F5A7 Cisco Certified Internetwork Expert (CCIE) Enterprise Infrastructure\n\
+\U00002666 Cisco Certified Internetwork Expert (CCIE) Enterprise Infrastructure\n\
 https://www.cisco.com/c/en/us/training-events/training-certifications/certifications/expert/ccie-enterprise-\
 infrastructure.html\n\n\
-\U0001F5A7 VMWare Certified Technical Associate - Network Virtualization (VCTA-NV)\n\
+\U00002666 VMWare Certified Technical Associate - Network Virtualization (VCTA-NV)\n\
 https://www.vmware.com/education-services/certification/vcta-nv.html\n\n\
-\U0001F5A7 Juniper Networks Certified Associate - Junos (JNCIA-Junos)\n\
+\U00002666 Juniper Networks Certified Associate - Junos (JNCIA-Junos)\n\
 https://www.juniper.net/us/en/training/certification.html \n\n")
         elif graphic_designing_on:
             await message.answer("Certifications that will help boost your career:\n\n\n\
-\U0001F58C Adobe Certified Associate in Graphic Design and Illustration\n\
+\U00002666 Adobe Certified Associate in Graphic Design and Illustration\n\
 https://edex.adobe.com/teaching-resources/v770dfc88\n\n\
-\U0001F58C Visual Design Using Adobe Photoshop\n\
+\U00002666 Visual Design Using Adobe Photoshop\n\
 https://edex.adobe.com/teaching-resources/v97ccf4fe\n\n\
-\U0001F58C Print and Digital Media Publication Using Adobe InDesign\n\
+\U00002666 Print and Digital Media Publication Using Adobe InDesign\n\
 https://edex.adobe.com/teaching-resources/v042df592 \n\n")
         elif cloud_computing_on:
             await message.answer("Certifications that can help boost your career:\n\n\n \
@@ -1039,6 +1166,52 @@ https://www.comptia.org/certifications/cloud\n\n \
 \U00002666 Certified Cloud Security Professional (CCSP)\n \
 https://www.isc2.org/Certifications/CCSP")
 
+        elif game_development_on:
+            await message.answer("Certifications that can help boost your career:\n\n\n \
+\U00002666Professional Certificate in Computer Science for Game Development (Harvard University)\n \
+https://www.edx.org/professional-certificate/harvardx-computer-science-for-game-development\n\n \
+\U00002666Unity certified associate-game-developer\n \
+https://unity.com/products/unity-certifications/associate-game-developer\n\n  ")
+
+        elif robotics_and_hardware_on:
+            await message.answer("Certifications that can help boost your career:\n\n\n \
+\U00002666A3 CERTIFIED ROBOT INTEGRATOR PROGRAM\n \
+https://www.automate.org/a3-content/robotic-integrator-certification-program\n\n \
+\U00002666FANUC National Certifications for Robotics and Advanced Automation Manufacturing\n \
+https://www.fanucamerica.com/education/nocti-certifications-robotics\n\n ")
+
+        elif data_science_on:
+            await message.answer("Certifications that can help boost your career:\n\n\n \
+\U00002666IBM Data Science Professional Certificate\n \
+https://www.ibm.com/training/badge/fb3af6d8-2402-4acb-b852-7a0c5034c976\n\n \
+\U00002666HarvardX’s Data Science Professional Certificate\n \
+https://www.edx.org/professional-certificate/harvardx-data-science\n\n \
+\U00002666Amazon AWS Big Data Certification\n \
+https://aws.amazon.com/certification/certified-big-data-specialty/\n\n \
+\U00002666Microsoft Certified Azure Data Scientist Associate\n \
+https://docs.microsoft.com/en-us/learn/certifications/azure-data-scientist/\n\n ")
+
+        elif front_end_development_on:
+            await message.answer("Certifications that can help boost your career:\n\n\n \
+\U00002666W3C Front-End Web Developer Professional Certificate\n \
+https://www.edx.org/professional-certificate/w3cx-front-end-web-developer\n\n \
+\U00002666Certified Web Professional - Web Developer\n \
+https://iwanet.org/profdevel/certification-levels/\n\n \
+\U00002666Web Foundations Associate\n \
+https://www.ciwcertified.com/\n\n \
+\U00002666HTML5 Application Development Fundamentals\n \
+https://docs.microsoft.com/en-us/learn/certifications/exams/98-375\n\n ")
+        elif back_end_development_on:
+            await message.answer("Certifications that can help boost your career:\n\n\n \
+\U00002666CWP Web Developer Certificate\n \
+https://iwanet.org/profdevel/certification-levels/\n\n \
+\U00002666Oracle Certified Professional (OCP) MySQL 5.6 Developer\n \
+https://education.oracle.com/oracle-certification-path/pfamily_406\n\n \
+\U00002666Amazon Web Services (AWS Certified Developer – Associate Level)\n \
+https://aws.amazon.com/certification/certified-developer-associate/\n\n \
+\U00002666IBM Full Stack Cloud Developer Professional Certificate\n \
+https://www.coursera.org/professional-certificates/ibm-full-stack-cloud-developer\n\n")
+
     elif message.text == "\U0001F393 Degrees":
         if cyber_security_on:
             await message.answer("Cyber Security Degrees which you can acquire:\n\n\n \
@@ -1054,17 +1227,17 @@ https://www.upgrad.com/cyber-security-certification-pgc-iiitb\n\n \
 https://www.upgrad.com/cyber-security-pgd-iiitb")
         elif blockchain_on:
             await message.answer("Possible Blockchain based degrees:\n\n\n\
-\U000026A1 Top 5 Universities for Blockchain Degrees(international)\n\
+\U00002666 Top 5 Universities for Blockchain Degrees(international)\n\
 https://www.stoodnt.com/blog/top-5-universities-for-blockchain-degrees/\n\n\
-\U000026A1 Masters Programs in Blockchain in Europe 2022\n\
+\U00002666 Masters Programs in Blockchain in Europe 2022\n\
 https://www.masterstudies.com/Masters-Degree/Blockchain/Europe/\n\n\
-\U000026A1 Advanced Certification in Software Engineering for Cloud, Blockchain & IoT - IIT: B\n\
+\U00002666 Advanced Certification in Software Engineering for Cloud, Blockchain & IoT - IIT: B\n\
 https://www.greatlearning.in/iit-madras-acse \n\n")
         elif networking_on:
             await message.answer("Possible Networking based degrees:\n\n\n\
-\U0001F5A7 Bachelor Programs in Computer Networking(international)\n\
+\U00002666 Bachelor Programs in Computer Networking(international)\n\
 https://www.bachelorstudies.com/Bachelor/Computer-Networking/\n\n\
-\U0001F5A7 Bachelor Network Courses(India)\n\
+\U00002666 Bachelor Network Courses(India)\n\
 https://collegedunia.com/courses/network#6\n\n\
 M.E. (Computer Networking) Colleges in India\n\
 https://targetstudy.com/colleges/me-computer-networking-degree-colleges-in-india.html\n\n\
@@ -1072,13 +1245,13 @@ Networking Colleges in India - 2022\n\
 https://www.shiksha.com/it-software/networking-hardware-security/colleges/colleges-india \n\n")
         elif graphic_designing_on:
             await message.answer("Possible Graphic Design based degrees:\n\n\n\
-\U0001F58C Bachelor Programs in Graphic Design(international)\n\
+\U00002666 Bachelor Programs in Graphic Design(international)\n\
 https://www.bachelorstudies.com/Bachelor/Graphic-Design/\n\n\
-\U0001F58C BA in Graphics Design(India)\n\
+\U00002666 BA in Graphics Design(India)\n\
 https://www.collegedekho.com/courses/ba-graphic-design/\n\n\
-\U0001F58C Masters Programs in Graphic Design(international)\n\
+\U00002666 Masters Programs in Graphic Design(international)\n\
 https://www.masterstudies.com/Masters-Degree/Graphic-Design/\n\n\
-\U0001F58C Master of Arts [M.A.] in Graphic Design\n\
+\U00002666 Master of Arts [M.A.] in Graphic Design\n\
 https://collegedunia.com/courses/master-of-arts-ma-graphic-design \n\n")
         elif cloud_computing_on:
             await message.answer("Cloud Computing Degrees which you can acquire:\n\n\n \
@@ -1094,42 +1267,46 @@ https://www.upgrad.com/cloud-computing-pgd-iiitb\n\n \
 https://www.upgrad.com/cloud-computing-certification-pgc-iiitb")
 
         elif game_development_on:
-            await message.answer("Your collective platform where you can get your Certification\
+            await message.answer("\U00002666 Your collective platform where you can get your Degrees\
 for Game Development:\n\
-https://web.ue-germany.com/en/bachelor/game-design\n\
-Bachelors in game development :\n\
-https://www.bachelorstudies.com/Game-Design/\n\
-Masters in Game development programs:\n\
-https://www.masterstudies.com/Masters-Degree/Game-Design/\n\
-Theory:\n\
+https://web.ue-germany.com/en/bachelor/game-design\n\n\
+\U00002666Bachelors in game development :\n\
+https://www.bachelorstudies.com/Game-Design/\n\n\
+\U00002666Masters in Game development programs:\n\
+https://www.masterstudies.com/Masters-Degree/Game-Design/\n\n\
+\U00002666Theory:\n\
 https://www.bachelorstudies.com/Game-Theory/\n\n")
 
         elif data_science_on:
             await message.answer("Your Collective platforms where you can get \
-your degrees in Data Science from:\n\
-Keystone Bachelorstudies.com:\n\
-Bachelors in Data Science:\n\
-https://www.bachelorstudies.com/Data-Science/\n\
-Masters in Data Science:\n\
-https://www.masterstudies.com/Masters-Degree/Data-Science/\n\
-UpGrad Courses for Data Science:\n\
-https://www.upgrad.com/data-science-course/\n\
-Courses in Machine Learning from UpGrad:\n\
-https://www.upgrad.com/machine-learning-course/\n\
-Edx courses for Data sciene:\n\
-https://www.edx.org/search?q=Data%20science%20courses\n\
-Courses from Coursera for Data Science:\n\
-https://www.coursera.org/search?query=data%20science%20certificate&network=g&utm_s\n\
-Courses from Udemy about Data Science:\n\
-https://www.udemy.com/courses/search/?src=ukw&q=data+science+and+machine+learning")
+your degrees in Data Science from:\n\n\
+Keystone Bachelorstudies.com:\n\n\
+\U00002666Bachelors in Data Science:\n\
+https://www.bachelorstudies.com/Data-Science/\n\n\
+\U00002666Masters in Data Science:\n\
+https://www.masterstudies.com/Masters-Degree/Data-Science/\n\n\
+")
 
         elif robotics_and_hardware_on:
             await message.answer("Your collective platform where you can \
-get your certifications in Robotics and Hardware:\n\
-Bachelor Programs in robotics:\n\
-https://www.bachelorstudies.com/Bachelor/Robotics/#:~\n\
-Masters Programs in Robotics:\n\
-https://www.masterstudies.com/Masters-Degree/Robotics/\n")
+get your degrees in Robotics and Hardware:\n\
+\U00002666Bachelor Programs in robotics:\n\
+https://www.bachelorstudies.com/Bachelor/Robotics/#:~\n\n\
+\U00002666Masters Programs in Robotics:\n\
+https://www.masterstudies.com/Masters-Degree/Robotics/\n\n")
+
+        elif front_end_development_on:
+            await message.answer("Web Development Degrees which you can acquire:\n\n\n \
+\U00002666Bachelor’s in Web Development\n\
+https://www.collegerank.net/web-development-bachelors/\n\n\
+\U00002666Masters Programs in Web Development\n\
+https://www.masterstudies.com/Masters-Degree/Web-Development/\n\n")
+        elif back_end_development_on:
+            await message.answer("Web Development Degrees which you can acquire:\n\n\n \
+\U00002666Bachelor’s in Web Development\n\
+https://www.collegerank.net/web-development-bachelors/\n\n\
+\U00002666Masters Programs in Web Development\n\
+https://www.masterstudies.com/Masters-Degree/Web-Development/\n\n")
 
     elif message.text == "\U0001F935 Jobs":
         if ai_and_ml_on:
@@ -1206,36 +1383,36 @@ Some other roles may include:\n\
         elif blockchain_on:
             await message.answer("Job Roles differ from company to company. Here is a list of some common job \
 roles for blockchain:\n\n\n \
-\U000026A1 Blockchain Developer\n\
+\U00002666 Blockchain Developer\n\
 Blockchain developers with the expertise to help companies explore Blockchain platforms are in high demand. Blockchain \
 development might be the most marketable career path today because people are eager to realize all the benefits of \
 Blockchain. These individuals require absolute attention to detail as theirs is a high ranking position. Blockchain \
 developers are programmers who create applications for blockchain. They typically have a lot of experience working \
 with C++, Python, and Javascript before becoming Blockchain developers.\n\n\
-\U000026A1 Blockchain Solution Architect\n\
+\U00002666 Blockchain Solution Architect\n\
 The Blockchain Solution Architect has the responsibility of designing, assigning, and connecting Blockchain solution \
 components with the team experts such as developers, network administrators, UX designers, and IT Operations whose to \
 develop to complete the Blockchain solutions.\n\n\
-\U000026A1 Blockchain Project Manager\n\
+\U00002666 Blockchain Project Manager\n\
 This individual is entrusted with the responsibility of connecting Blockchain projects to experts whose duty it is to \
 develop Blockchain solutions. Blockchain project managers need to be equipped with the skills of a traditional (cloud) \
 project manager. They also need to master the technical bit to understand the technology thoroughly. Another important \
 ability is excellent communication skills; this is essential when addressing non-technical workers, when providing \
 useful updates or when trying to get resources from higher authorities.\n\n\
-\U000026A1 Blockchain UX Designer\n\
+\U00002666 Blockchain UX Designer\n\
 With the incorporation of Blockchain into so many industries, its design as well as user interface, is becoming \
 critical. The role of a Blockchain designer is shaping a user interface that creates trust and is alluring to a \
 regular user. These individuals need to be able to pay attention to detail, have an artistic touch, but most \
 importantly they need to be hardworking as their line of work requires them to spend countless hours behind their \
 computers.\n\n\
-\U000026A1 Blockchain Quality Engineer\n\
+\U00002666 Blockchain Quality Engineer\n\
 In any development environment, we have a quality assurance engineer who tests and ensures that all areas of the \
 project are of the required quality. In the Blockchain world, a Blockchain engineer plays a similar role by \
 guaranteeing that all operations are of excellence in the Blockchain development environment. In other words, they \
 conduct the testing and automation of frameworks for Blockchain. These individuals need to have a third eye as far as \
 payment to detail is concerned because a small mistake on their part affects everyone using their technology. \
 Excellent communication skills would also go a long way in maintaining good work relationships.\n\n\
-\U000026A1 Blockchain Legal Consultant\n\
+\U00002666 Blockchain Legal Consultant\n\
 Of course, as organizations try to comprehend the adoption of Blockchain into their systems legal issues always arise. \
 As companies launch this new technology, they are also looking for legal expertise on what considerations to make \
 while investing. They are curious about the implications of their actions, about how to handle their finances, and \
@@ -1245,28 +1422,28 @@ is advisable that such people master as many universal languages as they can.\n\
         elif networking_on:
             await message.answer("Job Roles differ from company to company. Here is a list of some common job \
 roles for networking:\n\n\n \
-\U0001F5A7 Network Engineer\n\
+\U00002666 Network Engineer\n\
 A network engineer designs and manages the groups of computers networked together. The network engineer performs tasks \
 such as installing and configuring communication hardware, setting up of the network communication link, installing \
 and configuring application software, troubleshooting operations to ensure continuous network availability, and \
 offering technical support and assistance.\n\n\
-\U0001F5A7 Network Analyst\n\
+\U00002666 Network Analyst\n\
 Network analysts support the computer network and the overall computer infrastructure. Job duties might involve \
 installing network software and training the user in new applications. The analyst might be responsible for \
 coordinating system enhancements between the software and hardware, documenting procedures, and producing policies and \
 procedures.\n\n\
-\U0001F5A7 Information Systems Administrator\n\
+\U00002666 Information Systems Administrator\n\
 Information systems administrators assist with the design, delivery, and maintenance of an information technology \
 infrastructure within the organization. The person assists in strategic planning and in evaluating and recommending \
 services, products, and projects. The job involves assisting in the planning, development, implementation, and \
 maintenance of the information platform. The information platform might include Web servers and services, \
 technological applications, and interactive applications. Administrators also supply instruction, user aids, and \
 assistance in problem solving for library IT applications.\n\n\
-\U0001F5A7 Network Technician\n\
+\U00002666 Network Technician\n\
 The network technician generally services network computers and troubleshoots for potential problems. Network \
 technicians often work the help-desk services to repair or upgrade computers. Technicians need to be familiar with the \
 different operating systems such as Microsoft, Novell, and Unix, as well as the basics of computer networking. \n\n\
-\U0001F5A7 Computer Networking Instructor\n\
+\U00002666 Computer Networking Instructor\n\
 The increasing use of computer networks has created a need for more instructors who have a solid networking background \
 and can teach those skills to students. Unlike in some other academic fields, one need not have a doctoral degree in \
 computer networking to be a computer networking instructor. Although community colleges and four-year schools might \
@@ -1276,44 +1453,44 @@ contributing to the growth of the profession. \n\n")
         elif graphic_designing_on:
             await message.answer("Job Roles differ from company to company. Here is a list of some common job \
 roles for graphic designing:\n\n\n \
-\U0001F58C Graphic designer\n\
+\U00002666 Graphic designer\n\
 Graphic designers develop graphics and layouts for product illustrations, company logos, websites and more. This job \
 title can cover a huge range of duties in a huge range of industries.\n\n\
-\U0001F58C Creative director\n\
+\U00002666 Creative director\n\
 Creative directors determine the creative vision of a project. They make sure the overall aesthetic and cohesive look \
 stays on track by leading their team through the steps to create something, whether that is a tangible product like a \
 video game, film, magazine or something more abstract like an advertising campaign or brand identity.\n\n\
-\U0001F58C User experience (UX) designer\n\
+\U00002666 User experience (UX) designer\n\
 UX designers work to make products, processes and services seamless, enjoyable and intuitive for users. They think \
 about how the product feels, how users will use it. They ensure the product flows from one step to the next. UX \
 designers might run user tests, refining any bumps or confusions in the process. This career involves tons of \
 out-of-the-box thinking, creative intuition and a natural appreciation for smooth design.\n\n\
-\U0001F58C User interface (UI) designer\n\
+\U00002666 User interface (UI) designer\n\
 UI design is often considered a subset of UX design and has similar overall goals. User interface designers focus on \
 how the product is laid out. They design each screen and each page, ensuring that the layout visually works with the \
 overall path a UX designer has charted.\n\n\
-\U0001F58C Production artist\n\
+\U00002666 Production artist\n\
 Production artists take over the hands-on steps of production—whether that’s in graphics, film, art or other formats. \
 They upload and ensure the accuracy of design files throughout the last stages of development. The job is equal parts \
 design and computer applications skill.\n\n\
-\U0001F58C Product developer\n\
+\U00002666 Product developer\n\
 Product developers ideate, lead and manage the creation of products. They can work on so many different things that \
 their job duties will vary widely, but general tasks include performing industry research, creating illustrations, \
 presenting the product to employers or stakeholders and contributing to the development process.\n\n\
-\U0001F58C Art director\n\
+\U00002666 Art director\n\
 Art directors take charge of the visual style and content in magazines, newspapers, product packaging and movie and \
 television productions. They create design and direct other artists to develop each contributing piece. They work \
 closely with their employers or clients to cast an artistic vision that meets objectives, the available budget and \
 desired impact.\n\n\
-\U0001F58C Marketing specialist\n\
+\U00002666 Marketing specialist\n\
 Marketing specialists collect and analyze data on target customers, initiate marketing campaigns, measure \
 effectiveness of marketing attempts and create strategies to promote their company and its goods or services.\n\n\
-\U0001F58C Multimedia artist or animator\n\
+\U00002666 Multimedia artist or animator\n\
 Multimedia artists and animators design complex graphics and animation using computer animation or modeling programs. \
 They think about story development, visual impact and platforms to create media content that will meet their \
 employer’s objectives. More brands and organizations are looking to increase their online video presence—and that’s \
 been a boon for graphic designers with animation and motion graphics skills.\n\n\
-\U0001F58C Freelancer\n\
+\U00002666 Freelancer\n\
 While it’s not a unique design job in its own right, but most of the job titles mentioned above can be performed as a \
 freelancer. Designers who have some experience on their resume, a stunning portfolio of work or expertise in niche \
 areas of design, marketing and graphics could build a career finding freelance projects.\n\n")
@@ -1364,9 +1541,9 @@ One important piece of advice for your job search is to read data science job \
 descriptions carefullyThis will enable you to apply to jobs you’re already qualified\
 for, or develop specific data skill sets to match the roles you want to pursue. \
 “Data scientist” is often used as a blanket title to describe jobs that are \
-drastically different. Let’s look at four kinds of data science jobs.\n\
-Four Types of Data Science Jobs:\n\
-1. The Data Analyst:\n\
+drastically different. Let’s look at four kinds of data science jobs.\n\n\
+Four Types of Data Science Jobs:\n\n\
+\U00002666 The Data Analyst:\n\
 There are some companies where being a data scientist is synonymous with being \
 a data analyst. Your job might consist of tasks like pulling data out of \
 SQL databases, becoming an Excel or Tableau master, and producing basic data visualizations \
@@ -1376,7 +1553,7 @@ A company like this is a great place for an aspiring data scientist to learn the
 Once you have a handle on your day-to-day responsibilities, a company like this \
 can be a great environment to try new things and expand your skill set.\n\
 \n\n\n\
-2. The Data Engineer:\n\
+\U00002666 The Data Engineer:\n\
 Some companies get to the point where they have a lot of traffic (and an \
 increasingly large amount of data), and they start looking for \
 someone to set up a lot of the data infrastructure that the company will need \
@@ -1389,7 +1566,7 @@ a company looking to leverage rapidly increasing amounts of data.\n\
 As a result, you’ll have great opportunities to shine and grow via trial by fire, \
 but there will be less guidance and you may face a greater risk of flopping or stagnating.\n\
 \n\n\
-3. The Machine Learning Engineer:\n\
+\U00002666 The Machine Learning Engineer:\n\
 There are a number of companies for whom their data \
 (or their data analysis platform) is their product. In this case, \
 the data analysis or machine learning going on can be pretty intense. \
@@ -1400,7 +1577,7 @@ data-driven products than they do answering operational questions for a company.
 Companies that fall into this group could be consumer-facing \
 companies with massive amounts of data or companies that are offering a data-based service.\n\
 \n\n\n\
-4. The Data Science Generalist:\n\
+\U00002666 The Data Science Generalist:\n\
 A lot of companies are looking for a generalist to join an established \
 team of other data scientists. The company you’re interviewing for cares \
 about data but probably isn’t a data company. It’s equally important \
@@ -1418,7 +1595,7 @@ types of jobs in the game industry for you to choose from! Click on each role fo
 job descriptions, salary expectations and other key information \
 about working in game dev.\n\n\
 the following are the Possible jobs for you in the Gaming Industry:\n\n\
-1. Game Designer:\n\
+\U00002666 Game Designer:\n\
 Game designers create the concepts and worlds of video games. They are \
 involved with the design of the genre, environment, story, characters, gameplay \
 system, objectives and user experience of video games.\n\
@@ -1428,11 +1605,11 @@ final release. Game Designers author the storyline, writing the plot points, cha
 development, and game objectives that drive the game. The designer will work within \
 the rules of the genre of the game, with real innovation occurring when the \
 genre is pushed to its limits or reinvented.\n\n\
-2. System Designer:\n\
+\U00002666 System Designer:\n\
 A System Designer is the creator of the software systems that will power a video game. \
 They are brought in early in the development process to analyse the scope \
 and design of the game to set up the platforms that will bring the game to life.\n\n\
-3. Level Designer:\n\
+\U00002666 Level Designer:\n\
 A Level Designer is the creator of the levels within a game, mapping out the layout \
 so that it functions within the rules of the game and executes \
 gameplay as created by the Game Designer.\n\
@@ -1441,43 +1618,43 @@ level in two dimensions, this is based on the concept art and storyboards that \
 are provided by the Game Designer. Once they have been signed off they are then rendered \
 to their 3D iterations and the level is then populated with characters, objects, \
 events, environments and circles of action.\n\n\
-4. Game Programmer:\n\
+\U00002666 Game Programmer:\n\
 Game programmer is a general term applied to the computer engineers \
 that work on computer games. Usually trained in the basic languages of \
 computer programming, programmers make a game come to life. They may \
 specialize in areas of coding such as graphics, AI, sound, scripting, \
 user interface, network, tools, porting, etc.\n\n\
-5. AI Programmer:\n\
+\U00002666 AI Programmer:\n\
 Artificial Intelligence (AI) Programmers can be said to give a game its brain. They \
 create algorithms that set the behavior of characters and elements based on the gameplay \
 of the individual player. This is done by customising the reactions of gameplay to the \
 actions of the player. Elements such as pathfinding, group movement and camera control \
 are all embedded into the gameplay strategy.\n\n\
-6. Gameplay Engineer:\n\
+\U00002666 Gameplay Engineer:\n\
 Gameplay Engineers are code writers who adapt software to the requirements of a \
 video game. They may also be required to create custom software for \
 functions specific to a game.\n\n\
-7. Video Game Artist:\n\
+\U00002666 Video Game Artist:\n\
 A Game Artist is often a generalist animator and/or 3D \
 modeler who creates both 2D and 3D art for video games. \
 Working from design briefs and concept art, Game Artists give \
 expression to the script from the storyboard \
 to populate the world of the game.\n\n\
-8. Character Artist:\n\
+\U00002666 Character Artist:\n\
 3D Character Artists create 3D models of characters for films and video \
 games. Models are often based on original concept art.\n\
 Character Artists for computer games draw up the visual elements of as \
 briefed by the Art Director and Lead Character Artist. They create illustrations \
 of characters, vehicles, environment, weapons, props, etc from \
 the original concept artist’s sketches.\n\n\
-9. Environment Artist:\n\
+\U00002666 Environment Artist:\n\
 3D Environment Artists are 3D Modelers who specialize in creating indoor and \
 outdoor settings for films or video games.\n\n")
 
         elif robotics_and_hardware_on:
             await message.answer("Some of the Jobs availabe if you want to pursue your career in\
 Robotics and hardware.\n\
-1. Design Engineer:\n\
+\U00002666 Design Engineer:\n\
 Design engineers create the visual look of a robot. They often start by sketching \
 blueprints, schematics, or figures of a robot’s intended design, then work \
 with a mechanical engineering team to ensure those plans are followed \
@@ -1487,7 +1664,7 @@ functions of a robot, it is also important that design engineers have advanced \
 computer science knowledge and that they understand how the various components \
 of their design work together to bring a machine to life.\n\
 \n\n\
-2. Software Engineer:\n\
+\U00002666 Software Engineer:\n\
 Software engineers in robotics are in charge of developing the software that \
 allows each machine to function. They work closely with software designers \
 and programmers to integrate new software with existing systems and typically \
@@ -1496,7 +1673,7 @@ In robotics, software engineers are also tasked with staying up-to-date with \
 changing technologies and trends, and must apply updates or reconfigure \
 existing robotics software as needed.\n\
 \n\n\
-3. Hardware Engineer:\n\
+\U00002666 Hardware Engineer:\n\
 A hardware engineer is responsible for the computer hardware that robots \
 utilize to function. They can have a hand in everything from prototyping to development,\
 and are often tasked with overseeing the execution of a hardware build.\n\
@@ -1504,7 +1681,7 @@ Once a robot has been constructed, a hardware engineer may also partake in\
 testing and analysis of the designed systems, and lead a team in making any\
 necessary changes for improvement.\n\
 \n\n\
-4. User Experience (UX) Designer:\n\
+\U00002666 User Experience (UX) Designer:\n\
 The work of a UX designer is one aspect of robotics Padir considers integral \
 but often underrepresented in the larger robotics field. When building a robot, \
 “sometimes engineers can overlook what the user needs,” he explains, identifying \
@@ -1514,7 +1691,7 @@ These professionals are typically tasked with evaluating how consumers will inte
 with a robot, and making decisions about how to build a system \
 that’s best equipped to meet those needs. \n\
 \n\n\
-5. Data Scientist:\n\
+\U00002666 Data Scientist:\n\
 As most robots run on data, the work of a data scientist is critical within the \
 robotics field. These professionals are responsible for designing data modeling \
 processes and creating the algorithms and predictive models on which the data is \
@@ -1522,7 +1699,7 @@ gathered and interpreted. They also analyze data sets on which existing robots f
 make adjustments to collection processes or storage systems, and measure effectiveness in \
 order to improve functionality.\n\
 \n\n\
-6. Machine Learning Engineer:\n\
+\U00002666 Machine Learning Engineer:\n\
 Machine learning engineers are responsible for the automation aspect of robotics. \
 These professionals rely heavily on data and predictive analytics in their work. In many \
 cases, they use advanced software to automate predictive models as a way of advancing the \
@@ -1530,13 +1707,70 @@ machine’s function and helping it “learn” from its experiences.\n\
 Machine learning engineers are often highly skilled in data science, deep \
 learning, natural language processing, programming, and more.\n\
 \n\n\
-7. Algorithm Engineers:\n\
+\U00002666 Algorithm Engineers:\n\
 In the scope of robotics, an algorithm engineer’s main role is to research, develop, \
 and then test the algorithms on which a robot runs. These professionals work \
 closely with the rest of the development team to understand the desired functionality \
 of the robot, then identify and integrate the data needed to reach that goal.\n\
 This role straddles the line between data science, software, and computer science, \
 requiring professionals to be well versed in all three disciplines.\n")
+
+        elif front_end_development_on:
+            await message.answer("Some of the Jobs availabe if you want to pursue your career in\
+Front End Development\n\n\n\
+\U00002666 Front-End Developer\n\
+The generic job title that describes a developer who is skilled to some degree at HTML, CSS, DOM, and JavaScript and \
+implementing these technologies on the web platform.\n\n\
+\U00002666 Front-End Engineer (aka JavaScript Developer or Full-stack JavaScript Developer)\n\
+The job title given to a developer who comes from a computer science, engineering, background and is using these \
+skills to work with front-end technologies. This role typically requires a computer science degree and years of \
+software development experience. When the word JavaScript Application is included in the job title, this will \
+denote that the developer should be an advanced JavaScript developer possessing advanced programming, software \
+development, and application development skills (i.e has years of experience building front-end applications).\n\n\
+\U00002666 CSS/HTML Developer\n\
+The front-end job title that describes a developer who is skilled at HTML and CSS, excluding JavaScript and \
+Application know how.\n\n\
+\U00002666 Front-End Web Designer\n\
+When the word Designer is included in the job title, this will denote that the designer will posses front-end \
+skills (i.e., HTML & CSS) but also professional design (Visual Design and Interaction Design) skills.\n\n\
+\U00002666 Front-End SEO Expert\n\
+When the word SEO is included in the job title, this will denote that the developer has extensive experience \
+crafting front-end technologies towards an SEO strategy.\n\n\
+\U00002666 Front-End Accessibility Expert\n\
+When the word Accessibility is included in the job title, this will denote that the developer has extensive \
+experience crafting front-end technologies that support accessibility requirements and standards.\n\n\
+\U00002666 Front-End Dev. Ops\n\
+When the word DevOps is included in the job title, this will denote that the developer has extensive experience \
+with software development practices pertaining to collaboration, integration, deployment, automation, and measurement.\
+\n\n\
+\U00002666 Front-End Testing/QA\n\
+When the word Testing or QA is included in the job title, this will denote that the developer has extensive \
+experience testing and managing software that involves unit testing, functional testing, user testing, and A/B testing.")
+        elif back_end_development_on:
+            await message.answer("Areas of Work for Backend Engineers and Developers\n\n\
+\U00002666Backend developers can find career opportunities in a variety of industries and locations. Some backend \
+developers work exclusively with one company, while others work for agencies that specialize in web development for \
+their clients. Beginning a career in this field requires learning the various aspects of server-side language and \
+gaining an understanding of the other tools used daily. It’s also recommended that you seek an entry-level position \
+to gain practical, hands-on experience. \n\n\
+\U00002666Employers who hire backend developers tend to value a mixture of relevant education, updated skills \
+training, and practical experience in the industry. A passion for learning new technologies is a significant \
+plus in the web development industry. Those who move up the ranks toward senior backend developer positions often \
+possess a strong knowledge of frontend development. If you’re interested in a fruitful career in this field, starting \
+with backend development training is the first step. Moving on to frontend, or full-stack development certification is \
+an important future step for optimizing your career opportunities.\n\n\n\
+\U00002666Salaries and Career Prospects for Backend Developers\n\n\
+\U00002666According to the Bureau of Labor Statistics, the career outlook for web development is favorable, as the \
+industry expected to grow much faster than average. As with most web development careers, location can make a big \
+difference in terms of average salary.\n\n\
+\U00002666According to Glassdoor, the average salary for a web developer in the United States is $75,487 per year, with \
+specializations leading to a higher average salary. Top cities where web developers earn more than the national \
+average include San Francisco, Seattle, New York City, Los Angeles, and Chicago. Those who pursue additional training \
+and education to become full-stack developers are typically able to command higher salaries. \n\n\
+\U00002666To give you a sense of how fast the field of web development—including backend developers—is growing, \
+consider the fact that there were approximately 148,500 positions for developers five years ago. Looking ahead five \
+years into the future, that number is expected to grow to an estimated 188,000. This is substantial growth, which \
+indicates a promising future for those who are just now getting their foot in the door of web development.\n\n")
 
     elif message.text == "\U0001F393 Certifications/Degrees":
         if ai_and_ml_on:
@@ -1582,9 +1816,7 @@ https://www.masterstudies.com/MSc/Artificial-Intelligence/")
         elif back_end_development_on and web_development_on and software_development_on:
             back_end_development_on = False
             await message.answer("\U0001F519 Back", reply_markup=web_development_keyboard)
-        elif full_stack_development_on and web_development_on and software_development_on:
-            full_stack_development_on = False
-            await message.answer("\U0001F519 Back", reply_markup=web_development_keyboard)
+        
         elif web_development_on and software_development_on:
             web_development_on = False
             await message.answer("\U0001F519 Back", reply_markup=software_development_keyboard)
