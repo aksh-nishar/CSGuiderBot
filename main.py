@@ -7,34 +7,46 @@ bot = Bot(token=API_KEY)
 dp = Dispatcher(bot)
 
 what_is_bot_button = KeyboardButton("\U0001F937 What is CSGuider Bot? \U0001F937")
-why_we_created_bot_button = KeyboardButton("\U0001F914 Why we created this bot? \U0001F914")
 important_note_button = KeyboardButton("\U00002757\U00002757Important Note\U00002757\U00002757")
 go_to_guides_button = KeyboardButton("\U0001F4DA\U0001F4DA Go to Guides \U0001F4DA\U0001F4DA")
+contact_us_button = KeyboardButton("\U0001F4E7 Contact Us \U0001F4E7")
 
 top_menu_keyboard = ReplyKeyboardMarkup(resize_keyboard=True).add(what_is_bot_button)
-top_menu_keyboard.add(why_we_created_bot_button)
 top_menu_keyboard.add(important_note_button)
 top_menu_keyboard.add(go_to_guides_button)
+top_menu_keyboard.add(contact_us_button)
 
-ai_and_ml_button = KeyboardButton("\U00002699 AI and ML Guide \U00002699")
-cyber_security_button = KeyboardButton("\U0001F3AD Cyber Security Guide \U0001F3AD")
-game_development_button = KeyboardButton("\U0001F3AE Game Development Guide \U0001F3AE")
-software_development_keyboard = KeyboardButton("\U0001F5A5 Software Development Guide \U0001F5A5")
-blockchain_button = KeyboardButton("\U0001F517 Blockchain Guide \U0001F517")
-cloud_computing_button = KeyboardButton("\U00002601 Cloud Computing Guide \U00002601")
-networking_button = KeyboardButton("\U0001F4F6 Networking Guide \U0001F4F6")
-graphic_designing_button = KeyboardButton("\U0001F5BC Graphic Designing Guide \U0001F5BC")
-data_science_button = KeyboardButton("\U0001F4CA Data Science Guide \U0001F4CA")
-robotics_and_hardware_button = KeyboardButton("\U0001F916 Robotics and Hardware Guide \U0001F916")
-web_development_button = KeyboardButton("\U0001F310 Web Development Guide \U0001F310")
-front_end_development_button = KeyboardButton("\U00002B06 Front-End Web Development Guide \U00002B06")
-back_end_development_button = KeyboardButton("\U00002B07 Back-End Web Development Guide \U00002B07")
-application_development_button = KeyboardButton("\U0001F4BB Application Development Guide \U0001F4BB")
-android_development_button = KeyboardButton("\U0001F4F1 Android App Development Guide \U0001F4F1")
-ios_development_button = KeyboardButton("\U0001F4F2 IOS App Development Guide \U0001F4F2")
-desktop_development_button = KeyboardButton("\U0001F5A5 Desktop App Development Guide \U0001F5A5")
+ai_and_ml_button = KeyboardButton("\U00002699 AI and ML \U00002699")
+cyber_security_button = KeyboardButton("\U0001F3AD Cyber Security \U0001F3AD")
+game_development_button = KeyboardButton("\U0001F3AE Game Development \U0001F3AE")
+software_development_keyboard = KeyboardButton("\U0001F5A5 Software Development \U0001F5A5")
+blockchain_button = KeyboardButton("\U0001F517 Blockchain \U0001F517")
+cloud_computing_button = KeyboardButton("\U00002601 Cloud Computing \U00002601")
+networking_button = KeyboardButton("\U0001F4F6 Networking \U0001F4F6")
+graphic_designing_button = KeyboardButton("\U0001F5BC Graphic Designing \U0001F5BC")
+data_science_button = KeyboardButton("\U0001F4CA Data Science \U0001F4CA")
+robotics_and_hardware_button = KeyboardButton("\U0001F916 Robotics and Hardware \U0001F916")
+web_development_button = KeyboardButton("\U0001F310 Web Development \U0001F310")
+front_end_development_button = KeyboardButton("\U00002B06 Front-End Web Development \U00002B06")
+back_end_development_button = KeyboardButton("\U00002B07 Back-End Web Development \U00002B07")
+application_development_button = KeyboardButton("\U0001F4BB Application Development \U0001F4BB")
+android_development_button = KeyboardButton("\U0001F4F1 Android App Development \U0001F4F1")
+ios_development_button = KeyboardButton("\U0001F4F2 IOS App Development \U0001F4F2")
 back_button = KeyboardButton("\U0001F519 Back")
 back_to_top_menu_button = KeyboardButton("\U0001F51D Main Menu")
+what_is_ai_and_ml_button = KeyboardButton("\U0001F937 What is AI and ML \U0001F937")
+what_is_cyber_security_button = KeyboardButton("\U0001F937 What is Cyber Security \U0001F937")
+what_is_game_development_button = KeyboardButton("\U0001F937 What is Game Development \U0001F937")
+what_is_blockchain_button = KeyboardButton("\U0001F937 What is Blockchain \U0001F937")
+what_is_cloud_computing_button = KeyboardButton("\U0001F937 What is Cloud Computing \U0001F937")
+what_is_networking_button = KeyboardButton("\U0001F937 What is Networking \U0001F937")
+what_is_graphic_designing_button = KeyboardButton("\U0001F937 What is Graphic Designing \U0001F937")
+what_is_data_science_button = KeyboardButton("\U0001F937 What is Data Science \U0001F937")
+what_is_robotics_and_hardware_button = KeyboardButton("\U0001F937 What is Robotics and Hardware \U0001F937")
+what_is_front_end_development_button = KeyboardButton("\U0001F937 What is Front-End Web Development \U0001F937")
+what_is_back_end_development_button = KeyboardButton("\U0001F937 What is Back-End Web Development \U0001F937")
+what_is_android_app_development_button = KeyboardButton("\U0001F937 What is Android App Development \U0001F937")
+what_is_ios_app_development_button = KeyboardButton("\U0001F937 What is IOS App Development \U0001F937")
 
 guides_menu_keyboard = ReplyKeyboardMarkup(resize_keyboard=True).add(ai_and_ml_button, cyber_security_button)
 guides_menu_keyboard.add(game_development_button, software_development_keyboard)
@@ -51,32 +63,38 @@ degrees_button = KeyboardButton("\U0001F393 Degrees")
 jobs_button = KeyboardButton("\U0001F935 Jobs")
 certifications_degrees_button = KeyboardButton("\U0001F393 Certifications/Degrees")
 
-ai_and_ml_keyboard = ReplyKeyboardMarkup(resize_keyboard=True).add(skills_required_button, courses_button)
+ai_and_ml_keyboard = ReplyKeyboardMarkup(resize_keyboard=True).add(what_is_ai_and_ml_button)
+ai_and_ml_keyboard.add(skills_required_button, courses_button)
 ai_and_ml_keyboard.add(books_button, jobs_button)
 ai_and_ml_keyboard.add(certifications_degrees_button)
 ai_and_ml_keyboard.add(back_button, back_to_top_menu_button)
 
-cyber_security_keyboard = ReplyKeyboardMarkup(resize_keyboard=True).add(skills_required_button, courses_button)
+cyber_security_keyboard = ReplyKeyboardMarkup(resize_keyboard=True).add(what_is_cyber_security_button)
+cyber_security_keyboard.add(skills_required_button, courses_button)
 cyber_security_keyboard.add(books_button, certifications_button)
 cyber_security_keyboard.add(degrees_button, jobs_button)
 cyber_security_keyboard.add(back_button, back_to_top_menu_button)
 
-blockchain_keyboard = ReplyKeyboardMarkup(resize_keyboard=True).add(skills_required_button, courses_button)
+blockchain_keyboard = ReplyKeyboardMarkup(resize_keyboard=True).add(what_is_blockchain_button)
+blockchain_keyboard.add(skills_required_button, courses_button)
 blockchain_keyboard.add(books_button, certifications_button)
 blockchain_keyboard.add(degrees_button, jobs_button)
 blockchain_keyboard.add(back_button, back_to_top_menu_button)
 
-networking_keyboard = ReplyKeyboardMarkup(resize_keyboard=True).add(skills_required_button, courses_button)
+networking_keyboard = ReplyKeyboardMarkup(resize_keyboard=True).add(what_is_networking_button)
+networking_keyboard.add(skills_required_button, courses_button)
 networking_keyboard.add(books_button, certifications_button)
 networking_keyboard.add(degrees_button, jobs_button)
 networking_keyboard.add(back_button, back_to_top_menu_button)
 
-graphic_designing_keyboard = ReplyKeyboardMarkup(resize_keyboard=True).add(skills_required_button, courses_button)
+graphic_designing_keyboard = ReplyKeyboardMarkup(resize_keyboard=True).add(what_is_graphic_designing_button)
+graphic_designing_keyboard.add(skills_required_button, courses_button)
 graphic_designing_keyboard.add(books_button, certifications_button)
 graphic_designing_keyboard.add(degrees_button, jobs_button)
 graphic_designing_keyboard.add(back_button, back_to_top_menu_button)
 
-cloud_computing_keyboard = ReplyKeyboardMarkup(resize_keyboard=True).add(skills_required_button, courses_button)
+cloud_computing_keyboard = ReplyKeyboardMarkup(resize_keyboard=True).add(what_is_cloud_computing_button)
+cloud_computing_keyboard.add(skills_required_button, courses_button)
 cloud_computing_keyboard.add(books_button, certifications_button)
 cloud_computing_keyboard.add(degrees_button, jobs_button)
 cloud_computing_keyboard.add(back_button, back_to_top_menu_button)
@@ -91,33 +109,48 @@ web_development_keyboard.add(back_button, back_to_top_menu_button)
 
 application_development_keyboard = ReplyKeyboardMarkup(resize_keyboard=True).add(android_development_button)
 application_development_keyboard.add(ios_development_button)
-application_development_keyboard.add(desktop_development_button)
 application_development_keyboard.add(back_button, back_to_top_menu_button)
 
-data_science_keyboard = ReplyKeyboardMarkup(resize_keyboard=True).add(skills_required_button,courses_button)
+data_science_keyboard = ReplyKeyboardMarkup(resize_keyboard=True).add(what_is_data_science_button)
+data_science_keyboard.add(skills_required_button, courses_button)
 data_science_keyboard.add(books_button, certifications_button)
 data_science_keyboard.add(degrees_button, jobs_button)
 data_science_keyboard.add(back_button, back_to_top_menu_button)
 
-game_development_keyboard = ReplyKeyboardMarkup(resize_keyboard=True).add(skills_required_button, courses_button)
+game_development_keyboard = ReplyKeyboardMarkup(resize_keyboard=True).add(what_is_game_development_button)
+game_development_keyboard.add(skills_required_button, courses_button)
 game_development_keyboard.add(books_button, certifications_button)
 game_development_keyboard.add(degrees_button, jobs_button)
 game_development_keyboard.add(back_button, back_to_top_menu_button)
 
-robotics_and_hardware_keyboard = ReplyKeyboardMarkup(resize_keyboard=True).add(skills_required_button, courses_button)
+robotics_and_hardware_keyboard = ReplyKeyboardMarkup(resize_keyboard=True).add(what_is_robotics_and_hardware_button)
+robotics_and_hardware_keyboard.add(skills_required_button, courses_button)
 robotics_and_hardware_keyboard.add(books_button, certifications_button)
 robotics_and_hardware_keyboard.add(degrees_button, jobs_button)
 robotics_and_hardware_keyboard.add(back_button, back_to_top_menu_button)
 
-front_end_development_keyboard = ReplyKeyboardMarkup(resize_keyboard=True).add(skills_required_button, courses_button)
+front_end_development_keyboard = ReplyKeyboardMarkup(resize_keyboard=True).add(what_is_front_end_development_button)
+front_end_development_keyboard.add(skills_required_button, courses_button)
 front_end_development_keyboard.add(books_button, certifications_button)
 front_end_development_keyboard.add(degrees_button, jobs_button)
 front_end_development_keyboard.add(back_button, back_to_top_menu_button)
 
-back_end_development_keyboard = ReplyKeyboardMarkup(resize_keyboard=True).add(skills_required_button, courses_button)
+back_end_development_keyboard = ReplyKeyboardMarkup(resize_keyboard=True).add(what_is_back_end_development_button)
+back_end_development_keyboard.add(skills_required_button, courses_button)
 back_end_development_keyboard.add(books_button, certifications_button)
 back_end_development_keyboard.add(degrees_button, jobs_button)
 back_end_development_keyboard.add(back_button, back_to_top_menu_button)
+
+android_development_keyboard = ReplyKeyboardMarkup(resize_keyboard=True).add(what_is_android_app_development_button)
+android_development_keyboard.add(skills_required_button, courses_button)
+android_development_keyboard.add(books_button, jobs_button)
+android_development_keyboard.add(certifications_degrees_button)
+android_development_keyboard.add(back_button, back_to_top_menu_button)
+
+ios_development_keyboard = ReplyKeyboardMarkup(resize_keyboard=True).add(what_is_ios_app_development_button)
+ios_development_keyboard.add(skills_required_button, courses_button)
+ios_development_keyboard.add(books_button, jobs_button)
+ios_development_keyboard.add(back_button, back_to_top_menu_button)
 
 ai_and_ml_on = False
 cyber_security_on = False
@@ -149,7 +182,6 @@ async def welcome(message: types.Message):
 
 @dp.message_handler()
 async def main_keyboard_answer(message: types.Message):
-
     global ai_and_ml_on, cyber_security_on, game_development_on, software_development_on, blockchain_on, \
         cloud_computing_on, networking_on, graphic_designing_on, data_science_on, robotics_and_hardware_on, \
         web_development_on, front_end_development_on, back_end_development_on, full_stack_development_on, \
@@ -170,103 +202,151 @@ providing them with resources related to these specialization fields with the he
 \U0001F537Job Opportunities\n\n\
 All these features are conveniently packed into an easy to use and interactive Telegram Bot ")
 
-    elif message.text == "\U0001F914 Why we created this bot? \U0001F914":
-        pass
-
     elif message.text == "\U00002757\U00002757Important Note\U00002757\U00002757":
         pass
 
     elif message.text == "\U0001F4DA\U0001F4DA Go to Guides \U0001F4DA\U0001F4DA":
         await message.answer("Guides", reply_markup=guides_menu_keyboard)
 
-    elif message.text == "\U00002699 AI and ML Guide \U00002699":
+    elif message.text == "\U0001F4E7 Contact Us \U0001F4E7":
+        pass
+
+    elif message.text == "\U00002699 AI and ML \U00002699":
         ai_and_ml_on = True
-        await message.answer("\U00002699 AI and ML Guide \U00002699", reply_markup=ai_and_ml_keyboard)
+        await message.answer("\U00002699 AI and ML \U00002699", reply_markup=ai_and_ml_keyboard)
 
-    elif message.text == "\U0001F3AD Cyber Security Guide \U0001F3AD":
+    elif message.text == "\U0001F3AD Cyber Security \U0001F3AD":
         cyber_security_on = True
-        await message.answer("\U0001F3AD Cyber Security Guide \U0001F3AD", reply_markup=cyber_security_keyboard)
+        await message.answer("\U0001F3AD Cyber Security \U0001F3AD", reply_markup=cyber_security_keyboard)
 
-    elif message.text == "\U0001F3AE Game Development Guide \U0001F3AE":
+    elif message.text == "\U0001F3AE Game Development \U0001F3AE":
         game_development_on = True
         await message.answer("Game Development", reply_markup=game_development_keyboard)
 
-    elif message.text == "\U0001F5A5 Software Development Guide \U0001F5A5":
+    elif message.text == "\U0001F5A5 Software Development \U0001F5A5":
         software_development_on = True
-        await message.answer("\U0001F5A5 Software Development Guide \U0001F5A5",
+        await message.answer("\U0001F5A5 Software Development \U0001F5A5",
                              reply_markup=software_development_keyboard)
-    elif message.text == "\U0001F310 Web Development Guide \U0001F310":
+
+    elif message.text == "\U0001F310 Web Development \U0001F310":
         web_development_on = True
-        await message.answer("\U0001F310 Web Development Guide \U0001F310", reply_markup=web_development_keyboard)
-    elif message.text == "\U00002B06 Front-End Web Development Guide \U00002B06":
+        await message.answer("\U0001F310 Web Development \U0001F310", reply_markup=web_development_keyboard)
+
+    elif message.text == "\U00002B06 Front-End Web Development \U00002B06":
         front_end_development_on = True
-        await message.answer("\U00002B06 Front-End Web Development Guide \U00002B06", reply_markup=front_end_development_keyboard)
-        
-    elif message.text == "\U00002B07 Back-End Web Development Guide \U00002B07":
+        await message.answer("\U00002B06 Front-End Web Development \U00002B06",
+                             reply_markup=front_end_development_keyboard)
+
+    elif message.text == "\U00002B07 Back-End Web Development \U00002B07":
         back_end_development_on = True
-        await message.answer("\U00002B07 Back-End Web Development Guide \U00002B07", reply_markup=back_end_development_keyboard)
-            
-    elif message.text == "\U0001F4BB Application Development Guide \U0001F4BB":
+        await message.answer("\U00002B07 Back-End Web Development \U00002B07",
+                             reply_markup=back_end_development_keyboard)
+
+    elif message.text == "\U0001F4BB Application Development \U0001F4BB":
         application_development_on = True
-        await message.answer("\U0001F4BB Application Development Guide \U0001F4BB",
+        await message.answer("\U0001F4BB Application Development \U0001F4BB",
                              reply_markup=application_development_keyboard)
-    elif message.text == "\U0001F4F1 Android App Development Guide \U0001F4F1":
+
+    elif message.text == "\U0001F4F1 Android App Development \U0001F4F1":
         android_development_on = True
-        # await message.answer("\U0001F4F1 Android App Development Guide \U0001F4F1", reply_markup=android_development_keyboard)
-        pass
-    elif message.text == "\U0001F4F2 IOS App Development Guide \U0001F4F2":
+        await message.answer("\U0001F4F1 Android App Development \U0001F4F1",
+                             reply_markup=android_development_keyboard)
+
+    elif message.text == "\U0001F4F2 IOS App Development \U0001F4F2":
         ios_development_on = True
-        # await message.answer("\U0001F4F2 IOS App Development Guide \U0001F4F2", reply_markup=ios_development_keyboard)
-        pass
-    elif message.text == "\U0001F5A5 Desktop App Development Guide \U0001F5A5":
-        desktop_development_on = True
-        # await message.answer("\U0001F5A5 Desktop App Development Guide \U0001F5A5", reply_markup=desktop_development_keyboard)
-        pass
+        await message.answer("\U0001F4F2 IOS App Development \U0001F4F2", reply_markup=ios_development_keyboard)
 
-    elif message.text == "\U0001F517 Blockchain Guide \U0001F517":
+    elif message.text == "\U0001F517 Blockchain \U0001F517":
         blockchain_on = True
-        await message.answer("\U0001F517 Blockchain Guide \U0001F517", reply_markup=blockchain_keyboard)
+        await message.answer("\U0001F517 Blockchain \U0001F517", reply_markup=blockchain_keyboard)
 
-    elif message.text == "\U00002601 Cloud Computing Guide \U00002601":
+    elif message.text == "\U00002601 Cloud Computing \U00002601":
         cloud_computing_on = True
-        await message.answer("\U00002601 Cloud Computing Guide \U00002601", reply_markup=cloud_computing_keyboard)
+        await message.answer("\U00002601 Cloud Computing \U00002601", reply_markup=cloud_computing_keyboard)
 
-    elif message.text == "\U0001F4F6 Networking Guide \U0001F4F6":
+    elif message.text == "\U0001F4F6 Networking \U0001F4F6":
         networking_on = True
-        await message.answer("\U0001F4F6 Networking Guide \U0001F4F6", reply_markup=networking_keyboard)
+        await message.answer("\U0001F4F6 Networking \U0001F4F6", reply_markup=networking_keyboard)
 
-    elif message.text == "\U0001F5BC Graphic Designing Guide \U0001F5BC":
+    elif message.text == "\U0001F5BC Graphic Designing \U0001F5BC":
         graphic_designing_on = True
         await message.answer("Graphic Designing", reply_markup=graphic_designing_keyboard)
 
-    elif message.text == "\U0001F4CA Data Science Guide \U0001F4CA":
+    elif message.text == "\U0001F4CA Data Science \U0001F4CA":
         data_science_on = True
         await message.answer("Data Science", reply_markup=data_science_keyboard)
 
-    elif message.text == "\U0001F916 Robotics and Hardware Guide \U0001F916":
+    elif message.text == "\U0001F916 Robotics and Hardware \U0001F916":
         robotics_and_hardware_on = True
         await message.answer("Robotics and Hardware", reply_markup=robotics_and_hardware_keyboard)
+
+    elif message.text == "\U0001F937 What is AI and ML \U0001F937":
+        pass
+
+    elif message.text == "\U0001F937 What is Cyber Security \U0001F937":
+        pass
+
+    elif message.text == "\U0001F937 What is Game Development \U0001F937":
+        pass
+
+    elif message.text == "\U0001F937 What is Blockchain \U0001F937":
+        pass
+
+    elif message.text == "\U0001F937 What is Cloud Computing \U0001F937":
+        pass
+
+    elif message.text == "\U0001F937 What is Networking \U0001F937":
+        pass
+
+    elif message.text == "\U0001F937 What is Graphic Designing \U0001F937":
+        pass
+
+    elif message.text == "\U0001F937 What is Data Science \U0001F937":
+        pass
+
+    elif message.text == "\U0001F937 What is Robotics and Hardware \U0001F937":
+        pass
+
+    elif message.text == "\U0001F937 What is Front-End Web Development \U0001F937":
+        pass
+
+    elif message.text == "\U0001F937 What is Back-End Web Development \U0001F937":
+        pass
+
+    elif message.text == "\U0001F937 What is Android App Development \U0001F937":
+        pass
+
+    elif message.text == "\U0001F937 What is IOS App Development \U0001F937":
+        pass
 
     elif message.text == "\U0001F530 Skills Required":
         if ai_and_ml_on:
             await message.answer("Some skills required to get into AI and ML are as follows:\n\n\n \
 \U00002666 Applied Mathematics which include\n \
 Linear algebra, probability, statistics, multivariate calculus, distributions like Poisson, normal, binomial, etc\
-and some knowledge of Physics concepts.\n\n \
+and some knowledge of Physics concepts.\n\
+Mathematics for Machine Learning Course:\n\
+https://www.youtube.com/playlist?list=PLmAuaUS7wSOP-iTNDivR0ANKuTUhEzMe4\n\n \
 \U00002666 Computer Science Fundamentals and Programming\n \
 CS concepts like data structures and algorithms, space and time complexity, programming languages like Python and R\
 for ML and statistics, Spark and Hadoop for distributed computing, SQL for database management, Apache Kafka for\
 data pre-processing, etc. Python libraries like NumPy, Pandas, Matplotlib, Scikit-Learn, Tensor-Flow, etc.\n\n \
 \U00002666 Machine Learning algorithms\n \
 Some common ones include Naïve Bayes Classifier, K Means Clustering, Support Vector Machine, Apriori Algorithm, \
-Linear Regression, Logistic Regression, Decision Trees, Random Forests, etc.\n\n \
+Linear Regression, Logistic Regression, Decision Trees, Random Forests, etc.\n\
+Machine Learning Algorithms:\n\
+https://www.youtube.com/playlist?list=PLmAuaUS7wSOMsOj6PRpxQ4SiGEsCO349V\n\n \
 \U00002666 Neural Networks\n \
 Different types of neural networks like Feedforward Neural Network, Recurrent Neural Network, \
-Convolutional Neural Network, Modular Neural Network, Radial basis function Neural Network, etc.\n\n \
+Convolutional Neural Network, Modular Neural Network, Radial basis function Neural Network, etc.\n\
+Neural Networks Courses:\n\
+https://www.youtube.com/results?search_query=neural+networks+course\n\n \
 \U00002666 Natural Language Processing\n \
 This is so that machines can understand and interpret the human language to eventually understand human \
 communication in a better way. Natural Language Toolkit which is the most popular platform for creating \
-applications relating to NLP.\n\n \
+applications relating to NLP.\n\
+Natural Language Processing Courses:\n\
+https://www.youtube.com/results?search_query=natural+language+processing+course\n\n \
 \U00002666 Data Modeling and Evaluation\n \
 Data modeling involves understanding the underlying structure of the data and then finding patterns that are \
 not obvious to the naked eye. You also need to evaluate the data using an algorithm that is suitable for the data.\n\n\
@@ -302,11 +382,15 @@ also to become an ethical hacker.\n\n\
 Reverse Engineering is a process of recovering the design, requirement specifications, and functions of a product \
 from an analysis of its code. In software security, reverse engineering is widely used to ensure that the system \
 lacks any major security flaws or vulnerabilities. It helps to make a system robust, thereby protecting it from \
-hackers and spyware.\n\n\
+hackers and spyware.\n\
+Reverse Engineering Courses:\n\
+https://www.udemy.com/topic/reverse-engineering/\n\n\
 \U00002666 Cryptography Skills\n\
 Cryptography is the study and application of techniques for reliable communication in the presence of third parties \
 called adversaries. Cryptography deals with converting a normal text/message known as plain text to a non-readable \
-form known as ciphertext during the transmission to make it incomprehensible to hackers.\n\n\
+form known as ciphertext during the transmission to make it incomprehensible to hackers.\n\
+Cryptography Courses:\n\
+https://www.youtube.com/results?search_query=cryptography+course\n\n\
 \U00002666 Database Skills\n\
 DBMS is the crux of creating and managing all databases. Accessing a database where all the information is stored \
 can put the company in a tremendous threat, so ensuring that this software is hack-proof is important.\n\n\
@@ -415,9 +499,7 @@ Vector Graphics Course: https://www.udemy.com/topic/vector-graphic/\n\n")
 \U00002666 Understanding the Linux OS\n \
 The first and foremost thing is to get good hands-on on a Linux operating system. Practicing Linux would help you \
 as a cloud engineer, or as a cloud architect, you should have this fundamental understanding of your operating \
-system. This can be as simple as installing a virtual machine using VirtualBox or to create a VM in a cloud \
-environment. Some more complex commands can include installing various software, carrying out load analysis, \
-installing packages, or even modifying them. \n\n\
+system.\n\n\
 \U00002666 Programming Skills\n\
 Having good programming skills is an essence while learning cloud. There are a few languages you need to be \
 proficient with:\n\
@@ -436,27 +518,34 @@ Therefore, it is important to learn virtual networks and network fundamentals fo
 DevOps is a combination of development and operations and is one of the most popular frameworks in the cloud. \
 Recently, AWS DevOps has been highly in demand for people especially interested in AWS. Containerization means \
 abstracting applications from one another in the cloud and it makes the applications very easy to deploy on the \
-cloud. Therefore learning Docker or Kubernetes will give a good push towards being a good cloud engineer.\n\n\
+cloud. Therefore learning Docker or Kubernetes will give a good push towards being a good cloud engineer.\n\
+Docker Tutorials:\n\
+https://www.youtube.com/results?search_query=docker+tutorial\n\
+Kubernetes Tutorials:\n\
+https://www.youtube.com/results?search_query=kubernetes+tutorial\n\n\
 \U00002666 Understanding Virtualization\n\
 This means not depending upon personal individual hardware that faces problems when scaling but rather running \
 application software on virtual machines. This reduces the hardware dependency and also aids in fault tolerance, \
 making it one of the most desirable skills of a cloud engineer. Examples include AWS EC2 (Elastic Compute) and \
-AWS Lambda.\n\n\
+AWS Lambda.\n\
+AWS Lambda Courses:\n\
+https://www.udemy.com/topic/aws-lambda/\n\n\
 \U00002666 Cloud Service Providers\n\
 There are many cloud service vendors that offer storage, database, compute machine learning, and migration services \
 but AWS is the leader being closely followed by Microsoft’s Azure. Knowing how different cloud providers work and \
-ship resources to their clients will help you understand cloud computing in detail and familiarize you with the \
-best practices to follow. Other cloud providers include Google’s GCP, IBM, and OpenStack.\n\n\
+ship resources to their clients will help you understand cloud computing in detail.\n\n\
 \U00002666 Security and Recovery\n\
 Cloud security is one of the most difficult subdomains in the cloud since it involves critical measures to be taken \
-when there is a data breach or disaster recovery. It demands advanced skills in cybersecurity and cloud combined \
+when there is a data breach or disaster recovery. It demands advanced skills in cyber security and cloud combined \
 since any time the cloud resources are down, it can result in huge losses and unavailability of services to the \
 client thereby affecting their business in turn.\n\n\
 \U00002666 Web Services and API\n\
 Cloud infrastructure is heavily based upon APIs and web services for the integration of applications on the \
 internet. Some examples are XML, SOAP, WSDL, and other open standards are used to transfer and describe data \
 and list services available. Gaining an understanding of these fundamentals can help you in your journey in \
-the cloud.")
+the cloud.\n\
+WebServices/API Testing by SoapUI-Groovy:\n\
+https://www.udemy.com/course/soapui-with-groovy-with-realtime-projects/")
         elif data_science_on:
             await message.answer("Data science is an interdisciplinary field.\n \n\
 In order to have a flourishing career, a data scientist should obtain a \
@@ -491,11 +580,11 @@ Good Business Acumen include the following things and qualities: \n\
 *Market orientation\n\
 *Analytical skills\n\
 *Problem-solving skills\n\
-\n\U00002666Apart from all these skills one need to have a profound knowledge of Graphs and Statistical Graphs, Pie Charts.\
-\n\n\
-Mos of the times in Data Analysis graphs are use and till date they are considered to be the \
+\n\U00002666Apart from all these skills one need to have a profound knowledge of Graphs and Statistical Graphs, \
+Pie Charts.\n\n\
+Most of the times in Data Analysis graphs are use and till date they are considered to be the \
 best method of representing any sort of data in a pictorial form.\n\
-Why use of graph is made is beacuse it is easire to understand and it saves a lot of time that would be\
+Why use of graph is made is because it is easier to understand and it saves a lot of time that would be\
 consumes if one opted to read the report of each and every financial year\
 ( in instance of a Company's share prices )   ")
         elif robotics_and_hardware_on:
@@ -559,8 +648,7 @@ constantly learning about these changes and applying them \
 to new fields of robotics.\n\n\n\n\
 Other things that you need to know before you pursue your career in robotics and hardware are:\
 * Basic idea of how a basic breadboard functions and its fundamentals\n\
-*For starting off with robotics Arduino is a very intelligent way to do so\n\    ")
-
+*For starting off with robotics Arduino is a very intelligent way to do so\n")
         elif game_development_on:
             await message.answer("Before you make up your mind to \
 start you career in Game Developing you need to be firm in you mind that you \
@@ -568,7 +656,7 @@ want to take this as your career. Because this particular field \
 demands one to have absolute enthusiasm and passion for Video games.\
 Along with these things the Gaming Industry also demands a  a good \
 knowledge of programming languages from basic to advanced \
-and mastery of gaming specific progremming languages.\n\n\
+and mastery of gaming specific programming languages.\n\n\
 Here are some basic to advance requirements to become a game developer:\n\n\
 \U00002666 A bachelors degree in Software Engineering or Computer \
 sciences is to be attained by the individual after the completion of his college.\n\n\
@@ -654,6 +742,117 @@ SQL, or Structured Query Language, is used to manage data found on a database. M
 system that’s widely used in Back End development. There are other Back End languages, such as Java or ASP.NET, that \
 are used in different industries.\n\
 SQL Tutorial: https://www.w3schools.com/sql/\n\n")
+        elif android_development_on:
+            await message.answer("Some skills required to get into Android Development are as follows:\n\n\n \
+\U00002666 An Unprecedented Knowledge of Java and Kotlin\n \
+One of the most must-have skills of all, proficiency in Java and Kotlin can be a game-changer for Android developers. \
+Used to develop native Android apps, both Java and Kotlin are programming languages that Android developers should \
+be comfortable working with.\n\
+Java Course:\n\
+https://www.w3schools.com/java/default.asp\n\
+Kotlin Course:\n\
+https://www.w3schools.com/kotlin/index.php\n\n\
+\U00002666 Understanding of XML\n\
+XML was created as a standard way to encode data for internet-based mobile applications. It is a structured \
+markup language, sharing many features in common with HTML. In the Android world, developers use XML to create layouts \
+that serve as the foundational UI definition for Android applications.\n\
+XML Course:\n\
+https://www.w3schools.com/xml/default.asp\n\n\
+\U00002666 Vital Sense of the UX/UI\n\
+Today, the majority of app users demand a highly engaging and responsive application that is easy to use. Hence, \
+the demand for an intuitive UX and UI rises even more. o develop an Android app that stands out, one needs to have \
+a good knowledge of the design requirements of Android apps and what type of designs users prefer.\n\
+UI/UX Courses:\n\
+1. https://www.udemy.com/course/ui-ux-web-design-using-adobe-xd/\n\n\
+2. https://www.udemy.com/course/complete-web-designer-mobile-designer-zero-to-mastery/\n\n\
+\U00002666 Required Skill in Cross-Platform Solutions\n\
+Nowadays, cross-platform solutions are the need of the hour. Various frameworks like React Native and Flutter \
+have come into play to let Android developers build applications that can operate on the iOS platform too. The \
+tech giant Google has introduced Kotlin Multi-Platform, an extension of Kotlin language to enable mobile application \
+development beyond the Android platform. This is a move that has been welcomed by Android users around the world, \
+and any potential developer certainly needs to be mindful of it.\n\
+React Native Course:\n\
+https://www.udemy.com/course/the-complete-react-native-and-redux-course/\n\
+Flutter Course:\n\
+https://www.udemy.com/course/learn-flutter-dart-to-build-ios-android-apps/\n\n\
+\U00002666 Android Studio\n\
+The integrated development environment (IDE) of choice for Android developers is called Android Studio. Android \
+Studio is built on top of the well-respected IntelliJ IDE, and it comes with great out-of-the-box support for many \
+of the most common Android SDKs. Code completion helps make auto-complete suggestions as you type. Code debuggers \
+let you step through your code to identify the source of errors.\n\n\
+\U00002666 APIs\n\
+As an Android app developer, you’ll likely want to interact with many other services. For example, you may want to \
+allow your users to access a calendar from a third party service, or check the stock market. An Android app \
+development company usually offers APIs, and will tell you exactly how to query them for data in a consistent, \
+secure way. While you’re free to interact with any existing API, Google also makes it very easy to connect to \
+their own APIs from your Android app.\n\
+Java App Using REST API Course:\n\
+https://www.youtube.com/watch?v=xPi-z3nOcn8\n\n\
+\U00002666 Firebase on Android\n\
+If you hate being a backend developer, Firebase on Android is the way for you. Firebase is a mobile platform that \
+helps you quickly develop high-quality apps, grow your user base and earn more money. Firebase provides several \
+utility features to make the life of an Android developer easy.\n\
+Flutter and Firebase:\n\
+https://www.udemy.com/course/flutter-firebase-build-a-complete-app-for-ios-android/\n\n\
+\U00002666 Android security\n\
+Android has built-in security features that significantly reduce the frequency and impact of application security \
+issues. You can protect the user's privacy by using permissions. Share data securely by using signature-based \
+permissions. Handle data security by using internal storage, external storage and ContentProviders very cautiously. \
+By default, never export your Android component, such as ContentProvider, Service or BroadcastReceiver, unless \
+you need to.")
+        elif ios_development_on:
+            await message.answer("Some skills required to get into IOS Development are as follows:\n\n\n \
+\U00002666 The Swift 3.0 programming language\n \
+Developed by Apple, Swift 3.0 is the global and most favored language that is used in iOS mobile app development. \
+You should be proficient in Swift 3.0 like a cricketer is proficient is skilled in catching a ball.\n\n\
+\U00002666 Objective-C programming language\n\
+Objective-C is the primary programming language you use when writing software for OS X and iOS. It’s a superset of \
+the C programming language and provides object-oriented capabilities and a dynamic runtime. Objective-C inherits \
+the syntax, primitive types, and flow control statements of C and adds syntax for defining classes and methods. It \
+also adds language-level support for object graph management and object literals while providing dynamic typing and \
+binding, deferring many responsibilities until runtime.\n\n\
+\U00002666 Apple’s Xcode IDE\n\
+It is the primary object that you must add in your skill set. Xcode IDE is an excellent cause that delivers a \
+unique app and offers majestic user experience. It is combined with Cocoa Touch frameworks and Cocoa and is the \
+first environment to develop apps for several Apple devices like Apple, iPad, TV, iPhone, Mac, etc. It encourages \
+a developer to allow several Apple service like Passbook, Game Changer. To become an iOS developer, you must \
+know the Apple Xcode IDE.\n\n\
+\U00002666 Design Guidelines\n\
+The reason why Apple users are crazy about their devices is their uniqueness that lures them to purchase Apple \
+products. To create iOS apps, there are defined guidelines to follow. While your training period in iOS app \
+development company, you must discover how to develop such extraordinary apps while adhering to Apple’s design \
+guidelines. Once you have inbuilt this art within yourself, you will be ready do wonders.\n\n\
+\U00002666 UI and UX design experience\n\
+Both UI and UX are the main features on which design of an app depends but functions vary slightly. UI form the \
+appearances of the app and UX includes navigation etc. Effective performance of UI/UX design in the building a \
+mobile app can perform an extreme change to its entire look which in turn engages more users. Thus, an iOS \
+developer should have a fair idea of design concepts and should have the ability to create exciting UI/UX design \
+for a mobile app they design and develop.\n\
+UI/UX Course:\n\
+https://www.udemy.com/course/app-design-uiux-plus-ios-development/\n\n\
+\U00002666 Apple Human Interface Guidelines\n\
+You must be aware of Apple Guidelines, as it will be the most important skill that help you best the best iOS app \
+developer. It will make your learning journey smooth and straight. These guidelines support an app developer to \
+develop apps that have maximum impact with superior visuals, and breathtaking user experience.\n\
+Apple Guidelines:\n\
+https://developer.apple.com/design/human-interface-guidelines/\n\n\
+\U00002666 Networking\n\
+You must be aware of JSON- JavaScript Object Notation to know how data is sent and accepted over networks. It is \
+a conventional format for data exchange and to become an iOS developer, and you must have this skill set too.\n\
+JSON course:\n\
+https://www.w3schools.com/js/js_json_intro.asp\n\n\
+\U00002666 Core Data\n\
+Core Data is the most supportive thing that you can use to provide a smooth user experience, as Core Data \
+eliminates this obstacle by storing data on Apple’s devices. It will reduce user frustration of starting from \
+scratch every single time they use the app.\n\
+Core Data Tutorials:\n\
+https://www.youtube.com/playlist?list=PLMRqhzcHGw1aDYKmCuqXQ_IqpWpJlpoJ3\n\n\
+\U00002666 Grand Central Dispatch\n\
+Usually, an app does many tasks concurrently such as receiving data from the internet, following human inputs, \
+presenting data and many more. Grand Central Dispatch plays a significant role in Apple devices to perform all \
+these functions. It gives the user a smooth experience.\n\
+Dispatch Documentation Apple:\n\
+https://developer.apple.com/documentation/DISPATCH")
 
     elif message.text == "\U0001F4BB Courses":
         if ai_and_ml_on:
@@ -680,6 +879,8 @@ https://www.edx.org/search?q=artificial%20intelligence&tab=program\n\n \
 https://www.coursera.org/search?query=artificial%20intelligence\n\n \
 \U00002666 List of ML programs (Coursera)\n \
 https://www.coursera.org/search?query=machine%20learning\n\n \
+\U00002666 Deep Learning Specialization\n \
+https://www.coursera.org/specializations/deep-learning \n\n\
 \U00002666 List of AI and ML programs (Udacity)\n \
 https://www.udacity.com/courses/all?search=artificial%20intelligence")
         elif cyber_security_on:
@@ -760,7 +961,6 @@ https://www.edx.org/search?q=cloud%20computing&tab=program\n\n \
 https://www.coursera.org/search?query=cloud%20computing&\n\n \
 \U00002666 Cloud computing courses on (udacity)\n \
 https://www.udacity.com/school-of-cloud-computing")
-
         elif game_development_on:
             await message.answer("Here's some courses you can kick off your Game-development career with:\n\
 \U00002666RUST Programming Tutorial #1- Hello World | Getting Started with Rust:\n\
@@ -788,7 +988,6 @@ https://www.udemy.com/course/lua-love/\n\n\
 https://www.udemy.com/course/complete-roblox-lua-start-making-games-with-roblox-studio/\n\n\
 \U00002666An Introduction to game development in Python:\n\
 https://www.udemy.com/course/an-introduction-to-game-development-in-python/\n\n ")
-
         elif data_science_on:
             await message.answer("Here's some courses you can kick off your Data Science career with:\n\n\
 \U00002666The complete SQL Bootcamp of Manipulation and Analysis of Data:\n\
@@ -807,7 +1006,6 @@ https://www.youtube.com/watch?v=F8pyaR4uQ2g\n\n\
 https://www.youtube.com/watch?v=_V8eKsto3Ug\n\n\
 \U00002666R Programming A-Z: For Data Science(Courses and Exercises):\n\
 https://www.udemy.com/course/r-programming/\n")
-
         elif robotics_and_hardware_on:
             await message.answer("Here's some courses you can kick off your Robotics \
 and Hardware career with:\n\
@@ -832,7 +1030,6 @@ https://www.udemy.com/course/complete-uipath-rpa-developer-course/\n\n\
 https://www.sciencebuddies.org/science-fair-projects/references/how-to-use-a-breadboard\n\n\
 \U00002666How to use a Breadboard:\n\
 https://youtu.be/6WReFkfrUIk\n\n")
-
         elif front_end_development_on:
             await message.answer("Here's some courses you can kick off your front end career:\n\n\n\
 \U00002666The Complete Front-End Web Development Course!\n\
@@ -857,6 +1054,42 @@ https://www.udacity.com/course/intro-to-backend--ud171\n\n\
 https://www.coursera.org/learn/web-applications-php\n\n\
 \U00002666The Complete Ruby on Rails Developer Course\n\
 https://www.coursera.org/courses?query=php\n\n")
+        elif android_development_on:
+            await message.answer("List of some courses for Android Development:\n\n\n \
+\U00002666 Android Development for Beginners - Full Course\n \
+https://www.youtube.com/watch?v=fis26HvvDII\n\n \
+\U00002666 Android Application Development Course\n \
+https://www.youtube.com/playlist?list=PLknSwrodgQ72X4sKpzf5vT8kY80HKcUSe\n\n \
+\U00002666 The Complete Android 12 & Kotlin Development Masterclass\n \
+https://www.udemy.com/course/android-kotlin-developer/\n\n \
+\U00002666 Android Java Masterclass - Become an App Developer\n \
+https://www.udemy.com/course/master-android-7-nougat-java-app-development-step-by-step/\n\n \
+\U00002666 List of android app development courses (Coursera)\n \
+https://www.coursera.org/courses?query=android%20app%20development\n\n \
+\U00002666 Android Basics in Kotlin\n \
+https://developer.android.com/courses/android-basics-kotlin/course\n\n \
+\U00002666 Build Your First Android App in Java\n \
+https://developer.android.com/codelabs/build-your-first-android-app#0")
+        elif ios_development_on:
+            await message.answer("List of some courses for IOS Development:\n\n\n \
+\U00002666 IOS Tutorial: How To Make Your First App\n\
+https://www.youtube.com/watch?v=09TeUXjzpKs\n\n \
+\U00002666 Get Started with IOS Development\n \
+https://www.youtube.com/playlist?list=PLSzsOkUDsvdu5Mm67aBYs2YPu2OM4mFzt\n\n \
+\U00002666 Learn IOS Development -  How to Build Apps\n \
+https://www.youtube.com/playlist?list=PLpZBns8dFbgx0gr68lf-un9EjdmywTu4_\n\n \
+\U00002666 IOS & Swift - The Complete iOS App Development Bootcamp\n \
+https://www.udemy.com/course/ios-13-app-development-bootcamp/\n\n \
+\U00002666 SwiftUI Masterclass 2022 - iOS 15 App Development & Swift 5\n \
+https://www.udemy.com/course/swiftui-masterclass-course-ios-development-with-swift/\n\n \
+\U00002666 List of IOS app development courses (Coursera)\n \
+https://www.coursera.org/search?query=ios%20app%20development\n\n \
+\U00002666 Mobile App Development with Swift\n \
+https://www.edx.org/professional-certificate/curtinx-mobile-app-development-with-swift\n\n \
+\U00002666 Become an iOS Developer\n \
+https://www.udacity.com/course/ios-developer-nanodegree--nd003\n\n\
+\U00002666 iOS Developer University Program\n\
+https://developer.apple.com/programs/ios/university/")
 
     elif message.text == "\U0001F4D6 Books":
         if ai_and_ml_on:
@@ -944,7 +1177,7 @@ https://www.amazon.in/dp/3836545306\n\n\
 https://www.amazon.in/dp/0881792128\n\n\
 \U00002666 How to be a Graphic Designer Without Losing Your Soul\n\
 https://www.amazon.in/dp/1856697096\n\n\
-\U00002666 Graphic Design for Art, Fashion, Film, Architecture, Photography, Product Design and Everything in Between \n\
+\U00002666 Graphic Design for Art, Fashion, Film, Architecture, Photography, Product Design and Everything in Between\n\
 https://www.amazon.in/dp/3791383507 \n\n")
         elif cloud_computing_on:
             await message.answer("Some books to refer for Cloud Computing:\n\n\n \
@@ -992,10 +1225,7 @@ https://www.amazon.in/Practical-Game-Design-applicable-cutting-edge/dp/178712179
 https://www.amazon.in/Engine-Architecture-Third-Jason-Gregory/dp/1138035459/ref=sr_1_1\n\n\
 \U00002666Unity from Zero to Proficiency (Intermediate): \
 A step-by-step guide to coding your first FPS in C# with Unity. [Third Edition]\n\
-https://www.amazon.in/Unity-Proficiency-Intermediate-step-step/dp/1696564298/ref=sr_1_1\n\n\
-")
-
-
+https://www.amazon.in/Unity-Proficiency-Intermediate-step-step/dp/1696564298/ref=sr_1_1\n\n")
         elif data_science_on:
             await message.answer("Here's some books for you to refer for Data Science:\n\
 \U00002666Data Science from scratch:\n\
@@ -1017,8 +1247,6 @@ https://www.amazon.in/Deep-Learning-Python-Francois-Chollet/dp/1617294438/ref=sr
 \U00002666Introduction to Machine Learning with Python: \
 A Guide for Data Scientists (Greyscale Indian Edition):\n\
 https://www.amazon.in/Introduction-Machine-Learning-Python-Scientists/dp/9352134575/ref=sr_1_3\n\n")
-
-
         elif robotics_and_hardware_on:
             await message.answer("Here's some books for you to refer to for \
 Robotics and hardware:\n\
@@ -1051,7 +1279,6 @@ https://www.amazon.in/Getting-Started-Electronics-Forrest-Mims/dp/0945053282/ref
 https://www.amazon.in/Understanding-Basic-Electronics-ARRL-Inc-ebook/dp/B0112HMEUI/ref=sr_1_7\n\n\
 \U00002666Beginner's Guide to Reading Schematics, Fourth Edition:\n\
 https://www.amazon.in/Beginners-Guide-Reading-Schematics-Gibilisco/dp/1260031101/ref=sr_1_1\n\n")
-
         elif front_end_development_on:
             await message.answer("Here's some books for you to refer for Front End Development:\n\n\n\
 \U00002666 HTML and CSS: Design and build websites, by Jon Duckett\n\
@@ -1079,6 +1306,52 @@ https://www.amazon.in/gp/product/1522792147/\n\n\
 https://www.amazon.in/gp/product/1484201884/\n\n\
 \U00002666 PHP & MySQL: The Missing Manual\n\
 https://www.amazon.in/gp/product/144934190X/\n\n")
+        elif android_development_on:
+            await message.answer("Some books to refer for Android Development:\n\n\n \
+\U00002666 Android Programming with Kotlin for Beginners\n \
+https://www.amazon.in/gp/product/B07RLJNJHS/\n\n \
+\U00002666 Android App Development for Dummies\n \
+https://www.amazon.in/Android-App-Development-Dummies-3ed/dp/8126557869/\n\n \
+\U00002666 Android Programming for Beginners\n \
+https://www.amazon.in/Android-Programming-Beginners-depth-full-featured/dp/1789538505/\n\n \
+\U00002666 Android Programming: The Big Nerd Ranch Guide\n \
+https://www.amazon.in/Android-Programming-Ranch-Guide-Guides/dp/0135245125/\n\n \
+\U00002666 Android Studio 3.0 Development Essentials\n \
+https://www.amazon.in/Android-Studio-3-0-Development-Essentials/dp/1977540090/\n\n \
+\U00002666 Android Cookbook: Problems and Solutions for Android\n \
+https://www.amazon.in/Android-Cookbook-Problems-Solutions-Developers/dp/9352135555/\n\n \
+\U00002666 Head First Android Development 2e\n \
+https://www.amazon.in/dp/1491974052?tag=hackr0df-21&geniuslink=true\n\n \
+\U00002666 Android App Development for Dummies\n \
+https://www.amazon.in/Android-App-Development-Dummies-3ed/dp/8126557869/ref=sr_1_1_sspa\n\n \
+\U00002666 GUI Design for Android Apps\n \
+https://www.amazon.in/dp/B0781Y3PQG?tag=hackr0df-21&geniuslink=true\n\n \
+\U00002666 The Busy Coder's Guide to Advanced Android Development\n \
+https://www.amazon.in/dp/098167805X?tag=hackr0df-21&geniuslink=true\n\n \
+\U00002666 Professional Android\n \
+https://www.amazon.in/dp/1118949528?tag=hackr0df-21&geniuslink=true")
+        elif ios_development_on:
+            await message.answer("Some books to refer for IOS Development:\n\n\n \
+\U00002666 iOS Programming: The Big Nerd Ranch Guide\n \
+https://www.amazon.in/iOS-Programming-Nerd-Ranch-Guide/dp/0135264022/ref=sr_1_1\n\n \
+\U00002666 iOS 15 Programming Fundamentals with Swift: Swift, Xcode, and Cocoa Basics\n \
+https://www.amazon.in/iOS-Programming-Fundamentals-Swift-Grayscale/dp/9355421303/ref=sr_1_3\n\n \
+\U00002666  iOS 15 Programming for Beginners\n \
+https://www.amazon.in/iOS-Programming-Beginners-Kickstart-development-ebook/dp/B09CHHWVK3/ref=sr_1_1\n\n \
+\U00002666 Beginning iOS 14 & Swift App Development\n \
+https://www.amazon.in/Beginning-iOS-Swift-App-Development/dp/9811486042/ref=sr_1_1\n\n \
+\U00002666 iOS 14 Programming for Beginners 5th Edition\n \
+https://www.amazon.in/iOS-14-Programming-Beginners-building/dp/1800209746/ref=sr_1_3\n\n \
+\U00002666 Mastering Swift 5.3\n \
+https://www.amazon.in/Mastering-Swift-5-3-knowledge-programming/dp/1800562152/ref=sr_1_2\n\n \
+\U00002666  iOS 14 Programming Fundamentals with Swift\n \
+https://www.amazon.in/iOS-Programming-Fundamentals-Swift-Grayscale/dp/9385889419/ref=sr_1_1\n\n \
+\U00002666 Programming iOS 14\n \
+https://www.amazon.in/Programming-iOS-14-Controllers-Frameworks-ebook/dp/B08KWQ34WF/ref=sr_1_5\n\n \
+\U00002666 SwiftUI Cookbook\n \
+https://www.amazon.in/SwiftUI-Cookbook-Discover-solutions-practices-ebook/dp/B08C5JW4DX/ref=sr_1_1\n\n \
+\U00002666 iOS Navigation 101\n \
+https://www.amazon.in/iOS-Navigation-101-Development-Efficiently-ebook/dp/B07MDQS8ZV/ref=sr_1_1")
 
     elif message.text == "\U0001F3C5 Certifications":
         if cyber_security_on:
@@ -1165,21 +1438,18 @@ https://cloud.google.com/certification/data-engineer\n\n \
 https://www.comptia.org/certifications/cloud\n\n \
 \U00002666 Certified Cloud Security Professional (CCSP)\n \
 https://www.isc2.org/Certifications/CCSP")
-
         elif game_development_on:
             await message.answer("Certifications that can help boost your career:\n\n\n \
 \U00002666Professional Certificate in Computer Science for Game Development (Harvard University)\n \
 https://www.edx.org/professional-certificate/harvardx-computer-science-for-game-development\n\n \
 \U00002666Unity certified associate-game-developer\n \
 https://unity.com/products/unity-certifications/associate-game-developer\n\n  ")
-
         elif robotics_and_hardware_on:
             await message.answer("Certifications that can help boost your career:\n\n\n \
 \U00002666A3 CERTIFIED ROBOT INTEGRATOR PROGRAM\n \
 https://www.automate.org/a3-content/robotic-integrator-certification-program\n\n \
 \U00002666FANUC National Certifications for Robotics and Advanced Automation Manufacturing\n \
 https://www.fanucamerica.com/education/nocti-certifications-robotics\n\n ")
-
         elif data_science_on:
             await message.answer("Certifications that can help boost your career:\n\n\n \
 \U00002666IBM Data Science Professional Certificate\n \
@@ -1190,7 +1460,6 @@ https://www.edx.org/professional-certificate/harvardx-data-science\n\n \
 https://aws.amazon.com/certification/certified-big-data-specialty/\n\n \
 \U00002666Microsoft Certified Azure Data Scientist Associate\n \
 https://docs.microsoft.com/en-us/learn/certifications/azure-data-scientist/\n\n ")
-
         elif front_end_development_on:
             await message.answer("Certifications that can help boost your career:\n\n\n \
 \U00002666W3C Front-End Web Developer Professional Certificate\n \
@@ -1265,7 +1534,6 @@ https://www.masterstudies.com/Masters-Degree/Cloud-Computing/\n\n\
 https://www.upgrad.com/cloud-computing-pgd-iiitb\n\n \
 \U00002666 Advanced Certificate Programme in Cloud Computing\n \
 https://www.upgrad.com/cloud-computing-certification-pgc-iiitb")
-
         elif game_development_on:
             await message.answer("\U00002666 Your collective platform where you can get your Degrees\
 for Game Development:\n\
@@ -1276,7 +1544,6 @@ https://www.bachelorstudies.com/Game-Design/\n\n\
 https://www.masterstudies.com/Masters-Degree/Game-Design/\n\n\
 \U00002666Theory:\n\
 https://www.bachelorstudies.com/Game-Theory/\n\n")
-
         elif data_science_on:
             await message.answer("Your Collective platforms where you can get \
 your degrees in Data Science from:\n\n\
@@ -1284,9 +1551,7 @@ Keystone Bachelorstudies.com:\n\n\
 \U00002666Bachelors in Data Science:\n\
 https://www.bachelorstudies.com/Data-Science/\n\n\
 \U00002666Masters in Data Science:\n\
-https://www.masterstudies.com/Masters-Degree/Data-Science/\n\n\
-")
-
+https://www.masterstudies.com/Masters-Degree/Data-Science/\n\n")
         elif robotics_and_hardware_on:
             await message.answer("Your collective platform where you can \
 get your degrees in Robotics and Hardware:\n\
@@ -1294,7 +1559,6 @@ get your degrees in Robotics and Hardware:\n\
 https://www.bachelorstudies.com/Bachelor/Robotics/#:~\n\n\
 \U00002666Masters Programs in Robotics:\n\
 https://www.masterstudies.com/Masters-Degree/Robotics/\n\n")
-
         elif front_end_development_on:
             await message.answer("Web Development Degrees which you can acquire:\n\n\n \
 \U00002666Bachelor’s in Web Development\n\
@@ -1530,7 +1794,6 @@ A cloud automation engineer possesses experience in software development or IT o
 automation, orchestration and integration. This role often requires a wider understanding and knowledge of \
 hardware and software, along with data centre and cloud infrastructure. A cloud automation engineer is responsible \
 for implementing, optimizing and supporting cloud infrastructure.")
-
         elif data_science_on:
             await message.answer("Data science combines several disciplines, including statistics, \
 data analysis, machine learning, and computer science. It can be daunting if you’re new \
@@ -1587,8 +1850,6 @@ designed for big data, and experience with messy, real-life datasets.\n\
 Generally, these companies are either looking for generalists or they’re looking \
 to fill a specific niche where they feel their team is lacking, such as \
 data visualization or machine learning.\n")
-
-
         elif game_development_on:
             await message.answer("The video game industry is booming and there are many \
 types of jobs in the game industry for you to choose from! Click on each role for detailed \
@@ -1650,7 +1911,6 @@ the original concept artist’s sketches.\n\n\
 \U00002666 Environment Artist:\n\
 3D Environment Artists are 3D Modelers who specialize in creating indoor and \
 outdoor settings for films or video games.\n\n")
-
         elif robotics_and_hardware_on:
             await message.answer("Some of the Jobs availabe if you want to pursue your career in\
 Robotics and hardware.\n\
@@ -1714,7 +1974,6 @@ closely with the rest of the development team to understand the desired function
 of the robot, then identify and integrate the data needed to reach that goal.\n\
 This role straddles the line between data science, software, and computer science, \
 requiring professionals to be well versed in all three disciplines.\n")
-
         elif front_end_development_on:
             await message.answer("Some of the Jobs availabe if you want to pursue your career in\
 Front End Development\n\n\n\
@@ -1745,7 +2004,8 @@ with software development practices pertaining to collaboration, integration, de
 \n\n\
 \U00002666 Front-End Testing/QA\n\
 When the word Testing or QA is included in the job title, this will denote that the developer has extensive \
-experience testing and managing software that involves unit testing, functional testing, user testing, and A/B testing.")
+experience testing and managing software that involves unit testing, functional testing, user testing, \
+and A/B testing.")
         elif back_end_development_on:
             await message.answer("Areas of Work for Backend Engineers and Developers\n\n\
 \U00002666Backend developers can find career opportunities in a variety of industries and locations. Some backend \
@@ -1763,7 +2023,7 @@ an important future step for optimizing your career opportunities.\n\n\n\
 \U00002666According to the Bureau of Labor Statistics, the career outlook for web development is favorable, as the \
 industry expected to grow much faster than average. As with most web development careers, location can make a big \
 difference in terms of average salary.\n\n\
-\U00002666According to Glassdoor, the average salary for a web developer in the United States is $75,487 per year, with \
+\U00002666According to Glassdoor, the average salary for a web developer in the United States is $75,487 per year, with\
 specializations leading to a higher average salary. Top cities where web developers earn more than the national \
 average include San Francisco, Seattle, New York City, Los Angeles, and Chicago. Those who pursue additional training \
 and education to become full-stack developers are typically able to command higher salaries. \n\n\
@@ -1771,13 +2031,33 @@ and education to become full-stack developers are typically able to command high
 consider the fact that there were approximately 148,500 positions for developers five years ago. Looking ahead five \
 years into the future, that number is expected to grow to an estimated 188,000. This is substantial growth, which \
 indicates a promising future for those who are just now getting their foot in the door of web development.\n\n")
+        elif android_development_on:
+            await message.answer("Job Roles differ from company to company. Here is a list of some common job \
+roles for Android Development:\n\n\
+\U00002666 Mobile software system Engineer\n\
+\U00002666 Mobile Application Developer\n\
+\U00002666 Android Application Developer\n\
+\U00002666 Senior Android Developer\n\
+\U00002666 Senior Mobile Developer")
+        elif ios_development_on:
+            await message.answer("Job Roles differ from company to company. Here is a list of some common job \
+roles for IOS Development:\n\n\
+\U00002666 Senior iOS Developer \n\
+\U00002666 iOS Developer \n\
+\U00002666 iOS Engineer \n\
+\U00002666 Senior iOS Engineer \n\
+\U00002666 iOS Mobile Core Engineer")
 
     elif message.text == "\U0001F393 Certifications/Degrees":
         if ai_and_ml_on:
-            await message.answer("Here is a list of certifications and degrees which you can apply for \
-AI and ML:\n\n\n \
+            await message.answer("Here is a list of degrees which you can apply for AI and ML:\n\n\n \
+\U00002666 Bachelors degree provided by colleges in AI and ML\n \
+https://www.bachelorstudies.com/Bachelor/Artificial-Intelligence/\n\n \
+\U00002666 Masters degree provided by colleges in AI and ML\n \
+https://www.masterstudies.com/MSc/Artificial-Intelligence/\n\n\
 \U00002666 List of degree programs (Upgrad)\n \
-https://www.upgrad.com/machine-learning-course/\n\n \
+https://www.upgrad.com/machine-learning-course/\n\n\n\
+Here are some certifications which you can acquire for AI and ML\n\n\
 \U00002666 List of Learnbay certifications\n \
 https://www.learnbay.co/data-science-course/data-science-certification-courses/\n\n \
 https://www.learnbay.co/data-science-course/artificial-intelligence-certification-course/\n\n \
@@ -1785,11 +2065,20 @@ https://www.learnbay.co/data-science-course/data-science-ai-for-managers/\n\n \
 \U00002666 Artificial Intelligence Engineer by Simplilearn\n \
 https://www.simplilearn.com/artificial-intelligence-masters-program-training-course\n\n \
 \U00002666 List of 15 Artificial Intelligence Courses and Certifications\n \
-https://digitaldefynd.com/best-artificial-intelligence-courses-training-certifications/\n\n \
-\U00002666 Bachelors degree provided by colleges in AI and ML\n \
-https://www.bachelorstudies.com/Bachelor/Artificial-Intelligence/\n\n \
-\U00002666 Masters degree provided by colleges in AI and ML\n \
-https://www.masterstudies.com/MSc/Artificial-Intelligence/")
+https://digitaldefynd.com/best-artificial-intelligence-courses-training-certifications/\n\n")
+        elif android_development_on:
+            await message.answer("Here is a list of degrees which you can apply for Android Development:\n\n\n \
+\U00002666 Colleges providing masters degree in mobile application development\n \
+https://www.findamasters.com/masters-degrees/?Keywords=mobile+application+development\n\n \
+\U00002666 Android Basics by Google (Udacity Nanodegree)\n\
+https://www.udacity.com/course/android-basics-nanodegree-by-google--nd803\n\n \
+\U00002666 Become an Android Kotlin Developer (Udacity Nanodegree)\n \
+https://www.udacity.com/course/android-kotlin-developer-nanodegree--nd940\n\n\n\
+Here are some certifications which you can acquire for Android Development\n\n\
+\U00002666 Associate Android Developer Certification\n \
+https://grow.google/certificates/android-developer/\n\n\
+\U00002666 Associate Android Developer\n \
+https://developers.google.com/certification/associate-android-developer")
 
     elif message.text == "\U0001F519 Back":
         if ai_and_ml_on:
@@ -1803,7 +2092,7 @@ https://www.masterstudies.com/MSc/Artificial-Intelligence/")
             await message.answer("\U0001F519 Back", reply_markup=guides_menu_keyboard)
         elif networking_on:
             networking_on = False
-            await message.answer("\U0001F519 Back", reply_markup=guides_menu_keyboard)    
+            await message.answer("\U0001F519 Back", reply_markup=guides_menu_keyboard)
         elif graphic_designing_on:
             graphic_designing_on = False
             await message.answer("\U0001F519 Back", reply_markup=guides_menu_keyboard)
@@ -1816,7 +2105,6 @@ https://www.masterstudies.com/MSc/Artificial-Intelligence/")
         elif back_end_development_on and web_development_on and software_development_on:
             back_end_development_on = False
             await message.answer("\U0001F519 Back", reply_markup=web_development_keyboard)
-        
         elif web_development_on and software_development_on:
             web_development_on = False
             await message.answer("\U0001F519 Back", reply_markup=software_development_keyboard)
@@ -1826,9 +2114,6 @@ https://www.masterstudies.com/MSc/Artificial-Intelligence/")
         elif ios_development_on and application_development_on and software_development_on:
             ios_development_on = False
             await message.answer("\U0001F519 Back", reply_markup=application_development_keyboard)
-        elif desktop_development_on and application_development_on and software_development_on:
-            desktop_development_on = False
-            await message.answer("\U0001F519 Back", reply_markup=application_development_keyboard)
         elif application_development_on and software_development_on:
             application_development_on = False
             await message.answer("\U0001F519 Back", reply_markup=software_development_keyboard)
@@ -1836,7 +2121,7 @@ https://www.masterstudies.com/MSc/Artificial-Intelligence/")
             software_development_on = False
             await message.answer("\U0001F519 Back", reply_markup=guides_menu_keyboard)
         elif data_science_on:
-            data_science_on=False
+            data_science_on = False
             await message.answer("\U0001F519 Back", reply_markup=guides_menu_keyboard)
         elif game_development_on:
             game_development_on = False
@@ -1847,7 +2132,6 @@ https://www.masterstudies.com/MSc/Artificial-Intelligence/")
         else:
             await message.answer("\U0001F519 Back", reply_markup=top_menu_keyboard)
 
-           
     elif message.text == "\U0001F51D Main Menu":
         await message.answer("\U0001F51D Main Menu", reply_markup=top_menu_keyboard)
     else:
