@@ -1,20 +1,24 @@
+# Diploma Final Year Project - CSGuider Telegram Bot
+# Authors - Aksh Nishar, Kenneth Rodrigues, Khush Trivedi
+# Created - December 2021
+
+# Importing necessary classes from aiogram module
 from aiogram import Bot, Dispatcher, executor, types
 from aiogram.types import ReplyKeyboardMarkup, KeyboardButton
 
+# API KEY - got from Telegram's BotFather
 API_KEY = "2142160935:AAEGjTuZrHdNmLrGwVimS_OLs-qSfV-fd6c"
 
+# Bot class creates and initializes the bot
+# Dispatcher class dispatches all kinds of updates to the Bot's registered handlers.
 bot = Bot(token=API_KEY)
 dp = Dispatcher(bot)
 
+# Creating all the necessary buttons
 what_is_bot_button = KeyboardButton("\U0001F937 What is CSGuider Bot? \U0001F937")
-important_note_button = KeyboardButton("\U00002757\U00002757Important Note\U00002757\U00002757")
+important_note_button = KeyboardButton("\U00002757\U00002757Important Notes\U00002757\U00002757")
 go_to_guides_button = KeyboardButton("\U0001F4DA\U0001F4DA Go to Guides \U0001F4DA\U0001F4DA")
 contact_us_button = KeyboardButton("\U0001F4E7 Contact Us \U0001F4E7")
-
-top_menu_keyboard = ReplyKeyboardMarkup(resize_keyboard=True).add(what_is_bot_button)
-top_menu_keyboard.add(important_note_button)
-top_menu_keyboard.add(go_to_guides_button)
-top_menu_keyboard.add(contact_us_button)
 
 ai_and_ml_button = KeyboardButton("\U00002699 AI and ML \U00002699")
 cyber_security_button = KeyboardButton("\U0001F3AD Cyber Security \U0001F3AD")
@@ -32,8 +36,17 @@ back_end_development_button = KeyboardButton("\U00002B07 Back-End Web Developmen
 application_development_button = KeyboardButton("\U0001F4BB Application Development \U0001F4BB")
 android_development_button = KeyboardButton("\U0001F4F1 Android App Development \U0001F4F1")
 ios_development_button = KeyboardButton("\U0001F4F2 IOS App Development \U0001F4F2")
+
+skills_required_button = KeyboardButton("\U0001F530 Skills Required")
+courses_button = KeyboardButton("\U0001F4BB Courses")
+books_button = KeyboardButton("\U0001F4D6 Books")
+certifications_button = KeyboardButton("\U0001F3C5 Certifications")
+degrees_button = KeyboardButton("\U0001F393 Degrees")
+jobs_button = KeyboardButton("\U0001F935 Jobs")
+certifications_degrees_button = KeyboardButton("\U0001F393 Certifications/Degrees")
 back_button = KeyboardButton("\U0001F519 Back")
 back_to_top_menu_button = KeyboardButton("\U0001F51D Main Menu")
+
 what_is_ai_and_ml_button = KeyboardButton("\U0001F937 What is AI and ML \U0001F937")
 what_is_cyber_security_button = KeyboardButton("\U0001F937 What is Cyber Security \U0001F937")
 what_is_game_development_button = KeyboardButton("\U0001F937 What is Game Development \U0001F937")
@@ -48,20 +61,18 @@ what_is_back_end_development_button = KeyboardButton("\U0001F937 What is Back-En
 what_is_android_app_development_button = KeyboardButton("\U0001F937 What is Android App Development \U0001F937")
 what_is_ios_app_development_button = KeyboardButton("\U0001F937 What is IOS App Development \U0001F937")
 
+# Creating all the necessary keyboards which will contain the buttons
+top_menu_keyboard = ReplyKeyboardMarkup(resize_keyboard=True).add(what_is_bot_button)
+top_menu_keyboard.add(important_note_button)
+top_menu_keyboard.add(go_to_guides_button)
+top_menu_keyboard.add(contact_us_button)
+
 guides_menu_keyboard = ReplyKeyboardMarkup(resize_keyboard=True).add(ai_and_ml_button, cyber_security_button)
 guides_menu_keyboard.add(game_development_button, software_development_keyboard)
 guides_menu_keyboard.add(blockchain_button, cloud_computing_button)
 guides_menu_keyboard.add(networking_button, graphic_designing_button)
 guides_menu_keyboard.add(data_science_button, robotics_and_hardware_button)
 guides_menu_keyboard.add(back_button, back_to_top_menu_button)
-
-skills_required_button = KeyboardButton("\U0001F530 Skills Required")
-courses_button = KeyboardButton("\U0001F4BB Courses")
-books_button = KeyboardButton("\U0001F4D6 Books")
-certifications_button = KeyboardButton("\U0001F3C5 Certifications")
-degrees_button = KeyboardButton("\U0001F393 Degrees")
-jobs_button = KeyboardButton("\U0001F935 Jobs")
-certifications_degrees_button = KeyboardButton("\U0001F393 Certifications/Degrees")
 
 ai_and_ml_keyboard = ReplyKeyboardMarkup(resize_keyboard=True).add(what_is_ai_and_ml_button)
 ai_and_ml_keyboard.add(skills_required_button, courses_button)
@@ -152,6 +163,7 @@ ios_development_keyboard.add(skills_required_button, courses_button)
 ios_development_keyboard.add(books_button, jobs_button)
 ios_development_keyboard.add(back_button, back_to_top_menu_button)
 
+# Boolean values to identify which keyboard/guide user is interacting with
 ai_and_ml_on = False
 cyber_security_on = False
 game_development_on = False
@@ -172,8 +184,17 @@ data_science_on = False
 robotics_and_hardware_on = False
 
 
-@dp.message_handler(commands=['start', 'help'])
-async def welcome(message: types.Message):
+# Asynchronous functions are used. They cannot be avoided otherwise the code will break.
+# await keyword is also used to prevent errors and to continuously wait for user's input.
+@dp.message_handler(commands=['start'])
+async def welcome(message: 'types.Message') -> None:
+    """
+    Function to handle the start command.
+
+    :param message: To receive the commands from the user. If any other text is entered other than the specified
+        command, an error message will be shown by the bot.
+    :return: None
+    """
     if message.is_command():
         await message.reply("Hello, Welcome to CSGuider Bot", reply_markup=top_menu_keyboard)
     else:
@@ -181,35 +202,53 @@ async def welcome(message: types.Message):
 
 
 @dp.message_handler()
-async def main_keyboard_answer(message: types.Message):
+async def main_keyboard_answer(message: 'types.Message') -> None:
+    """
+    Function which will handle all the commands of the bot, except the start command.
+
+    :param message: To receive the commands from the user. If any other text is entered other than the specified
+        commands, an error message will be shown by the bot.
+    :return: None
+    """
+    # global keyword prevents the below variables to be used as local variables.
     global ai_and_ml_on, cyber_security_on, game_development_on, software_development_on, blockchain_on, \
         cloud_computing_on, networking_on, graphic_designing_on, data_science_on, robotics_and_hardware_on, \
         web_development_on, front_end_development_on, back_end_development_on, full_stack_development_on, \
         application_development_on, android_development_on, ios_development_on, desktop_development_on
 
+    # if...elif...else ladder to handle all the commands
     if message.text == "\U0001F937 What is CSGuider Bot? \U0001F937":
         await message.answer("\U0001F4BB CSGuiderBot\n\n\n\
 \U0001F4BB What is CSGuider Bot?\n\n\
 CSGuider is a comprehensive guide to specialization within the Computer Science field.\n\n\
 It is aimed at providing students with a list of possible opportunities within the Computer Science field along with \
 providing them with resources related to these specialization fields with the help of a responsive UI.\n\n\
-\U0001F4BB The following resources are included in the CSGuider Bot:\n\
-\U0001F537Skills Required \n\
-\U0001F537Courses\n\
-\U0001F537Books\n\
-\U0001F537Degrees\n\
-\U0001F537Certifications\n\
-\U0001F537Job Opportunities\n\n\
+The following resources are included in the CSGuider Bot:\n\
+\U00002666 Skills Required \n\
+\U00002666 Courses\n\
+\U00002666 Books\n\
+\U00002666 Degrees\n\
+\U00002666 Certifications\n\
+\U00002666 Job Opportunities\n\n\
 All these features are conveniently packed into an easy to use and interactive Telegram Bot ")
 
-    elif message.text == "\U00002757\U00002757Important Note\U00002757\U00002757":
-        pass
+    elif message.text == "\U00002757\U00002757Important Notes\U00002757\U00002757":
+        await message.answer("\U0001F6A9 All the resources provided in this bot will help you move from a \
+beginner level with no knowledge to an intermediate level. However, to become an expert in any field you will \
+need a lot of practice, real-world experience, a never-stop-learning attitude and staying up-to-date with trends.\n\n\
+\U0001F6A9 A second important thing to remember is to do some research before enrolling in any course, \
+certification, degree program or purchasing a book to find out if they are suitable for you, whether all \
+prerequisites are met, and if the skills they are providing are what you need, so that you don't regret \
+after buying them.")
 
     elif message.text == "\U0001F4DA\U0001F4DA Go to Guides \U0001F4DA\U0001F4DA":
         await message.answer("Guides", reply_markup=guides_menu_keyboard)
 
     elif message.text == "\U0001F4E7 Contact Us \U0001F4E7":
-        pass
+        await message.answer("If you have any questions, feel free to email any one of us: \n\n\
+aksh.nishar@somaiya.edu\n\n\
+kenneth.r@somaiya.edu\n\n\
+khush.t@somaiya.edu")
 
     elif message.text == "\U00002699 AI and ML \U00002699":
         ai_and_ml_on = True
@@ -281,43 +320,119 @@ All these features are conveniently packed into an easy to use and interactive T
         await message.answer("Robotics and Hardware", reply_markup=robotics_and_hardware_keyboard)
 
     elif message.text == "\U0001F937 What is AI and ML \U0001F937":
-        pass
+        await message.answer("\U0001F6A9 Artificial Intelligence (AI) is a technology using which we can create \
+intelligent systems that can simulate human intelligence. The Artificial intelligence system does not require to \
+be pre-programmed, instead of that, they use such algorithms which can work with their own intelligence. It \
+involves machine learning algorithms such as Reinforcement learning algorithm and deep learning neural networks. \
+AI is being used in multiple places such as Siri, Google Assistant, AI in Chess playing, etc.\n\n\
+\U0001F6A9 Machine Learning (ML) is a subfield of artificial intelligence, which enables machines to learn from \
+past data or experiences without being explicitly programmed. Machine learning works on algorithm which learn by \
+it's own using historical data. It works only for specific domains such as if we are creating a machine learning \
+model to detect pictures of dogs, it will only give result for dog images, but if we provide a new data like cat \
+image then it will become unresponsive. Machine learning is being used in various places such as for online \
+recommender system, for Google search algorithms, Email spam filter, Facebook Auto friend tagging suggestion, etc.")
 
     elif message.text == "\U0001F937 What is Cyber Security \U0001F937":
-        pass
+        await message.answer("\U0001F6A9 Computer security, cyber security, or information technology security \
+(IT security) is the protection of computer systems and networks from information disclosure, theft of \
+or damage to their hardware, software, or electronic data, as well as from the disruption or misdirection \
+of the services they provide.\n\nThe field is becoming increasingly significant due to the continuously expanding \
+reliance on computer systems, the Internet and wireless network standards such as Bluetooth and Wi-Fi, and due \
+to the growth of `smart` devices, including smartphones, televisions, and the various devices that constitute \
+the `Internet of things`.")
 
     elif message.text == "\U0001F937 What is Game Development \U0001F937":
-        pass
+        await message.answer("\U0001F6A9 Game Development is the art of creating games and describes the design, \
+development and release of a game. It may involve concept generation, design, build, test and release. \
+While you create a game, it is important to think about the game mechanics, rewards, player engagement \
+and level design.\n\nGame Development can be undertaken by a large Game Development Studio or by a single individual. \
+It can be as small or large as you like. As long as it lets the player interact with content and is able to \
+manipulate the game’s elements, you can call it a `game`.")
 
     elif message.text == "\U0001F937 What is Blockchain \U0001F937":
-        pass
+        await message.answer("\U0001F6A9 A blockchain is a growing list of records, called blocks, that are linked \
+together using cryptography. Each block contains a cryptographic hash of the previous block, a timestamp, \
+and transaction data (generally represented as a Merkle tree). The timestamp proves that the transaction data \
+existed when the block was published in order to get into its hash. As blocks each contain information about the \
+block previous to it, they form a chain, with each additional block reinforcing the ones before it. Therefore, \
+blockchains are resistant to modification of their data because once recorded, the data in any given block cannot \
+be altered retroactively without altering all subsequent blocks.\n\n Blockchains are typically managed by a \
+peer-to-peer network for use as a publicly distributed ledger, where nodes collectively adhere to a protocol to \
+communicate and validate new blocks. Although blockchain records are not unalterable as forks are possible, \
+blockchains may be considered secure by design and exemplify a distributed computing system with high Byzantine \
+fault tolerance.")
 
     elif message.text == "\U0001F937 What is Cloud Computing \U0001F937":
-        pass
+        await message.answer("\U0001F6A9 Cloud computing is the delivery of different services through the Internet. \
+These resources include tools and applications like data storage, servers, databases, networking, and software. \
+Rather than keeping files on a proprietary hard drive or local storage device, cloud-based storage makes it possible \
+to save them to a remote database. As long as an electronic device has access to the web, it has access to the data \
+and the software programs to run it. \n\nCloud computing is a popular option for people and businesses for a number of \
+reasons including cost savings, increased productivity, speed and efficiency, performance, and security.")
 
     elif message.text == "\U0001F937 What is Networking \U0001F937":
-        pass
+        await message.answer("\U0001F6A9 A computer networking is a process of connecting two more than two \
+computers with the purpose to share data, provide technical support, and to communicate. \n\n\
+Internet is the technology that is used to connect different computer systems (located in different \
+geographic location). Networking technology has revolutionized the world and created a new arena for the overall \
+development of every nation.")
 
     elif message.text == "\U0001F937 What is Graphic Designing \U0001F937":
-        pass
+        await message.answer("\U0001F6A9 Graphic design is the profession and academic discipline whose activity \
+consists in projecting visual communications intended to transmit specific messages to social groups, with specific \
+objectives. Therefore, graphic design is an interdisciplinary branch of design whose foundations and objectives \
+revolve around the definition of problems and the determination of objectives for decision-making, through creativity, \
+innovation and lateral thinking along with manual or digital tools, transforming them for proper interpretation. \
+This activity helps in the optimization of graphic communications.\n\nThe design work can be based on a customer’s \
+demand, a demand that ends up being established linguistically, either orally or in writing, that is, that graphic \
+design transforms a linguistic message into a graphic manifestation.")
 
     elif message.text == "\U0001F937 What is Data Science \U0001F937":
-        pass
+        await message.answer("\U0001F6A9 Data science is an interdisciplinary field that uses scientific methods, \
+processes, algorithms and systems to extract knowledge and insights from noisy, structured and unstructured data, \
+and apply knowledge and actionable insights from data across a broad range of application domains. Data science is \
+related to data mining, machine learning and big data. \n\nData science is a `concept to unify statistics, data \
+analysis, informatics, and their related methods` in order to `understand and analyze actual phenomena` with data. \
+It uses techniques and theories drawn from many fields within the context of mathematics, statistics, computer \
+science, information science, and domain knowledge. \n\nA data scientist is someone who creates programming code, and \
+combines it with statistical knowledge to create insights from data.")
 
     elif message.text == "\U0001F937 What is Robotics and Hardware \U0001F937":
-        pass
+        await message.answer("\U0001F6A9 Robotics is the intersection of science, engineering and technology that \
+produces machines, called robots, that substitute for (or replicate) human actions. A robot is the product of the \
+robotics field, where programmable machines are built that can assist humans or mimic human actions. \n\n Robots were \
+originally built to handle monotonous tasks (like building cars on an assembly line), but have since expanded well \
+beyond their initial uses to perform tasks like fighting fires, cleaning homes and assisting with incredibly \
+intricate surgeries. Each robot has a differing level of autonomy, ranging from human-controlled bots that carry \
+out tasks that a human has full control over to fully-autonomous bots that perform tasks without any \
+external influences.")
 
     elif message.text == "\U0001F937 What is Front-End Web Development \U0001F937":
-        pass
+        await message.answer("\U0001F6A9 Front-end web development is the development of the graphical user interface \
+of a website, through the use of HTML, CSS, and JavaScript, so that users can view and interact with that website. \
+It involves transforming the code built by backend developers into a graphical interface, making sure that the data \
+is presented in an easy-to-read and -understand format. \n\nWithout frontend development, all you would see on a \
+website or web application are undecipherable codes (unless you’re a developer, too, of course). But because of \
+frontend developers, people with no coding background can easily understand and use web applications and websites.")
 
     elif message.text == "\U0001F937 What is Back-End Web Development \U0001F937":
-        pass
+        await message.answer("\U0001F6A9 Backend is the server-side of the website. It stores and arranges data, and \
+also makes sure everything on the client-side of the website works fine. It is the part of the website that \
+you cannot see and interact with. It is the portion of software that does not come in direct contact with \
+the users.\n\nThe parts and characteristics developed by backend designers are indirectly accessed by users through \
+a front-end application. Activities, like writing APIs, creating libraries, and working with system components \
+without user interfaces or even systems of scientific programming, are also included in the backend.")
 
     elif message.text == "\U0001F937 What is Android App Development \U0001F937":
-        pass
+        await message.answer("\U0001F6A9 Android app development is a process in which mobile apps are developed \
+for devices that run the Android operating system. Android apps are written with the help of languages such \
+as Java, Kotlin and C++ languages with the Android Software Development Kit (SDK). Android was initially \
+released in the year 2009 and is basically written in Java language.")
 
     elif message.text == "\U0001F937 What is IOS App Development \U0001F937":
-        pass
+        await message.answer("\U0001F6A9 IOS application development is the process of making mobile applications \
+for Apple hardware, including iPhone, iPad and iPod Touch. The software is written in the Swift programming \
+language or Objective-C and then deployed to the App Store for users to download.")
 
     elif message.text == "\U0001F530 Skills Required":
         if ai_and_ml_on:
@@ -547,10 +662,7 @@ the cloud.\n\
 WebServices/API Testing by SoapUI-Groovy:\n\
 https://www.udemy.com/course/soapui-with-groovy-with-realtime-projects/")
         elif data_science_on:
-            await message.answer("Data science is an interdisciplinary field.\n \n\
-In order to have a flourishing career, a data scientist should obtain a \
-comprehensive set of skills that covers each building block of the field.\
-Following are the skills that are required to pursue a career in Data Science:\n\
+            await message.answer("Following are the skills that are required to pursue a career in Data Science:\n\
 1.Data science requires you to have or develop skills in statistics.\n\
 Introduction to Statistic :\n\
 https://www.udemy.com/course/intro-to-statistics/\n\
@@ -566,20 +678,17 @@ The goal of data science is creating value out of data.\
 The initial requirement for accomplishing this goal is to understand the data very well.\n\
 Statistics can be considered as the most impactful tool to understand, interpret, evaluate the data.\
 \n\n\
-\U00002666A person has to have or attain knowledge of Data science tools.\
+\U00002666 A person has to have or attain knowledge of Data science tools.\
 The tools for data science are for analyzing data, creating aesthetic and interactive \
 visualizations and creating powerful predictive models using machine learning algorithms.\n \
 Most of the data science tools deliver complex data science operations in one place.\
 Some of the Data science tools of 2021 are:\n\
 SAS\n 2. Apache Hadoop\n 3. Excel\n 4. MongoDB\n 5. Python\n \
-You'll find all the information you need to learn the Data science tools by clicking the Courses button down below.\n\ \
+You'll find all the information you need to learn the Data science tools by clicking the Courses button down below.\
 3.One needs to know how to best communicate with others whether it's at \
 SAS\n 2. Apache Hadoop\n 3. Excel\n 4. MongoDB\n 5. Python\n \n\
-\U00002666One needs to know how to best communicate with others whether it's at\
+\U00002666 One needs to know how to best communicate with others whether it's at\
 work or with clients or even with the computer.\n\
-Communication skills play an important role in almost any field you go to; \
-be it industrial or commercial or any other entertainment.\n\
-If you know how to communicate better you can sell anything in this world.\
 Communication becomes a very crucial part of a person's life especially if he \
 belongs to the industrial sector such as Computer Science or IT.\n\
 You need to know how and when to communicate with people and maintain a clean reputation just the same.\
@@ -590,7 +699,7 @@ Powerful Speaking:\n\
 https://www.udemy.com/course/powerful-speaking/\n\
 \n4.Commendable knowledge in Quants and Business Acumen.\n\
 You need to know how and when to communicate with people and maintain a clean reputation just the same.\n\n\
-\U00002666Commendable knowledge in Quants and Business Acumen.\n\
+\U00002666 Commendable knowledge in Quants and Business Acumen.\n\
 Good Business Acumen include the following things and qualities: \n\
 *Leadership Skills\n\
 *Financial acumen\n\
@@ -616,17 +725,7 @@ Why use of graph is made is because it is easier to understand and it saves a lo
 consumes if one opted to read the report of each and every financial year\
 ( in instance of a Company's share prices )   ")
         elif robotics_and_hardware_on:
-            await message.answer("Robotics is an interdisciplinary sector of science and engineering \
-dedicated to the design, construction and use of mechanical robots. \
-Our guide will give you a concrete grasp of robotics, \
-including different types of robots and how they're being applied across industries.\n\n\
-*What Is Robotics?\n\
-Robotics is the intersection of science, engineering and technology that produces machines,\
-called robots, that substitute for (or replicate) human actions. \n\
-Robots are gaining intellectual and mechanical capabilities \
-that don’t put the possibility of a R2-D2-like machine out of reach in the future.\n\
-That was about Robotics now we'll talk about the skill you need to learn\
-before going into Robotics:\n\n\
+            await message.answer("Some skills you need to learn before going into Robotics:\n\n\
 \U00002666Math and Science:\n\
 Robotics manufacturer RobotIQ describes mathematics as one of \
 the only core robotics skills that you cannot learn as you go along.\n\
@@ -2167,4 +2266,6 @@ https://developers.google.com/certification/associate-android-developer")
 /start to reload the bot")
 
 
+# Starts polling/checking whether any changes are made in Telegram Bot i.e. whether any command is pressed or
+# text is entered.
 executor.start_polling(dp)
