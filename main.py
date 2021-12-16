@@ -2001,12 +2001,6 @@ and then test the algorithms on which a robot runs. These professionals work \
 closely with the rest of the development team to understand the desired functionality \
 of the robot, then identify and integrate the data needed to reach that goal.\n\
 This role straddles the line between data science, software, and computer science, \
-requiring professionals to be well versed in all three disciplines.\n\
- 
-
-            
-            
-            ")
 requiring professionals to be well versed in all three disciplines.\n")
         elif front_end_development_on:
             await message.answer("Some of the Jobs availabe if you want to pursue your career in\
