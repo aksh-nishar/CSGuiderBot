@@ -447,6 +447,12 @@ In order to have a flourishing career, a data scientist should obtain a \
 comprehensive set of skills that covers each building block of the field.\
 Following are the skills that are required to pursue a career in Data Science:\n\
 1.Data science requires you to have or develop skills in statistics.\n\
+Introduction to Statistic :\n\
+https://www.udemy.com/course/intro-to-statistics/\n\
+Statistics for Data science and Business Analysis : \n\
+https://www.udemy.com/course/statistics-for-data-science-and-business-analysis/\n\
+Your collegtive destination for everything you need to know about Statistics in Data science :\n\
+https://www.coursera.org/courses?query=statistics%20for%20data%20science\n\
 One of the building blocks is statistics.Some even call machine learning glorified statistics.\
 I do not completely agree with this argument but machine learning and statistics are closely related.\
 The goal of data science is creating value out of data.\
@@ -458,7 +464,8 @@ visualizations and creating powerful predictive models using machine learning al
 Most of the data science tools deliver complex data science operations in one place.\
 Some of the Data science tools of 2021 are:\n\
 SAS\n 2. Apache Hadoop\n 3. Excel\n 4. MongoDB\n 5. Python\n \
-3.One needs to know how to best communicate with others whether it's at\
+You'll find all the information you need to learn the Data science tools by clicking the Courses button down below.\n\ \
+3.One needs to know how to best communicate with others whether it's at \
 work or with clients or even with the computer.\n\
 Communication skills play an important role in almost any field you go to; \
 be it industrial or commercial or any other entertainment.\n\
@@ -466,6 +473,11 @@ If you know how to communicate better you can sell anything in this world.\
 Communication becomes a very crucial part of a person's life especially if he \
 belongs to the industrial sector such as Computer Science or IT.\n\
 You need to know how and when to communicate with people and maintain a clean reputation just the same.\
+Here are some courses that will help you with your Communication skills better :\n\
+Become more clear Concise and confident:\n\
+https://www.skillshare.com/classes/Communication-Skills-Become-More-Clear-Concise-Confident/\n\
+Powerful Speaking:\n\
+https://www.udemy.com/course/powerful-speaking/\n\
 \n4.Commendable knowledge in Quants and Business Acumen.\n\
 Good Business Acumen include the following things and qualities: \n\
 *Leadership Skills\n\
@@ -474,6 +486,13 @@ Good Business Acumen include the following things and qualities: \n\
 *Market orientation\n\
 *Analytical skills\n\
 *Problem-solving skills\n\
+Some courses about business:\n\
+Learn Business Acumen with Udemy:\n\
+https://www.udemy.com/course/learn-business-acumen/\n\
+Develop Business Acumen with LinkedIn:\n\
+https://www.linkedin.com/learning/developing-business-acumen\n\
+Business Acumen Training:\n\
+https://www.acumenlearning.com/online-corporate\n\
 \n5.Apart from all these skills one need to have a profound knowledge of Graphs and Statistical Graphs, Pie Charts.\
 \n\
 Mos of the times in Data Analysis graphs are use and till date they are considered to be the \
@@ -1706,7 +1725,12 @@ and then test the algorithms on which a robot runs. These professionals work \
 closely with the rest of the development team to understand the desired functionality \
 of the robot, then identify and integrate the data needed to reach that goal.\n\
 This role straddles the line between data science, software, and computer science, \
-requiring professionals to be well versed in all three disciplines.\n")
+requiring professionals to be well versed in all three disciplines.\n\
+ 
+
+            
+            
+            ")
 
 
 
